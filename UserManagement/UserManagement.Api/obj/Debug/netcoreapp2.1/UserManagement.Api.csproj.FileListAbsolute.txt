@@ -1,0 +1,14 @@
+D:\Users\Joao\Documents\VisualStudioProjects\Quiz\UserManagement\UserManagement.Api\bin\Debug\netcoreapp2.1\UserManagement.Api.deps.json
+D:\Users\Joao\Documents\VisualStudioProjects\Quiz\UserManagement\UserManagement.Api\bin\Debug\netcoreapp2.1\UserManagement.Api.runtimeconfig.json
+D:\Users\Joao\Documents\VisualStudioProjects\Quiz\UserManagement\UserManagement.Api\bin\Debug\netcoreapp2.1\UserManagement.Api.runtimeconfig.dev.json
+D:\Users\Joao\Documents\VisualStudioProjects\Quiz\UserManagement\UserManagement.Api\bin\Debug\netcoreapp2.1\UserManagement.Api.dll
+D:\Users\Joao\Documents\VisualStudioProjects\Quiz\UserManagement\UserManagement.Api\obj\Debug\netcoreapp2.1\UserManagement.Api.csprojAssemblyReference.cache
+D:\Users\Joao\Documents\VisualStudioProjects\Quiz\UserManagement\UserManagement.Api\obj\Debug\netcoreapp2.1\UserManagement.Api.csproj.CoreCompileInputs.cache
+D:\Users\Joao\Documents\VisualStudioProjects\Quiz\UserManagement\UserManagement.Api\obj\Debug\netcoreapp2.1\UserManagement.Api.RazorAssemblyInfo.cache
+D:\Users\Joao\Documents\VisualStudioProjects\Quiz\UserManagement\UserManagement.Api\obj\Debug\netcoreapp2.1\UserManagement.Api.RazorAssemblyInfo.cs
+D:\Users\Joao\Documents\VisualStudioProjects\Quiz\UserManagement\UserManagement.Api\obj\Debug\netcoreapp2.1\UserManagement.Api.AssemblyInfoInputs.cache
+D:\Users\Joao\Documents\VisualStudioProjects\Quiz\UserManagement\UserManagement.Api\obj\Debug\netcoreapp2.1\UserManagement.Api.AssemblyInfo.cs
+D:\Users\Joao\Documents\VisualStudioProjects\Quiz\UserManagement\UserManagement.Api\obj\Debug\netcoreapp2.1\UserManagement.Api.RazorTargetAssemblyInfo.cache
+D:\Users\Joao\Documents\VisualStudioProjects\Quiz\UserManagement\UserManagement.Api\bin\Debug\netcoreapp2.1\Shared.dll
+D:\Users\Joao\Documents\VisualStudioProjects\Quiz\UserManagement\UserManagement.Api\bin\Debug\netcoreapp2.1\Shared.pdb
+D:\Users\Joao\Documents\VisualStudioProjects\Quiz\UserManagement\UserManagement.Api\obj\Debug\netcoreapp2.1\UserManagement.Api.csproj.CopyComplete

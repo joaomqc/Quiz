@@ -1,0 +1,11 @@
+d:\Users\Joao\Documents\VisualStudioProjects\QuizManagement\QuizManagement\bin\Debug\netcoreapp2.1\QuizManagement.deps.json
+d:\Users\Joao\Documents\VisualStudioProjects\QuizManagement\QuizManagement\bin\Debug\netcoreapp2.1\QuizManagement.runtimeconfig.json
+d:\Users\Joao\Documents\VisualStudioProjects\QuizManagement\QuizManagement\bin\Debug\netcoreapp2.1\QuizManagement.runtimeconfig.dev.json
+d:\Users\Joao\Documents\VisualStudioProjects\QuizManagement\QuizManagement\bin\Debug\netcoreapp2.1\QuizManagement.dll
+d:\Users\Joao\Documents\VisualStudioProjects\QuizManagement\QuizManagement\obj\Debug\netcoreapp2.1\QuizManagement.csprojAssemblyReference.cache
+d:\Users\Joao\Documents\VisualStudioProjects\QuizManagement\QuizManagement\obj\Debug\netcoreapp2.1\QuizManagement.csproj.CoreCompileInputs.cache
+d:\Users\Joao\Documents\VisualStudioProjects\QuizManagement\QuizManagement\obj\Debug\netcoreapp2.1\QuizManagement.RazorAssemblyInfo.cache
+d:\Users\Joao\Documents\VisualStudioProjects\QuizManagement\QuizManagement\obj\Debug\netcoreapp2.1\QuizManagement.RazorAssemblyInfo.cs
+d:\Users\Joao\Documents\VisualStudioProjects\QuizManagement\QuizManagement\obj\Debug\netcoreapp2.1\QuizManagement.AssemblyInfoInputs.cache
+d:\Users\Joao\Documents\VisualStudioProjects\QuizManagement\QuizManagement\obj\Debug\netcoreapp2.1\QuizManagement.AssemblyInfo.cs
+d:\Users\Joao\Documents\VisualStudioProjects\QuizManagement\QuizManagement\obj\Debug\netcoreapp2.1\QuizManagement.RazorTargetAssemblyInfo.cache

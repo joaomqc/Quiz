@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2035
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuizManagement.Api", "QuizManagement.Api\QuizManagement.Api.csproj", "{ECCA01DA-615D-4D78-9037-54388EC27DB6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuizManagement.Domain", "QuizManagement.Domain\QuizManagement.Domain.csproj", "{03ABFC43-8EFC-4444-BC50-87DCE30481AB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuizManagement.Infrastructure", "QuizManagement.Infrastructure\QuizManagement.Infrastructure.csproj", "{D4A428C6-A059-4901-96CC-934043CF64A1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuizManagement.Application", "QuizManagement.Application\QuizManagement.Application.csproj", "{B0751077-3C87-4F39-B3D6-94B9DDB0E308}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{B84430C2-7146-4574-902E-9B3C68AE76FD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared", "..\Shared\Shared\Shared.csproj", "{B4CCA55C-822D-437D-B13B-D0610512C910}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ECCA01DA-615D-4D78-9037-54388EC27DB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECCA01DA-615D-4D78-9037-54388EC27DB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECCA01DA-615D-4D78-9037-54388EC27DB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECCA01DA-615D-4D78-9037-54388EC27DB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03ABFC43-8EFC-4444-BC50-87DCE30481AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03ABFC43-8EFC-4444-BC50-87DCE30481AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03ABFC43-8EFC-4444-BC50-87DCE30481AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03ABFC43-8EFC-4444-BC50-87DCE30481AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4A428C6-A059-4901-96CC-934043CF64A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4A428C6-A059-4901-96CC-934043CF64A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4A428C6-A059-4901-96CC-934043CF64A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4A428C6-A059-4901-96CC-934043CF64A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0751077-3C87-4F39-B3D6-94B9DDB0E308}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0751077-3C87-4F39-B3D6-94B9DDB0E308}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0751077-3C87-4F39-B3D6-94B9DDB0E308}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0751077-3C87-4F39-B3D6-94B9DDB0E308}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4CCA55C-822D-437D-B13B-D0610512C910}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4CCA55C-822D-437D-B13B-D0610512C910}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4CCA55C-822D-437D-B13B-D0610512C910}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4CCA55C-822D-437D-B13B-D0610512C910}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B4CCA55C-822D-437D-B13B-D0610512C910} = {B84430C2-7146-4574-902E-9B3C68AE76FD}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E56BA954-6445-4C70-BAB9-2925727E3986}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,56 @@
+﻿namespace QuizManagement.Domain
+{
+    using System;
+    using System.Collections.Generic;
+
+    public class Quiz
+    {
+        public static Quiz CreateNewQuiz(
+            string name,
+            DateTime creationTimestamp,
+            int userId,
+            IEnumerable<Question> questions,
+            int topicId,
+            bool isPublic)
+        {
+            return new Quiz(
+                0,
+                name,
+                creationTimestamp,
+                userId,
+                questions,
+                topicId,
+                isPublic,
+                new List<Comment>());
+        }
+
+        public Quiz(
+            int id,
+            string name,
+            DateTime creationTimestamp,
+            int userId,
+            IEnumerable<Question> questions,
+            int topicId,
+            bool isPublic,
+            IEnumerable<Comment> comments)
+        {
+            Id = id;
+            Name = name;
+            CreationTimestamp = creationTimestamp;
+            UserId = userId;
+            Questions = questions;
+            TopicId = topicId;
+            IsPublic = isPublic;
+            Comments = comments;
+        }
+
+        public int Id { get; }
+        public string Name { get; }
+        public DateTime CreationTimestamp { get; }
+        public int UserId { get; }
+        public IEnumerable<Question> Questions { get; }
+        public int TopicId { get; }
+        public bool IsPublic { get; }
+        public IEnumerable<Comment> Comments { get; }
+    }
+}

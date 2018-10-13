@@ -1,0 +1,14 @@
+D:\Users\Joao\Documents\VisualStudioProjects\Quiz\QuizManagement\QuizManagement.Application\bin\Debug\netcoreapp2.1\QuizManagement.Application.deps.json
+D:\Users\Joao\Documents\VisualStudioProjects\Quiz\QuizManagement\QuizManagement.Application\bin\Debug\netcoreapp2.1\QuizManagement.Application.dll
+D:\Users\Joao\Documents\VisualStudioProjects\Quiz\QuizManagement\QuizManagement.Application\bin\Debug\netcoreapp2.1\QuizManagement.Application.pdb
+D:\Users\Joao\Documents\VisualStudioProjects\Quiz\QuizManagement\QuizManagement.Application\bin\Debug\netcoreapp2.1\QuizManagement.Domain.dll
+D:\Users\Joao\Documents\VisualStudioProjects\Quiz\QuizManagement\QuizManagement.Application\bin\Debug\netcoreapp2.1\Shared.dll
+D:\Users\Joao\Documents\VisualStudioProjects\Quiz\QuizManagement\QuizManagement.Application\bin\Debug\netcoreapp2.1\Shared.pdb
+D:\Users\Joao\Documents\VisualStudioProjects\Quiz\QuizManagement\QuizManagement.Application\bin\Debug\netcoreapp2.1\QuizManagement.Domain.pdb
+D:\Users\Joao\Documents\VisualStudioProjects\Quiz\QuizManagement\QuizManagement.Application\obj\Debug\netcoreapp2.1\QuizManagement.Application.csprojAssemblyReference.cache
+D:\Users\Joao\Documents\VisualStudioProjects\Quiz\QuizManagement\QuizManagement.Application\obj\Debug\netcoreapp2.1\QuizManagement.Application.csproj.CoreCompileInputs.cache
+D:\Users\Joao\Documents\VisualStudioProjects\Quiz\QuizManagement\QuizManagement.Application\obj\Debug\netcoreapp2.1\QuizManagement.Application.AssemblyInfoInputs.cache
+D:\Users\Joao\Documents\VisualStudioProjects\Quiz\QuizManagement\QuizManagement.Application\obj\Debug\netcoreapp2.1\QuizManagement.Application.AssemblyInfo.cs
+D:\Users\Joao\Documents\VisualStudioProjects\Quiz\QuizManagement\QuizManagement.Application\obj\Debug\netcoreapp2.1\QuizManagement.Application.csproj.CopyComplete
+D:\Users\Joao\Documents\VisualStudioProjects\Quiz\QuizManagement\QuizManagement.Application\obj\Debug\netcoreapp2.1\QuizManagement.Application.dll
+D:\Users\Joao\Documents\VisualStudioProjects\Quiz\QuizManagement\QuizManagement.Application\obj\Debug\netcoreapp2.1\QuizManagement.Application.pdb
