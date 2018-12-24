@@ -1,7 +1,0 @@
-D:\Users\Joao\Documents\VisualStudioProjects\Quiz\UserManagement\UserManagement.Infrastructure\bin\Debug\netcoreapp2.1\UserManagement.Application.dll
-D:\Users\Joao\Documents\VisualStudioProjects\Quiz\UserManagement\UserManagement.Infrastructure\bin\Debug\netcoreapp2.1\UserManagement.Domain.dll
-D:\Users\Joao\Documents\VisualStudioProjects\Quiz\UserManagement\UserManagement.Infrastructure\obj\Debug\netcoreapp2.1\UserManagement.Infrastructure.csprojAssemblyReference.cache
-D:\Users\Joao\Documents\VisualStudioProjects\Quiz\UserManagement\UserManagement.Infrastructure\obj\Debug\netcoreapp2.1\UserManagement.Infrastructure.csproj.CoreCompileInputs.cache
-D:\Users\Joao\Documents\VisualStudioProjects\Quiz\UserManagement\UserManagement.Infrastructure\obj\Debug\netcoreapp2.1\UserManagement.Infrastructure.AssemblyInfoInputs.cache
-D:\Users\Joao\Documents\VisualStudioProjects\Quiz\UserManagement\UserManagement.Infrastructure\obj\Debug\netcoreapp2.1\UserManagement.Infrastructure.AssemblyInfo.cs
-D:\Users\Joao\Documents\VisualStudioProjects\Quiz\UserManagement\UserManagement.Infrastructure\bin\Debug\netcoreapp2.1\Shared.dll
