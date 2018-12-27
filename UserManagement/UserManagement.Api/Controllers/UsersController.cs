@@ -77,7 +77,7 @@
                 await _executor
                     .ExecuteAsync<AuthenticateUserParameters, AuthenticateUserResults>(
                         new AuthenticateUserParameters(
-                            parameters.UserName,
+                            parameters.Username,
                             parameters.Password), ct);
 
             if (!isAuthenticated.IsAuthenticated)
@@ -88,7 +88,7 @@
             var user =
                 await _executor
                     .ExecuteAsync<GetUserByUsernameParameters, GetUserByUsernameResults>(
-                        new GetUserByUsernameParameters(parameters.UserName), ct)
+                        new GetUserByUsernameParameters(parameters.Username), ct)
                     .ConfigureAwait(false);
             
             var result = new AuthenticateUserResult(user.Id);

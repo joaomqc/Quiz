@@ -7,7 +7,7 @@
     using Application.Operation.Results;
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
-    using Shared.Contracts.QuizManagement.Results;
+    //using Shared.Contracts.QuizManagement.Results;
     using Shared.Executors;
 
     [Authorize]
@@ -25,7 +25,7 @@
         
         [HttpGet]
         [Route("")]
-        [ProducesResponseType(typeof(GetAllTopicsResult), 200)]
+        //[ProducesResponseType(typeof(GetAllTopicsResult), 200)]
         public async Task<IActionResult> GetAllTopics(
             CancellationToken ct = default(CancellationToken))
         {
@@ -35,14 +35,14 @@
                         new GetAllTopicsParameters(), ct)
                     .ConfigureAwait(false);
 
-            var result = new GetAllTopicsResult(topics.Topics);
+            var result = 0;//new GetAllTopicsResult(topics.Topics);
 
             return Ok(result);
         }
 
         [HttpGet]
         [Route("{topicId:int}")]
-        [ProducesResponseType(typeof(GetTopicByIdResult), 200)]
+        //[ProducesResponseType(typeof(GetTopicByIdResult), 200)]
         public async Task<IActionResult> GetTopicById(
             int topicId,
             CancellationToken ct = default(CancellationToken))
@@ -53,11 +53,11 @@
                         new GetTopicByIdParameters(topicId), ct)
                     .ConfigureAwait(false);
 
-            var result =
-                new GetTopicByIdResult(
-                    topic.Id,
-                    topic.Name,
-                    topic.Description);
+            var result = 0;
+                //new GetTopicByIdResult(
+                //    topic.Id,
+                //    topic.Name,
+                //    topic.Description);
 
             return Ok(result);
         }

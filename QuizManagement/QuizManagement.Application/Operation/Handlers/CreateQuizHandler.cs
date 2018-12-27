@@ -21,9 +21,7 @@
                                  ?? throw new ArgumentNullException(nameof(quizzesRepository));
         }
 
-        public async Task<CreateQuizResults> ExecuteAsync(
-            CreateQuizParameters parameters,
-            CancellationToken ct = default(CancellationToken))
+        public async Task<CreateQuizResults> ExecuteAsync(CreateQuizParameters parameters)
         {
             await _quizzesRepository
                 .InsertAsync(
@@ -42,8 +40,7 @@
                                     .ToList()))
                             .ToList(),
                         parameters.TopicId,
-                        parameters.IsPublic),
-                    ct)
+                        parameters.IsPublic))
                 .ConfigureAwait(false);
 
             return new CreateQuizResults();

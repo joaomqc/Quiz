@@ -4,10 +4,11 @@
     using System.Linq;
     using System.Threading;
     using System.Threading.Tasks;
+    using Domain;
     using Parameters;
     using Repositories;
     using Results;
-    using Shared.Contracts.QuizManagement.Results.InnerTypes;
+    //using Shared.Contracts.QuizManagement.Results.InnerTypes;
     using Shared.Operation;
 
     public class GetQuizByIdHandler : IHandler<GetQuizByIdParameters, GetQuizByIdResults>
@@ -26,39 +27,26 @@
                                 ?? throw new ArgumentNullException(nameof(topicsRepository));
         }
 
-        public async Task<GetQuizByIdResults> ExecuteAsync(
-            GetQuizByIdParameters parameters,
-            CancellationToken ct = default(CancellationToken))
+        public async Task<GetQuizByIdResults> ExecuteAsync(GetQuizByIdParameters parameters)
         {
             var quiz =
                 await _quizRepository
-                    .GetByIdAsync(parameters.QuizId, ct)
+                    .GetByIdAsync(parameters.QuizId)
                     .ConfigureAwait(false);
 
             var topic =
                 await _topicsRepository
-                    .GetByIdAsync(quiz.TopicId, ct)
+                    .GetByIdAsync(quiz.TopicId)
                     .ConfigureAwait(false);
-                    
+
 
             return new GetQuizByIdResults(
                 quiz.Id,
                 quiz.Name,
                 quiz.CreationTimestamp,
                 quiz.UserId,
-                quiz.Questions
-                    .Select(question => new QuestionResult(
-                        question.Id,
-                        question.Text,
-                        question.IsMultipleChoice,
-                        question.Answers
-                            .Select(answer => new AnswerResult(
-                                answer.Id,
-                                answer.Text,
-                                answer.IsCorrect))
-                            .ToList()))
-                    .ToList(),
-                new TopicResult(
+                quiz.Questions,
+                new TopicDetails(
                     topic.Id,
                     topic.Name),
                 quiz.IsPublic);

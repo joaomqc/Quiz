@@ -1,52 +1,35 @@
 ﻿namespace QuizManagement.Application.Repositories
 {
     using Domain;
-    using System.Threading;
     using System.Threading.Tasks;
 
     public interface IQuizzesRepository
     {
-        Task<Quiz> GetByIdAsync(
-            int quizId,
-            CancellationToken ct = default(CancellationToken));
+        Task<Quiz> GetByIdAsync(int quizId);
 
         Task<QuizzesPaged> GetByTopicPagedAsync(
             int topicId,
             int startIndex,
-            int numberOfItems,
-            CancellationToken ct = default(CancellationToken));
+            int numberOfItems);
 
         Task<QuizzesPaged> GetAllByUserPagedAsync(
             int userId,
             int startIndex,
-            int numberOfItems,
-            CancellationToken ct = default(CancellationToken));
+            int numberOfItems);
 
         Task<QuizzesPaged> GetPublicByUserPagedAsync(
             int userId,
             int startIndex,
-            int numberOfItems,
-            CancellationToken ct = default(CancellationToken));
+            int numberOfItems);
 
         Task<QuizzesPaged> GetPublicPagedAsync(
             int startIndex,
-            int numberOfItems,
-            CancellationToken ct = default(CancellationToken));
+            int numberOfItems);
 
-        Task InsertAsync(
-            Quiz quiz,
-            CancellationToken ct = default(CancellationToken));
+        Task InsertAsync(Quiz quiz);
 
-        Task RemoveByIdAsync(
-            int quizId,
-            CancellationToken ct = default(CancellationToken));
+        Task DeleteByIdAsync(int quizId);
 
-        Task RemoveAllByUserIdAsync(
-            int userId,
-            CancellationToken ct = default(CancellationToken));
-
-        Task RemovePrivateByUserIdAsync(
-            int userId,
-            CancellationToken ct = default(CancellationToken));
+        Task DeleteByUserIdAsync(int userId, bool keepPublic);
     }
 }

@@ -1,0 +1,110 @@
+﻿syntax = "proto3";
+
+package Shared.Contracts.QuizManagement.Quizzes;
+
+import "Common/Common.proto";
+
+service QuizzesService {
+	rpc GetQuizzesPaged (Shared.Contracts.Common.GetPagedParameter) returns (GetQuizzesPagedResult);
+	rpc GetQuiz (GetQuizByIdParameter) returns (GetQuizByIdResult);
+	rpc GetQuizzesByUserPaged (GetQuizzesByUserPagedParameter) returns (GetQuizzesPagedResult);
+	rpc GetPublicQuizzesByUserPaged (GetQuizzesByUserPagedParameter) returns (GetQuizzesPagedResult);
+	rpc GetQuizzesByTopicPaged (GetQuizzesByTopicPagedParameter) returns (GetQuizzesPagedResult);
+	rpc CreateQuiz (CreateQuizParameter) returns (Shared.Contracts.Common.Empty);
+	rpc DeleteQuiz (DeleteQuizParameter) returns (Shared.Contracts.Common.Empty);
+	rpc DeleteAllQuizzesByUser (DeleteQuizzesByUserParameter) returns (Shared.Contracts.Common.Empty);
+}
+
+// Parameters
+
+message GetQuizByIdParameter {
+	int32 QuizId = 1;
+}
+
+message GetQuizzesByUserPagedParameter {
+	Shared.Contracts.Common.GetPagedParameter PageInfo = 1;
+	int32 UserId = 2;
+}
+
+message GetQuizzesByTopicPagedParameter {
+	Shared.Contracts.Common.GetPagedParameter PageInfo = 1;
+	int32 TopicId = 2;
+}
+
+message DeleteQuizParameter {
+	int32 QuizId = 1;
+}
+
+message DeleteQuizzesByUserParameter {
+	int32 UserId = 1;
+	bool KeepPublic = 2;
+}
+
+message CreateQuizParameter {
+	string Name = 1;
+	int64 CreationTimestamp = 2;
+	int32 UserId = 3;
+	repeated QuestionParameter Questions = 4;
+	int32 TopicId = 5;
+	bool IsPublic = 6;
+}
+
+// Parameter DTOs
+
+message QuestionParameter {
+	string Text = 1;
+	bool IsMultipleChoice = 2;
+	repeated AnswerParameter Answers = 3;
+}
+
+message AnswerParameter {
+	string Text = 1;
+	bool IsCorrect = 2;
+}
+
+
+// Results
+
+message GetQuizByIdResult {
+	int32 QuizId = 1;
+	string Name = 2;
+	int64 CreationTimestamp = 3;
+	int32 UserId = 4;
+	repeated QuestionResult Questions = 5;
+	TopicResult Topic = 6;
+	bool IsPublic = 7;
+}
+
+message GetQuizzesPagedResult {
+	Shared.Contracts.Common.GetPagedResult pageInfo = 1;
+	repeated QuizResult Quizzes = 2;
+}
+
+
+// Result DTOs
+message AnswerResult {
+	int32 AnswerId = 1;
+	string Text = 2;
+	bool IsCorrect = 3;
+}
+
+message QuestionResult {
+	int32 QuestionId = 1;
+	string Text = 2;
+	bool IsMultipleChoice = 3;
+	repeated AnswerResult Answers = 4;
+}
+
+message QuizResult {
+	int32 QuizId = 1;
+	string Name = 2;
+	int64 CreationTimestamp = 3;
+	int32 UserId = 4;
+	TopicResult Topic = 5;
+	bool IsPublic = 6;
+}
+
+message TopicResult {
+	int32 TopicId = 1;
+	string Name = 2;
+}

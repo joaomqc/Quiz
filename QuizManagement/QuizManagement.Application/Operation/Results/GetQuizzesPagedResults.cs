@@ -1,14 +1,14 @@
 ﻿namespace QuizManagement.Application.Operation.Results
 {
     using System.Collections.Generic;
-    using Shared.Contracts.Common;
-    using Shared.Contracts.QuizManagement.Results.InnerTypes;
+    using Domain;
+    using Shared.Common;
     using Shared.Operation;
 
-    public class GetQuizzesPagedResults : GetPagedResult<QuizResult>, IResult
+    public class GetQuizzesPagedResults : PagedResult<QuizDetails>, IResult
     {
         public GetQuizzesPagedResults(
-            IEnumerable<QuizResult> list,
+            IEnumerable<QuizDetails> list,
             int totalCount,
             int itemCount,
             int startIndex,

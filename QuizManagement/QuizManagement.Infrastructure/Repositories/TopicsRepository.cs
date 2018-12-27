@@ -19,35 +19,34 @@
                        ?? throw new ArgumentNullException(nameof(quizContext));
         }
 
-        public async Task<IEnumerable<Topic>> GetAllAsync(
-            CancellationToken ct = default(CancellationToken))
+        public async Task<IEnumerable<Topic>> GetAllAsync()
         {
             var topics =
                 await _context.Topics
-                    .ToListAsync(ct)
+                    .ToListAsync()
                     .ConfigureAwait(false);
 
             return topics
                 .Select(topic => new Topic(
                     topic.Id,
                     topic.Name,
-                    topic.Description))
+                    topic.Description,
+                    topic.Url))
                 .ToList();
         }
 
-        public async Task<Topic> GetByIdAsync(
-            int topicId,
-            CancellationToken ct = default(CancellationToken))
+        public async Task<Topic> GetByIdAsync(int topicId)
         {
             var topic =
                 await _context.Topics
-                    .FirstOrDefaultAsync(t => t.Id == topicId, ct)
+                    .FirstOrDefaultAsync(t => t.Id == topicId)
                     .ConfigureAwait(false);
 
             return new Topic(
                 topic.Id,
                 topic.Name,
-                topic.Description);
+                topic.Description,
+                topic.Url);
         }
     }
 }

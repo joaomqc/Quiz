@@ -2,7 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
-    using Shared.Contracts.QuizManagement.Results.InnerTypes;
+    using Domain;
     using Shared.Operation;
 
     public class GetQuizByIdResults : IResult
@@ -12,8 +12,8 @@
             string name,
             DateTime creationTimestamp,
             int userId,
-            IEnumerable<QuestionResult> questions,
-            TopicResult topic,
+            IEnumerable<Question> questions,
+            TopicDetails topic,
             bool isPublic)
         {
             Id = id;
@@ -29,8 +29,8 @@
         public string Name { get; }
         public DateTime CreationTimestamp { get; }
         public int UserId { get; }
-        public IEnumerable<QuestionResult> Questions { get; }
-        public TopicResult Topic { get; }
+        public IEnumerable<Question> Questions { get; }
+        public TopicDetails Topic { get; }
         public bool IsPublic { get; }
     }
 }

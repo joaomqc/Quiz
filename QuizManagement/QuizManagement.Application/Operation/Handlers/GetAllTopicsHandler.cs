@@ -7,7 +7,9 @@
     using System.Linq;
     using System.Threading;
     using System.Threading.Tasks;
-    using Shared.Contracts.QuizManagement.Results.InnerTypes;
+    using Domain;
+
+    //using Shared.Contracts.QuizManagement.Results.InnerTypes;
 
     public class GetAllTopicsHandler
     {
@@ -18,22 +20,14 @@
             _topicRepository = topicRepository ?? throw new ArgumentNullException(nameof(topicRepository));
         }
 
-        public async Task<GetAllTopicsResults> ExecuteAsync(
-            GetAllTopicsParameters parameters,
-            CancellationToken ct = default(CancellationToken))
+        public async Task<GetAllTopicsResults> ExecuteAsync(GetAllTopicsParameters parameters)
         {
             var topics =
                 await _topicRepository
-                    .GetAllAsync(ct)
+                    .GetAllAsync()
                     .ConfigureAwait(false);
 
-            return new GetAllTopicsResults(
-                topics.Select(
-                    topic => new TopicDetailsResult(
-                        topic.Id,
-                        topic.Name,
-                        topic.Description))
-                .ToList());
+            return new GetAllTopicsResults(topics);
         }
     }
 }

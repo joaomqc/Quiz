@@ -7,8 +7,8 @@
     using Application.Operation.Results;
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
-    using Shared.Contracts.QuizManagement.Parameters;
-    using Shared.Contracts.QuizManagement.Results;
+    //using Shared.Contracts.QuizManagement.Parameters;
+    //using Shared.Contracts.QuizManagement.Results;
     using Shared.Executors;
 
     [Authorize]
@@ -23,17 +23,10 @@
         {
             _executor = queryExecutor ?? throw new ArgumentNullException(nameof(queryExecutor));
         }
-        
-        [HttpGet]
-        [Route("test")]
-        public async Task<IActionResult> GetTest()
-        {
-            return Ok(await Task.FromResult("hello"));
-        }
 
         [HttpGet]
         [Route("")]
-        [ProducesResponseType(typeof(GetQuizzesPagedResult), 200)]
+      //  [ProducesResponseType(typeof(GetQuizzesPagedResult), 200)]
         public async Task<IActionResult> GetQuizzesPaged(
             int startIndex,
             int numberOfItems,
@@ -47,20 +40,20 @@
                             numberOfItems), ct)
                     .ConfigureAwait(false);
 
-            var result =
-                new GetQuizzesPagedResult(
-                    quizzes.List,
-                    quizzes.TotalCount,
-                    quizzes.ItemCount,
-                    quizzes.StartIndex,
-                    quizzes.EndIndex);
+            var result = 0;
+                //new GetQuizzesPagedResult(
+                //    quizzes.List,
+                //    quizzes.TotalCount,
+                //    quizzes.ItemCount,
+                //    quizzes.StartIndex,
+                //    quizzes.EndIndex);
 
             return Ok(result);
         }
 
         [HttpGet]
         [Route("{quizId:int}")]
-        [ProducesResponseType(typeof(GetQuizByIdResult), 200)]
+        //[ProducesResponseType(typeof(GetQuizByIdResult), 200)]
         public async Task<IActionResult> GetQuiz(
             int quizId,
             CancellationToken ct = default(CancellationToken))
@@ -72,22 +65,22 @@
                             quizId), ct)
                     .ConfigureAwait(false);
 
-            var result =
-                new GetQuizByIdResult(
-                    quiz.Id,
-                    quiz.Name,
-                    quiz.CreationTimestamp,
-                    quiz.UserId,
-                    quiz.Questions,
-                    quiz.Topic,
-                    quiz.IsPublic);
+            var result = 0;
+                //new GetQuizByIdResult(
+                //    quiz.Id,
+                //    quiz.Name,
+                //    quiz.CreationTimestamp,
+                //    quiz.UserId,
+                //    quiz.Questions,
+                //    quiz.Topic,
+                //    quiz.IsPublic);
 
             return Ok(result);
         }
 
         [HttpGet]
         [Route("user/{userId:int}")]
-        [ProducesResponseType(typeof(GetQuizzesPagedResult), 200)]
+        //[ProducesResponseType(typeof(GetQuizzesPagedResult), 200)]
         public async Task<IActionResult> GetQuizzesByUserPaged(
             int userId,
             int startIndex,
@@ -102,21 +95,21 @@
                             startIndex,
                             numberOfItems), ct)
                     .ConfigureAwait(false);
-            
-            var result =
-                new GetQuizzesPagedResult(
-                    quizzes.List,
-                    quizzes.TotalCount,
-                    quizzes.ItemCount,
-                    quizzes.StartIndex,
-                    quizzes.EndIndex);
+
+            var result = 0;
+            //    new GetQuizzesPagedResult(
+            //        quizzes.List,
+            //        quizzes.TotalCount,
+            //        quizzes.ItemCount,
+            //        quizzes.StartIndex,
+            //        quizzes.EndIndex);
 
             return Ok(result);
         }
 
         [HttpGet]
         [Route("user/{userId:int}/public")]
-        [ProducesResponseType(typeof(GetQuizzesPagedResult), 200)]
+        //[ProducesResponseType(typeof(GetQuizzesPagedResult), 200)]
         public async Task<IActionResult> GetPublicQuizzesByUserPaged(
             int userId,
             int startIndex,
@@ -132,20 +125,20 @@
                             numberOfItems), ct)
                     .ConfigureAwait(false);
 
-            var result =
-                new GetQuizzesPagedResult(
-                    quizzes.List,
-                    quizzes.TotalCount,
-                    quizzes.ItemCount,
-                    quizzes.StartIndex,
-                    quizzes.EndIndex);
+            var result = 0;
+                //new GetQuizzesPagedResult(
+                //    quizzes.List,
+                //    quizzes.TotalCount,
+                //    quizzes.ItemCount,
+                //    quizzes.StartIndex,
+                //    quizzes.EndIndex);
 
             return Ok(result);
         }
 
         [HttpGet]
         [Route("topic/{topicId:int}")]
-        [ProducesResponseType(typeof(GetQuizzesPagedResult), 200)]
+        //[ProducesResponseType(typeof(GetQuizzesPagedResult), 200)]
         public async Task<IActionResult> GetQuizzesByTopicPaged(
             int topicId,
             int startIndex,
@@ -161,13 +154,13 @@
                             numberOfItems), ct)
                     .ConfigureAwait(false);
 
-            var result =
-                new GetQuizzesPagedResult(
-                    quizzes.List,
-                    quizzes.TotalCount,
-                    quizzes.ItemCount,
-                    quizzes.StartIndex,
-                    quizzes.EndIndex);
+            var result = 0;
+                //new GetQuizzesPagedResult(
+                //    quizzes.List,
+                //    quizzes.TotalCount,
+                //    quizzes.ItemCount,
+                //    quizzes.StartIndex,
+                //    quizzes.EndIndex);
 
             return Ok(result);
         }
@@ -175,21 +168,21 @@
         [HttpPost]
         [Route("")]
         [ProducesResponseType(typeof(void), 200)]
-        public async Task<IActionResult> CreateQuiz(
-            CreateQuizParameter parameters,
+        public IActionResult CreateQuiz(
+            //CreateQuizParameter parameters,
             CancellationToken ct = default(CancellationToken))
         {
-            await _executor
-                .ExecuteAsync<CreateQuizParameters, CreateQuizResults>(
-                    new CreateQuizParameters(
-                        parameters.Name,
-                        parameters.CreationTimestamp,
-                        parameters.UserId,
-                        parameters.Questions,
-                        parameters.TopicId,
-                        parameters.IsPublic),
-                    ct)
-                .ConfigureAwait(false);
+            //await _executor
+            //    .ExecuteAsync<CreateQuizParameters, CreateQuizResults>(
+            //        new CreateQuizParameters(
+            //            parameters.Name,
+            //            parameters.CreationTimestamp,
+            //            parameters.UserId,
+            //            parameters.Questions,
+            //            parameters.TopicId,
+            //            parameters.IsPublic),
+            //        ct)
+            //    .ConfigureAwait(false);
 
             return Ok();
         }
@@ -202,8 +195,8 @@
             CancellationToken ct = default(CancellationToken))
         {
             await _executor
-                .ExecuteAsync<RemoveQuizByIdParameters, RemoveQuizByIdResults>(
-                    new RemoveQuizByIdParameters(quizId), ct)
+                .ExecuteAsync<DeleteQuizByIdParameters, DeleteQuizByIdResults>(
+                    new DeleteQuizByIdParameters(quizId), ct)
                 .ConfigureAwait(false);
 
             return Ok();
@@ -217,8 +210,8 @@
             CancellationToken ct = default(CancellationToken))
         {
             await _executor
-                .ExecuteAsync<RemoveAllQuizzesByUserParameters, RemoveAllQuizzesByUserResults>(
-                    new RemoveAllQuizzesByUserParameters(userId), ct)
+                .ExecuteAsync<DeleteQuizzesByUserParameters, DeleteQuizzesByUserResults>(
+                    new DeleteQuizzesByUserParameters(userId), ct)
                 .ConfigureAwait(false);
 
             return Ok();

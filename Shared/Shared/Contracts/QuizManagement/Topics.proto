@@ -1,0 +1,38 @@
+﻿syntax = "proto3";
+
+package Shared.Contracts.QuizManagement.Topics;
+
+import "Common/Common.proto";
+
+service TopicsService {
+	rpc GetAllTopics (Shared.Contracts.Common.Empty) returns (GetAllTopicsResult);
+	rpc GetTopicById (GetTopicByIdParameter) returns (GetTopicByIdResult);
+}
+
+// Parameters
+
+message GetTopicByIdParameter {
+	int32 TopicId = 1;
+}
+
+// Results
+
+message GetTopicByIdResult {
+	int32 TopicId = 1;
+	string Name = 2;
+	string Description = 3;
+	string Url = 4;
+}
+
+message GetAllTopicsResult {
+	repeated TopicResult Topics = 1;
+}
+
+// Result DTOs
+
+message TopicResult {
+	int32 TopicId = 1;
+	string Name = 2;
+	string Description = 3;
+	string Url = 4;
+}

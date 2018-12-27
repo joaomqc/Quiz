@@ -5,6 +5,6 @@
 
     public interface IHandler<P, R> where P : IParameter where R : IResult
     {
-        Task<R> ExecuteAsync(P parameters, CancellationToken ct = default(CancellationToken));
+        Task<R> ExecuteAsync(P parameters);
     }
 }

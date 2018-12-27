@@ -15,13 +15,13 @@
             _container = container ?? throw new ArgumentNullException(nameof(container));
         }
 
-        public Task<TResult> ExecuteAsync<TParam, TResult>(TParam parameters, CancellationToken ct = default(CancellationToken))
+        public Task<TResult> ExecuteAsync<TParam, TResult>(TParam parameters)
             where TParam : IParameter
             where TResult : IResult
         {
             var handler = _container.Resolve<IHandler<TParam, TResult>>();
             
-            return handler.ExecuteAsync(parameters, ct);
+            return handler.ExecuteAsync(parameters);
         }
     }
 }

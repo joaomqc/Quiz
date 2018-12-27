@@ -1,0 +1,41 @@
+﻿syntax = "proto3";
+
+package Shared.Contracts.UserManagement.Users;
+
+import "Common/Common.proto";
+
+service UsersService {
+	rpc GetUserById (GetUserByIdParameter) returns (GetUserByIdResult);
+	rpc RegisterUser (RegisterUserParameter) returns (Shared.Contracts.Common.Empty);
+	rpc AuthenticateUser (AuthenticateUserParameter) returns (AuthenticateUserResult);
+}
+
+// Parameters
+
+message GetUserByIdParameter {
+	int32 UserId = 1;
+}
+
+message AuthenticateUserParameter {
+	string Username = 1;
+	string Password = 2;
+}
+
+message RegisterUserParameter {
+	string Username = 1;
+	string Email = 2;
+	string Password = 3;
+}
+
+// Results
+
+message AuthenticateUserResult {
+	int32 UserId = 1;
+}
+
+message GetUserByIdResult {
+	int32 UserId = 1;
+	string Email = 2;
+	string Username = 3;
+	string Password = 4;
+}

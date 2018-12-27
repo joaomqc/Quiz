@@ -1,0 +1,18 @@
+﻿syntax = "proto3";
+
+package Shared.Contracts.Common;
+
+message GetPagedParameter {
+	int32 StartIndex = 1;
+	int32 ItemCount = 2;
+}
+
+message GetPagedResult {
+	int32 TotalCount = 1;
+	int32 ItemCount = 2;
+	int32 StartIndex = 3;
+	int32 EndIndex = 4;
+}
+
+message Empty{
+}

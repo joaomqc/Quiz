@@ -1,16 +1,16 @@
 ﻿namespace QuizManagement.Application.Operation.Results
 {
     using System.Collections.Generic;
-    using Shared.Contracts.QuizManagement.Results.InnerTypes;
+    using Domain;
     using Shared.Operation;
 
     public class GetAllTopicsResults : IResult
     {
-        public GetAllTopicsResults(IEnumerable<TopicDetailsResult> topics)
+        public GetAllTopicsResults(IEnumerable<Topic> topics)
         {
             Topics = topics;
         }
 
-        public IEnumerable<TopicDetailsResult> Topics { get; }
+        public IEnumerable<Topic> Topics { get; }
     }
 }

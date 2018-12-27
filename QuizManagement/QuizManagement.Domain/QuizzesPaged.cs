@@ -1,9 +1,9 @@
 ﻿namespace QuizManagement.Domain
 {
     using System.Collections.Generic;
-    using Shared.Contracts.Common;
+    using Shared.Common;
 
-    public class QuizzesPaged : GetPagedResult<QuizDetails>
+    public class QuizzesPaged : PagedResult<QuizDetails>
     {
         public QuizzesPaged(
             IEnumerable<QuizDetails> list,

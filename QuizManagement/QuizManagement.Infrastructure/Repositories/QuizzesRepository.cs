@@ -19,9 +19,7 @@
                        ?? throw new ArgumentNullException(nameof(quizContext));
         }
 
-        public async Task<Quiz> GetByIdAsync(
-            int quizId,
-            CancellationToken ct = default(CancellationToken))
+        public async Task<Quiz> GetByIdAsync(int quizId)
         {
             var quiz =
                 await (
@@ -64,7 +62,7 @@
                         Topic = q.Topic,
                         IsPublic = q.IsPublic
                     })
-                    .FirstOrDefaultAsync(ct)
+                    .FirstOrDefaultAsync()
                     .ConfigureAwait(false);
 
             var questions =
@@ -79,7 +77,7 @@
                                 answer.Text,
                                 answer.IsCorrect))
                             .ToList()))
-                    .ToListAsync(ct)
+                    .ToListAsync()
                     .ConfigureAwait(false);
 
             var comments =
@@ -89,7 +87,7 @@
                         comment.Text,
                         comment.CreationTimestamp,
                         comment.UserId))
-                    .ToListAsync(ct)
+                    .ToListAsync()
                     .ConfigureAwait(false);
 
             return new Quiz(
@@ -106,71 +104,66 @@
         public async Task<QuizzesPaged> GetByTopicPagedAsync(
             int topicId,
             int startIndex,
-            int numberOfItems,
-            CancellationToken ct = default(CancellationToken))
+            int numberOfItems)
         {
             return await GetPagedAsync(
                 startIndex,
                 numberOfItems,
-                quiz => quiz.Topic.Id == topicId && quiz.IsPublic, ct)
+                quiz => quiz.Topic.Id == topicId && quiz.IsPublic)
                 .ConfigureAwait(false);
         }
 
         public async Task<QuizzesPaged> GetPublicPagedAsync(
             int startIndex,
-            int numberOfItems,
-            CancellationToken ct = default(CancellationToken))
+            int numberOfItems)
         {
             return await GetPagedAsync(
                 startIndex,
                 numberOfItems,
-                quiz => quiz.IsPublic, ct)
+                quiz => quiz.IsPublic)
                 .ConfigureAwait(false);
         }
 
         public async Task<QuizzesPaged> GetAllByUserPagedAsync(
             int userId,
             int startIndex,
-            int numberOfItems,
-            CancellationToken ct = default(CancellationToken))
+            int numberOfItems)
         {
             return await GetPagedAsync(
                 startIndex,
                 numberOfItems,
-                quiz => quiz.UserId == userId, ct)
+                quiz => quiz.UserId == userId)
                 .ConfigureAwait(false);
         }
 
         public async Task<QuizzesPaged> GetPublicByUserPagedAsync(
             int userId,
             int startIndex,
-            int numberOfItems,
-            CancellationToken ct = default(CancellationToken))
+            int numberOfItems)
         {
             return await GetPagedAsync(
                 startIndex,
                 numberOfItems,
-                quiz => quiz.UserId == userId && quiz.IsPublic, ct)
+                quiz => quiz.UserId == userId && quiz.IsPublic)
                 .ConfigureAwait(false);
         }
 
         private async Task<QuizzesPaged> GetPagedAsync(
             int startIndex,
             int numberOfItems,
-            Expression<Func<Entities.Quiz, bool>> filter,
-            CancellationToken ct = default(CancellationToken))
+            Expression<Func<Entities.Quiz, bool>> filter)
         {
             var quizzes =
                 await _context.Quizzes
                     .Where(filter)
                     .Skip(startIndex)
                     .Take(numberOfItems)
-                    .ToListAsync(ct)
+                    .ToListAsync()
                     .ConfigureAwait(false);
 
             var total =
-                await _context.Topics
-                    .CountAsync(ct)
+                await _context.Quizzes
+                    .CountAsync()
                     .ConfigureAwait(false);
 
             return new QuizzesPaged(
@@ -180,10 +173,9 @@
                         quiz.Name,
                         quiz.CreationTimestamp,
                         quiz.UserId,
-                        new Topic(
+                        new TopicDetails(
                             quiz.Topic.Id,
-                            quiz.Topic.Name,
-                            quiz.Topic.Description),
+                            quiz.Topic.Name), 
                         quiz.IsPublic))
                     .ToList(),
                 total,
@@ -191,12 +183,8 @@
                 startIndex,
                 startIndex + numberOfItems);
         }
-
-
-
-        public async Task InsertAsync(
-            Quiz quiz,
-            CancellationToken ct = default(CancellationToken))
+        
+        public async Task InsertAsync(Quiz quiz)
         {
             var quizToAdd =
                 new Entities.Quiz
@@ -236,15 +224,15 @@
                 try {
 
                     await _context.Quizzes
-                        .AddAsync(quizToAdd, ct)
+                        .AddAsync(quizToAdd)
                         .ConfigureAwait(false);
 
                     await _context.Questions
-                        .AddRangeAsync(questions, ct)
+                        .AddRangeAsync(questions)
                         .ConfigureAwait(false);
 
                     await _context.Answers
-                        .AddRangeAsync(answers, ct)
+                        .AddRangeAsync(answers)
                         .ConfigureAwait(false);
              
                     transaction.Commit();
@@ -256,13 +244,11 @@
             }
         }
 
-        public async Task RemoveByIdAsync(
-            int quizId,
-            CancellationToken ct = default(CancellationToken))
+        public async Task DeleteByIdAsync(int quizId)
         {
             var quizToRemove =
                 await _context.Quizzes
-                    .FirstOrDefaultAsync(quiz => quiz.Id == quizId, ct)
+                    .FirstOrDefaultAsync(quiz => quiz.Id == quizId)
                     .ConfigureAwait(false);
 
             if (quizToRemove != null)
@@ -270,39 +256,21 @@
                 _context.Quizzes.Remove(quizToRemove);
 
                 await _context
-                    .SaveChangesAsync(ct)
+                    .SaveChangesAsync()
                     .ConfigureAwait(false);
             }
         }
 
-        public async Task RemoveAllByUserIdAsync(
-            int userId,
-            CancellationToken ct = default(CancellationToken))
-        {
-            await RemoveListAsync(quiz => quiz.UserId == userId,ct)
-                .ConfigureAwait(false);
-        }
-
-        public async Task RemovePrivateByUserIdAsync(
-            int userId,
-            CancellationToken ct = default(CancellationToken))
-        {
-            await RemoveListAsync(quiz => quiz.UserId == userId && !quiz.IsPublic, ct)
-                .ConfigureAwait(false);
-        }
-
-        private async Task RemoveListAsync(
-            Expression<Func<Entities.Quiz, bool>> filter,
-            CancellationToken ct = default(CancellationToken))
+        public async Task DeleteByUserIdAsync(int userId, bool keepPublic)
         {
             var quizzesToRemove =
                 _context.Quizzes
-                    .Where(filter);
+                    .Where(quiz => !quiz.IsPublic || !keepPublic);
 
             _context.Quizzes.RemoveRange(quizzesToRemove);
 
             await _context
-                .SaveChangesAsync(ct)
+                .SaveChangesAsync()
                 .ConfigureAwait(false);
         }
     }
