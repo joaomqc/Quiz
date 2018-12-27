@@ -4,7 +4,7 @@
     using System.Threading.Tasks;
     using Domain;
 
-    public interface IUserRepository
+    public interface IUsersRepository
     {
         Task<User> GetById(
             int id,

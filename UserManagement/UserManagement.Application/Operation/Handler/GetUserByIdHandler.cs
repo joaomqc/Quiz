@@ -11,22 +11,20 @@
     public class GetUserByIdHandler
         : IHandler<GetUserByIdParameters, GetUserByIdResults>
     {
-        private readonly IUserRepository _userRepository;
+        private readonly IUsersRepository _usersRepository;
 
         public GetUserByIdHandler(
-            IUserRepository userRepository)
+            IUsersRepository usersRepository)
         {
-            _userRepository = userRepository
-                              ?? throw new ArgumentNullException(nameof(userRepository));
+            _usersRepository = usersRepository
+                              ?? throw new ArgumentNullException(nameof(usersRepository));
         }
 
-        public async Task<GetUserByIdResults> ExecuteAsync(
-            GetUserByIdParameters parameters,
-            CancellationToken ct = default(CancellationToken))
+        public async Task<GetUserByIdResults> ExecuteAsync(GetUserByIdParameters parameters)
         {
             var user =
-                await _userRepository
-                    .GetById(parameters.Id, ct)
+                await _usersRepository
+                    .GetById(parameters.Id)
                     .ConfigureAwait(false);
 
             return new GetUserByIdResults(

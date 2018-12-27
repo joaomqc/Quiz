@@ -11,25 +11,22 @@
     public class AuthenticateUserHandler
         : IHandler<AuthenticateUserParameters, AuthenticateUserResults>
     {
-        private IUserRepository _userRepository;
+        private IUsersRepository _usersRepository;
 
         public AuthenticateUserHandler(
-            IUserRepository userRepository)
+            IUsersRepository usersRepository)
         {
-            _userRepository = userRepository
-                              ?? throw new ArgumentNullException(nameof(userRepository));
+            _usersRepository = usersRepository
+                              ?? throw new ArgumentNullException(nameof(usersRepository));
         }
 
-        public async Task<AuthenticateUserResults> ExecuteAsync(
-            AuthenticateUserParameters parameters,
-            CancellationToken ct = default(CancellationToken))
+        public async Task<AuthenticateUserResults> ExecuteAsync(AuthenticateUserParameters parameters)
         {
             var isAuthenticated =
-                await _userRepository
+                await _usersRepository
                     .ValidateCredentials(
                         parameters.Username,
-                        parameters.Password,
-                        ct)
+                        parameters.Password)
                     .ConfigureAwait(false);
 
             return new AuthenticateUserResults(isAuthenticated);

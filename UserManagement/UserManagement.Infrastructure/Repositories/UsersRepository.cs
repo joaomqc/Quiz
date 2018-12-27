@@ -8,12 +8,12 @@
     using Domain;
     using Microsoft.EntityFrameworkCore;
 
-    public class UserRepository : IUserRepository
+    public class UsersRepository : IUsersRepository
     {
         private readonly IPasswordHasher _passwordHasher;
         private readonly UserContext _context;
 
-        public UserRepository(
+        public UsersRepository(
             IPasswordHasher passwordHasher,
             UserContext context)
         {

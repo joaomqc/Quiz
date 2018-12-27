@@ -1,34 +1,27 @@
-﻿namespace UserManagement.Api.Configuration
+﻿namespace UserManagement.RPC.Configuration
 {
-    using System;
     using System.Reflection;
     using Application;
     using Application.Repositories;
     using Castle.MicroKernel.Registration;
     using Castle.Windsor;
-    using Castle.Windsor.MsDependencyInjection;
     using Infrastructure;
     using Infrastructure.Repositories;
-    using Microsoft.AspNetCore.Mvc;
-    using Microsoft.Extensions.Configuration;
-    using Microsoft.Extensions.DependencyInjection;
     using Shared.Executors;
     using Shared.Operation;
 
     public class ServiceResolver
     {
-        private static IServiceProvider _serviceProvider;
-
-        public ServiceResolver(
-            IServiceCollection services,
-            IConfiguration configuration)
+        public static IWindsorContainer Configure()
         {
             IWindsorContainer container = new WindsorContainer();
 
             container
                 .Register(Classes
                     .FromAssembly(Assembly.GetCallingAssembly())
-                    .BasedOn(typeof(ControllerBase))
+                    .Pick()
+                    .If(t => t.Name.EndsWith("Controller"))
+                    .Configure(configurer => configurer.Named(configurer.Implementation.Name))
                     .LifestyleTransient())
                 .Register(Component
                     .For<IExecutor>()
@@ -47,21 +40,11 @@
                     .ImplementedBy<UserContext>()
                     .LifestyleTransient())
                 .Register(Component
-                    .For<IConfiguration>()
-                    .Instance(configuration)
-                    .LifestyleSingleton())
-                .Register(Component
                     .For<IPasswordHasher>()
                     .ImplementedBy<PasswordHasher>()
                     .LifestyleTransient());
 
-            _serviceProvider =
-                WindsorRegistrationHelper.CreateServiceProvider(container, services);
-        }
-
-        public IServiceProvider GetServiceProvider()
-        {
-            return _serviceProvider;
+            return container;
         }
     }
 }

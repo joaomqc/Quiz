@@ -12,25 +12,23 @@
     public class RegisterUserHandler
         : IHandler<RegisterUserParameters, RegisterUserResults>
     {
-        private readonly IUserRepository _userRepository;
+        private readonly IUsersRepository _usersRepository;
 
         public RegisterUserHandler(
-            IUserRepository userRepository)
+            IUsersRepository usersRepository)
         {
-            _userRepository = userRepository
-                              ?? throw new ArgumentNullException(nameof(userRepository));
+            _usersRepository = usersRepository
+                              ?? throw new ArgumentNullException(nameof(usersRepository));
         }
 
-        public async Task<RegisterUserResults> ExecuteAsync(
-            RegisterUserParameters parameters,
-            CancellationToken ct = default(CancellationToken))
+        public async Task<RegisterUserResults> ExecuteAsync(RegisterUserParameters parameters)
         {
-            await _userRepository
+            await _usersRepository
                 .RegisterUser(
                     User.CreateNewUser(
                         parameters.Email,
                         parameters.Username,
-                        parameters.Password), ct)
+                        parameters.Password))
                 .ConfigureAwait(false);
 
             return new RegisterUserResults();
