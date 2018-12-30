@@ -61,7 +61,7 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
             "cmVhdGlvblRpbWVzdGFtcBgDIAEoAxIOCgZVc2VySWQYBCABKAUSQwoFVG9w",
             "aWMYBSABKAsyNC5TaGFyZWQuQ29udHJhY3RzLlF1aXpNYW5hZ2VtZW50LlF1",
             "aXp6ZXMuVG9waWNSZXN1bHQSEAoISXNQdWJsaWMYBiABKAgiLAoLVG9waWNS",
-            "ZXN1bHQSDwoHVG9waWNJZBgBIAEoBRIMCgROYW1lGAIgASgJMuAICg5RdWl6",
+            "ZXN1bHQSDwoHVG9waWNJZBgBIAEoBRIMCgROYW1lGAIgASgJMt0ICg5RdWl6",
             "emVzU2VydmljZRJ9Cg9HZXRRdWl6emVzUGFnZWQSKi5TaGFyZWQuQ29udHJh",
             "Y3RzLkNvbW1vbi5HZXRQYWdlZFBhcmFtZXRlcho+LlNoYXJlZC5Db250cmFj",
             "dHMuUXVpek1hbmFnZW1lbnQuUXVpenplcy5HZXRRdWl6emVzUGFnZWRSZXN1",
@@ -83,10 +83,10 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
             "YWdlbWVudC5RdWl6emVzLkNyZWF0ZVF1aXpQYXJhbWV0ZXIaHi5TaGFyZWQu",
             "Q29udHJhY3RzLkNvbW1vbi5FbXB0eRJqCgpEZWxldGVRdWl6EjwuU2hhcmVk",
             "LkNvbnRyYWN0cy5RdWl6TWFuYWdlbWVudC5RdWl6emVzLkRlbGV0ZVF1aXpQ",
-            "YXJhbWV0ZXIaHi5TaGFyZWQuQ29udHJhY3RzLkNvbW1vbi5FbXB0eRJ/ChZE",
-            "ZWxldGVBbGxRdWl6emVzQnlVc2VyEkUuU2hhcmVkLkNvbnRyYWN0cy5RdWl6",
-            "TWFuYWdlbWVudC5RdWl6emVzLkRlbGV0ZVF1aXp6ZXNCeVVzZXJQYXJhbWV0",
-            "ZXIaHi5TaGFyZWQuQ29udHJhY3RzLkNvbW1vbi5FbXB0eWIGcHJvdG8z"));
+            "YXJhbWV0ZXIaHi5TaGFyZWQuQ29udHJhY3RzLkNvbW1vbi5FbXB0eRJ8ChNE",
+            "ZWxldGVRdWl6emVzQnlVc2VyEkUuU2hhcmVkLkNvbnRyYWN0cy5RdWl6TWFu",
+            "YWdlbWVudC5RdWl6emVzLkRlbGV0ZVF1aXp6ZXNCeVVzZXJQYXJhbWV0ZXIa",
+            "Hi5TaGFyZWQuQ29udHJhY3RzLkNvbW1vbi5FbXB0eWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Shared.Contracts.Common.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {

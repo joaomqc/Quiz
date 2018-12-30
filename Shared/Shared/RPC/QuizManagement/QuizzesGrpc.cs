@@ -72,10 +72,10 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
         __Marshaller_Shared_Contracts_QuizManagement_Quizzes_DeleteQuizParameter,
         __Marshaller_Shared_Contracts_Common_Empty);
 
-    static readonly grpc::Method<global::Shared.Contracts.QuizManagement.Quizzes.DeleteQuizzesByUserParameter, global::Shared.Contracts.Common.Empty> __Method_DeleteAllQuizzesByUser = new grpc::Method<global::Shared.Contracts.QuizManagement.Quizzes.DeleteQuizzesByUserParameter, global::Shared.Contracts.Common.Empty>(
+    static readonly grpc::Method<global::Shared.Contracts.QuizManagement.Quizzes.DeleteQuizzesByUserParameter, global::Shared.Contracts.Common.Empty> __Method_DeleteQuizzesByUser = new grpc::Method<global::Shared.Contracts.QuizManagement.Quizzes.DeleteQuizzesByUserParameter, global::Shared.Contracts.Common.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
-        "DeleteAllQuizzesByUser",
+        "DeleteQuizzesByUser",
         __Marshaller_Shared_Contracts_QuizManagement_Quizzes_DeleteQuizzesByUserParameter,
         __Marshaller_Shared_Contracts_Common_Empty);
 
@@ -123,7 +123,7 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      public virtual global::System.Threading.Tasks.Task<global::Shared.Contracts.Common.Empty> DeleteAllQuizzesByUser(global::Shared.Contracts.QuizManagement.Quizzes.DeleteQuizzesByUserParameter request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Shared.Contracts.Common.Empty> DeleteQuizzesByUser(global::Shared.Contracts.QuizManagement.Quizzes.DeleteQuizzesByUserParameter request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -265,21 +265,21 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteQuiz, null, options, request);
       }
-      public virtual global::Shared.Contracts.Common.Empty DeleteAllQuizzesByUser(global::Shared.Contracts.QuizManagement.Quizzes.DeleteQuizzesByUserParameter request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Shared.Contracts.Common.Empty DeleteQuizzesByUser(global::Shared.Contracts.QuizManagement.Quizzes.DeleteQuizzesByUserParameter request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return DeleteAllQuizzesByUser(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return DeleteQuizzesByUser(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::Shared.Contracts.Common.Empty DeleteAllQuizzesByUser(global::Shared.Contracts.QuizManagement.Quizzes.DeleteQuizzesByUserParameter request, grpc::CallOptions options)
+      public virtual global::Shared.Contracts.Common.Empty DeleteQuizzesByUser(global::Shared.Contracts.QuizManagement.Quizzes.DeleteQuizzesByUserParameter request, grpc::CallOptions options)
       {
-        return CallInvoker.BlockingUnaryCall(__Method_DeleteAllQuizzesByUser, null, options, request);
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteQuizzesByUser, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::Shared.Contracts.Common.Empty> DeleteAllQuizzesByUserAsync(global::Shared.Contracts.QuizManagement.Quizzes.DeleteQuizzesByUserParameter request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Shared.Contracts.Common.Empty> DeleteQuizzesByUserAsync(global::Shared.Contracts.QuizManagement.Quizzes.DeleteQuizzesByUserParameter request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return DeleteAllQuizzesByUserAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return DeleteQuizzesByUserAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::Shared.Contracts.Common.Empty> DeleteAllQuizzesByUserAsync(global::Shared.Contracts.QuizManagement.Quizzes.DeleteQuizzesByUserParameter request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Shared.Contracts.Common.Empty> DeleteQuizzesByUserAsync(global::Shared.Contracts.QuizManagement.Quizzes.DeleteQuizzesByUserParameter request, grpc::CallOptions options)
       {
-        return CallInvoker.AsyncUnaryCall(__Method_DeleteAllQuizzesByUser, null, options, request);
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteQuizzesByUser, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override QuizzesServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -300,7 +300,7 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
           .AddMethod(__Method_GetQuizzesByTopicPaged, serviceImpl.GetQuizzesByTopicPaged)
           .AddMethod(__Method_CreateQuiz, serviceImpl.CreateQuiz)
           .AddMethod(__Method_DeleteQuiz, serviceImpl.DeleteQuiz)
-          .AddMethod(__Method_DeleteAllQuizzesByUser, serviceImpl.DeleteAllQuizzesByUser).Build();
+          .AddMethod(__Method_DeleteQuizzesByUser, serviceImpl.DeleteQuizzesByUser).Build();
     }
 
     /// <summary>Register service method implementations with a service binder. Useful when customizing the service binding logic.
@@ -316,7 +316,7 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
       serviceBinder.AddMethod(__Method_GetQuizzesByTopicPaged, serviceImpl.GetQuizzesByTopicPaged);
       serviceBinder.AddMethod(__Method_CreateQuiz, serviceImpl.CreateQuiz);
       serviceBinder.AddMethod(__Method_DeleteQuiz, serviceImpl.DeleteQuiz);
-      serviceBinder.AddMethod(__Method_DeleteAllQuizzesByUser, serviceImpl.DeleteAllQuizzesByUser);
+      serviceBinder.AddMethod(__Method_DeleteQuizzesByUser, serviceImpl.DeleteQuizzesByUser);
     }
 
   }

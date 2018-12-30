@@ -187,7 +187,7 @@
             return new Empty();
         }
 
-        public override async Task<Empty> DeleteAllQuizzesByUser(
+        public override async Task<Empty> DeleteQuizzesByUser(
             DeleteQuizzesByUserParameter request,
             ServerCallContext context)
         {

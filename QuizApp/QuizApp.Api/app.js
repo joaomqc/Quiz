@@ -3,9 +3,14 @@ var express = require('express');
 var path = require('path');
 var logger = require('morgan');
 var bodyparser = require('body-parser');
+var cors = require('cors');
 
 var quizzesRouter = require('./routes/quizzes');
+var topicsRouter = require('./routes/topics');
 var usersRouter = require('./routes/users');
+
+require('./repositories/quizzes_repository');
+require('./repositories/users_repository');
 
 var app = express();
 
@@ -16,6 +21,7 @@ app.use(bodyparser.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/quizzes', quizzesRouter);
+app.use('/topics', topicsRouter);
 app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler

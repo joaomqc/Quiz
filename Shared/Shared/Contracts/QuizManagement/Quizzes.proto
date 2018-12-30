@@ -12,7 +12,7 @@ service QuizzesService {
 	rpc GetQuizzesByTopicPaged (GetQuizzesByTopicPagedParameter) returns (GetQuizzesPagedResult);
 	rpc CreateQuiz (CreateQuizParameter) returns (Shared.Contracts.Common.Empty);
 	rpc DeleteQuiz (DeleteQuizParameter) returns (Shared.Contracts.Common.Empty);
-	rpc DeleteAllQuizzesByUser (DeleteQuizzesByUserParameter) returns (Shared.Contracts.Common.Empty);
+	rpc DeleteQuizzesByUser (DeleteQuizzesByUserParameter) returns (Shared.Contracts.Common.Empty);
 }
 
 // Parameters
