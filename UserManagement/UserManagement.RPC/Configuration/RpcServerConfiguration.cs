@@ -17,7 +17,7 @@
             {
                 Services =
                 {
-                    UsersService.BindService(configuration.Get<UsersController>())
+                    UsersService.BindService(container.Resolve<UsersController>())
                 },
                 Ports = { new ServerPort("localhost", serverPort, ServerCredentials.Insecure) }
             };

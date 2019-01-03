@@ -6,12 +6,13 @@
     using Application.Repositories;
     using Infrastructure;
     using Infrastructure.Repositories;
+    using Microsoft.Extensions.Configuration;
     using Shared.Executors;
     using Shared.Operation;
 
     public class ServiceResolver
     {
-        public static IWindsorContainer Configure()
+        public static IWindsorContainer Configure(IConfigurationRoot configuration)
         {
             IWindsorContainer container = new WindsorContainer();
 
@@ -27,8 +28,9 @@
                     .ImplementedBy<Executor>()
                     .LifestyleTransient())
                 .Register(Classes
-                    .FromAssembly(Assembly.GetCallingAssembly())
+                    .FromAssemblyInThisApplication(Assembly.GetCallingAssembly())
                     .BasedOn(typeof(IHandler<,>))
+                    .WithServiceFromInterface()
                     .LifestyleTransient())
                 .Register(Component
                     .For<ITopicsRepository>()
@@ -41,7 +43,12 @@
                 .Register(Component
                     .For<QuizContext>()
                     .ImplementedBy<QuizContext>()
-                    .LifestyleTransient());
+                    .LifestyleTransient()
+                    .DependsOn(Dependency.OnValue("connectionString", configuration["ConnectionStrings:DefaultConnection"])))
+                .Register(Component
+                    .For<IWindsorContainer>()
+                    .Instance(container)
+                    .LifestyleSingleton());
 
             return container;
         }

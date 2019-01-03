@@ -1,7 +1,6 @@
 ﻿namespace Shared.Executors
 {
     using System;
-    using System.Threading;
     using System.Threading.Tasks;
     using Castle.Windsor;
     using Operation;
@@ -20,7 +19,7 @@
             where TResult : IResult
         {
             var handler = _container.Resolve<IHandler<TParam, TResult>>();
-            
+
             return handler.ExecuteAsync(parameters);
         }
     }

@@ -1,6 +1,5 @@
 ﻿namespace QuizManagement.Rpc
 {
-    using System.IO;
     using Castle.Windsor;
     using Configuration;
     using Grpc.Core;
@@ -15,12 +14,11 @@
         public bool Start(HostControl hostControl)
         {
             var builder = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory())
                 .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
 
             var configuration = builder.Build();
 
-            _container = ServiceResolver.Configure();
+            _container = ServiceResolver.Configure(configuration);
             _rpcServer = RpcServerConfiguration.Configure(_container, configuration);
 
             _rpcServer.Start();

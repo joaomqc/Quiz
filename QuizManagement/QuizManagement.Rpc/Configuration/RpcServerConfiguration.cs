@@ -18,8 +18,8 @@
             {
                 Services =
                 {
-                    QuizzesService.BindService(configuration.Get<QuizzesController>()),
-                    TopicsService.BindService(configuration.Get<TopicsController>())
+                    QuizzesService.BindService(container.Resolve<QuizzesController>()),
+                    TopicsService.BindService(container.Resolve<TopicsController>())
                 },
                 Ports = { new ServerPort("localhost", serverPort, ServerCredentials.Insecure)}
             };
