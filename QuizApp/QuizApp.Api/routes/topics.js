@@ -1,9 +1,21 @@
 var express = require('express');
 var router = express.Router();
+var quizManagementRepository = require('../repositories/quiz_management_repository');
 
-/* GET topics listing. */
+/* GET topics. */
 router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+  quizManagementRepository.getAllTopics(function(err, message){
+    if(err) next(err);
+    res.send(message);
+  });
+});
+
+/* GET topic. */
+router.get('/:topicId', function(req, res, next) {
+  quizManagementRepository.getTopicById(req.params.topicId, function(err, message){
+    if(err) next(err);
+    res.send(message);
+  });
 });
 
 module.exports = router;

@@ -9,9 +9,6 @@ var quizzesRouter = require('./routes/quizzes');
 var topicsRouter = require('./routes/topics');
 var usersRouter = require('./routes/users');
 
-require('./repositories/quizzes_repository');
-require('./repositories/users_repository');
-
 var app = express();
 
 app.use(cors());
