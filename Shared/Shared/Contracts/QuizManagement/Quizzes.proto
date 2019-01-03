@@ -42,11 +42,10 @@ message DeleteQuizzesByUserParameter {
 
 message CreateQuizParameter {
 	string Name = 1;
-	int64 CreationTimestamp = 2;
-	int32 UserId = 3;
-	repeated QuestionParameter Questions = 4;
-	int32 TopicId = 5;
-	bool IsPublic = 6;
+	int32 UserId = 2;
+	repeated QuestionParameter Questions = 3;
+	int32 TopicId = 4;
+	bool IsPublic = 5;
 }
 
 // Parameter DTOs

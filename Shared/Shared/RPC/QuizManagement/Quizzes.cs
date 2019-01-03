@@ -34,59 +34,59 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
             "cy5Db21tb24uR2V0UGFnZWRQYXJhbWV0ZXISDwoHVG9waWNJZBgCIAEoBSIl",
             "ChNEZWxldGVRdWl6UGFyYW1ldGVyEg4KBlF1aXpJZBgBIAEoBSJCChxEZWxl",
             "dGVRdWl6emVzQnlVc2VyUGFyYW1ldGVyEg4KBlVzZXJJZBgBIAEoBRISCgpL",
-            "ZWVwUHVibGljGAIgASgIIsABChNDcmVhdGVRdWl6UGFyYW1ldGVyEgwKBE5h",
-            "bWUYASABKAkSGQoRQ3JlYXRpb25UaW1lc3RhbXAYAiABKAMSDgoGVXNlcklk",
-            "GAMgASgFEk0KCVF1ZXN0aW9ucxgEIAMoCzI6LlNoYXJlZC5Db250cmFjdHMu",
-            "UXVpek1hbmFnZW1lbnQuUXVpenplcy5RdWVzdGlvblBhcmFtZXRlchIPCgdU",
-            "b3BpY0lkGAUgASgFEhAKCElzUHVibGljGAYgASgIIoYBChFRdWVzdGlvblBh",
-            "cmFtZXRlchIMCgRUZXh0GAEgASgJEhgKEElzTXVsdGlwbGVDaG9pY2UYAiAB",
-            "KAgSSQoHQW5zd2VycxgDIAMoCzI4LlNoYXJlZC5Db250cmFjdHMuUXVpek1h",
-            "bmFnZW1lbnQuUXVpenplcy5BbnN3ZXJQYXJhbWV0ZXIiMgoPQW5zd2VyUGFy",
-            "YW1ldGVyEgwKBFRleHQYASABKAkSEQoJSXNDb3JyZWN0GAIgASgIIv8BChFH",
-            "ZXRRdWl6QnlJZFJlc3VsdBIOCgZRdWl6SWQYASABKAUSDAoETmFtZRgCIAEo",
-            "CRIZChFDcmVhdGlvblRpbWVzdGFtcBgDIAEoAxIOCgZVc2VySWQYBCABKAUS",
-            "SgoJUXVlc3Rpb25zGAUgAygLMjcuU2hhcmVkLkNvbnRyYWN0cy5RdWl6TWFu",
-            "YWdlbWVudC5RdWl6emVzLlF1ZXN0aW9uUmVzdWx0EkMKBVRvcGljGAYgASgL",
-            "MjQuU2hhcmVkLkNvbnRyYWN0cy5RdWl6TWFuYWdlbWVudC5RdWl6emVzLlRv",
-            "cGljUmVzdWx0EhAKCElzUHVibGljGAcgASgIIpgBChVHZXRRdWl6emVzUGFn",
-            "ZWRSZXN1bHQSOQoIcGFnZUluZm8YASABKAsyJy5TaGFyZWQuQ29udHJhY3Rz",
-            "LkNvbW1vbi5HZXRQYWdlZFJlc3VsdBJECgdRdWl6emVzGAIgAygLMjMuU2hh",
-            "cmVkLkNvbnRyYWN0cy5RdWl6TWFuYWdlbWVudC5RdWl6emVzLlF1aXpSZXN1",
-            "bHQiQQoMQW5zd2VyUmVzdWx0EhAKCEFuc3dlcklkGAEgASgFEgwKBFRleHQY",
-            "AiABKAkSEQoJSXNDb3JyZWN0GAMgASgIIpQBCg5RdWVzdGlvblJlc3VsdBIS",
-            "CgpRdWVzdGlvbklkGAEgASgFEgwKBFRleHQYAiABKAkSGAoQSXNNdWx0aXBs",
-            "ZUNob2ljZRgDIAEoCBJGCgdBbnN3ZXJzGAQgAygLMjUuU2hhcmVkLkNvbnRy",
-            "YWN0cy5RdWl6TWFuYWdlbWVudC5RdWl6emVzLkFuc3dlclJlc3VsdCKsAQoK",
-            "UXVpelJlc3VsdBIOCgZRdWl6SWQYASABKAUSDAoETmFtZRgCIAEoCRIZChFD",
-            "cmVhdGlvblRpbWVzdGFtcBgDIAEoAxIOCgZVc2VySWQYBCABKAUSQwoFVG9w",
-            "aWMYBSABKAsyNC5TaGFyZWQuQ29udHJhY3RzLlF1aXpNYW5hZ2VtZW50LlF1",
-            "aXp6ZXMuVG9waWNSZXN1bHQSEAoISXNQdWJsaWMYBiABKAgiLAoLVG9waWNS",
-            "ZXN1bHQSDwoHVG9waWNJZBgBIAEoBRIMCgROYW1lGAIgASgJMt0ICg5RdWl6",
-            "emVzU2VydmljZRJ9Cg9HZXRRdWl6emVzUGFnZWQSKi5TaGFyZWQuQ29udHJh",
-            "Y3RzLkNvbW1vbi5HZXRQYWdlZFBhcmFtZXRlcho+LlNoYXJlZC5Db250cmFj",
-            "dHMuUXVpek1hbmFnZW1lbnQuUXVpenplcy5HZXRRdWl6emVzUGFnZWRSZXN1",
-            "bHQShAEKB0dldFF1aXoSPS5TaGFyZWQuQ29udHJhY3RzLlF1aXpNYW5hZ2Vt",
-            "ZW50LlF1aXp6ZXMuR2V0UXVpekJ5SWRQYXJhbWV0ZXIaOi5TaGFyZWQuQ29u",
-            "dHJhY3RzLlF1aXpNYW5hZ2VtZW50LlF1aXp6ZXMuR2V0UXVpekJ5SWRSZXN1",
-            "bHQSoAEKFUdldFF1aXp6ZXNCeVVzZXJQYWdlZBJHLlNoYXJlZC5Db250cmFj",
-            "dHMuUXVpek1hbmFnZW1lbnQuUXVpenplcy5HZXRRdWl6emVzQnlVc2VyUGFn",
-            "ZWRQYXJhbWV0ZXIaPi5TaGFyZWQuQ29udHJhY3RzLlF1aXpNYW5hZ2VtZW50",
-            "LlF1aXp6ZXMuR2V0UXVpenplc1BhZ2VkUmVzdWx0EqYBChtHZXRQdWJsaWNR",
-            "dWl6emVzQnlVc2VyUGFnZWQSRy5TaGFyZWQuQ29udHJhY3RzLlF1aXpNYW5h",
-            "Z2VtZW50LlF1aXp6ZXMuR2V0UXVpenplc0J5VXNlclBhZ2VkUGFyYW1ldGVy",
-            "Gj4uU2hhcmVkLkNvbnRyYWN0cy5RdWl6TWFuYWdlbWVudC5RdWl6emVzLkdl",
-            "dFF1aXp6ZXNQYWdlZFJlc3VsdBKiAQoWR2V0UXVpenplc0J5VG9waWNQYWdl",
-            "ZBJILlNoYXJlZC5Db250cmFjdHMuUXVpek1hbmFnZW1lbnQuUXVpenplcy5H",
-            "ZXRRdWl6emVzQnlUb3BpY1BhZ2VkUGFyYW1ldGVyGj4uU2hhcmVkLkNvbnRy",
-            "YWN0cy5RdWl6TWFuYWdlbWVudC5RdWl6emVzLkdldFF1aXp6ZXNQYWdlZFJl",
-            "c3VsdBJqCgpDcmVhdGVRdWl6EjwuU2hhcmVkLkNvbnRyYWN0cy5RdWl6TWFu",
-            "YWdlbWVudC5RdWl6emVzLkNyZWF0ZVF1aXpQYXJhbWV0ZXIaHi5TaGFyZWQu",
-            "Q29udHJhY3RzLkNvbW1vbi5FbXB0eRJqCgpEZWxldGVRdWl6EjwuU2hhcmVk",
-            "LkNvbnRyYWN0cy5RdWl6TWFuYWdlbWVudC5RdWl6emVzLkRlbGV0ZVF1aXpQ",
-            "YXJhbWV0ZXIaHi5TaGFyZWQuQ29udHJhY3RzLkNvbW1vbi5FbXB0eRJ8ChNE",
-            "ZWxldGVRdWl6emVzQnlVc2VyEkUuU2hhcmVkLkNvbnRyYWN0cy5RdWl6TWFu",
-            "YWdlbWVudC5RdWl6emVzLkRlbGV0ZVF1aXp6ZXNCeVVzZXJQYXJhbWV0ZXIa",
-            "Hi5TaGFyZWQuQ29udHJhY3RzLkNvbW1vbi5FbXB0eWIGcHJvdG8z"));
+            "ZWVwUHVibGljGAIgASgIIqUBChNDcmVhdGVRdWl6UGFyYW1ldGVyEgwKBE5h",
+            "bWUYASABKAkSDgoGVXNlcklkGAIgASgFEk0KCVF1ZXN0aW9ucxgDIAMoCzI6",
+            "LlNoYXJlZC5Db250cmFjdHMuUXVpek1hbmFnZW1lbnQuUXVpenplcy5RdWVz",
+            "dGlvblBhcmFtZXRlchIPCgdUb3BpY0lkGAQgASgFEhAKCElzUHVibGljGAUg",
+            "ASgIIoYBChFRdWVzdGlvblBhcmFtZXRlchIMCgRUZXh0GAEgASgJEhgKEElz",
+            "TXVsdGlwbGVDaG9pY2UYAiABKAgSSQoHQW5zd2VycxgDIAMoCzI4LlNoYXJl",
+            "ZC5Db250cmFjdHMuUXVpek1hbmFnZW1lbnQuUXVpenplcy5BbnN3ZXJQYXJh",
+            "bWV0ZXIiMgoPQW5zd2VyUGFyYW1ldGVyEgwKBFRleHQYASABKAkSEQoJSXND",
+            "b3JyZWN0GAIgASgIIv8BChFHZXRRdWl6QnlJZFJlc3VsdBIOCgZRdWl6SWQY",
+            "ASABKAUSDAoETmFtZRgCIAEoCRIZChFDcmVhdGlvblRpbWVzdGFtcBgDIAEo",
+            "AxIOCgZVc2VySWQYBCABKAUSSgoJUXVlc3Rpb25zGAUgAygLMjcuU2hhcmVk",
+            "LkNvbnRyYWN0cy5RdWl6TWFuYWdlbWVudC5RdWl6emVzLlF1ZXN0aW9uUmVz",
+            "dWx0EkMKBVRvcGljGAYgASgLMjQuU2hhcmVkLkNvbnRyYWN0cy5RdWl6TWFu",
+            "YWdlbWVudC5RdWl6emVzLlRvcGljUmVzdWx0EhAKCElzUHVibGljGAcgASgI",
+            "IpgBChVHZXRRdWl6emVzUGFnZWRSZXN1bHQSOQoIcGFnZUluZm8YASABKAsy",
+            "Jy5TaGFyZWQuQ29udHJhY3RzLkNvbW1vbi5HZXRQYWdlZFJlc3VsdBJECgdR",
+            "dWl6emVzGAIgAygLMjMuU2hhcmVkLkNvbnRyYWN0cy5RdWl6TWFuYWdlbWVu",
+            "dC5RdWl6emVzLlF1aXpSZXN1bHQiQQoMQW5zd2VyUmVzdWx0EhAKCEFuc3dl",
+            "cklkGAEgASgFEgwKBFRleHQYAiABKAkSEQoJSXNDb3JyZWN0GAMgASgIIpQB",
+            "Cg5RdWVzdGlvblJlc3VsdBISCgpRdWVzdGlvbklkGAEgASgFEgwKBFRleHQY",
+            "AiABKAkSGAoQSXNNdWx0aXBsZUNob2ljZRgDIAEoCBJGCgdBbnN3ZXJzGAQg",
+            "AygLMjUuU2hhcmVkLkNvbnRyYWN0cy5RdWl6TWFuYWdlbWVudC5RdWl6emVz",
+            "LkFuc3dlclJlc3VsdCKsAQoKUXVpelJlc3VsdBIOCgZRdWl6SWQYASABKAUS",
+            "DAoETmFtZRgCIAEoCRIZChFDcmVhdGlvblRpbWVzdGFtcBgDIAEoAxIOCgZV",
+            "c2VySWQYBCABKAUSQwoFVG9waWMYBSABKAsyNC5TaGFyZWQuQ29udHJhY3Rz",
+            "LlF1aXpNYW5hZ2VtZW50LlF1aXp6ZXMuVG9waWNSZXN1bHQSEAoISXNQdWJs",
+            "aWMYBiABKAgiLAoLVG9waWNSZXN1bHQSDwoHVG9waWNJZBgBIAEoBRIMCgRO",
+            "YW1lGAIgASgJMt0ICg5RdWl6emVzU2VydmljZRJ9Cg9HZXRRdWl6emVzUGFn",
+            "ZWQSKi5TaGFyZWQuQ29udHJhY3RzLkNvbW1vbi5HZXRQYWdlZFBhcmFtZXRl",
+            "cho+LlNoYXJlZC5Db250cmFjdHMuUXVpek1hbmFnZW1lbnQuUXVpenplcy5H",
+            "ZXRRdWl6emVzUGFnZWRSZXN1bHQShAEKB0dldFF1aXoSPS5TaGFyZWQuQ29u",
+            "dHJhY3RzLlF1aXpNYW5hZ2VtZW50LlF1aXp6ZXMuR2V0UXVpekJ5SWRQYXJh",
+            "bWV0ZXIaOi5TaGFyZWQuQ29udHJhY3RzLlF1aXpNYW5hZ2VtZW50LlF1aXp6",
+            "ZXMuR2V0UXVpekJ5SWRSZXN1bHQSoAEKFUdldFF1aXp6ZXNCeVVzZXJQYWdl",
+            "ZBJHLlNoYXJlZC5Db250cmFjdHMuUXVpek1hbmFnZW1lbnQuUXVpenplcy5H",
+            "ZXRRdWl6emVzQnlVc2VyUGFnZWRQYXJhbWV0ZXIaPi5TaGFyZWQuQ29udHJh",
+            "Y3RzLlF1aXpNYW5hZ2VtZW50LlF1aXp6ZXMuR2V0UXVpenplc1BhZ2VkUmVz",
+            "dWx0EqYBChtHZXRQdWJsaWNRdWl6emVzQnlVc2VyUGFnZWQSRy5TaGFyZWQu",
+            "Q29udHJhY3RzLlF1aXpNYW5hZ2VtZW50LlF1aXp6ZXMuR2V0UXVpenplc0J5",
+            "VXNlclBhZ2VkUGFyYW1ldGVyGj4uU2hhcmVkLkNvbnRyYWN0cy5RdWl6TWFu",
+            "YWdlbWVudC5RdWl6emVzLkdldFF1aXp6ZXNQYWdlZFJlc3VsdBKiAQoWR2V0",
+            "UXVpenplc0J5VG9waWNQYWdlZBJILlNoYXJlZC5Db250cmFjdHMuUXVpek1h",
+            "bmFnZW1lbnQuUXVpenplcy5HZXRRdWl6emVzQnlUb3BpY1BhZ2VkUGFyYW1l",
+            "dGVyGj4uU2hhcmVkLkNvbnRyYWN0cy5RdWl6TWFuYWdlbWVudC5RdWl6emVz",
+            "LkdldFF1aXp6ZXNQYWdlZFJlc3VsdBJqCgpDcmVhdGVRdWl6EjwuU2hhcmVk",
+            "LkNvbnRyYWN0cy5RdWl6TWFuYWdlbWVudC5RdWl6emVzLkNyZWF0ZVF1aXpQ",
+            "YXJhbWV0ZXIaHi5TaGFyZWQuQ29udHJhY3RzLkNvbW1vbi5FbXB0eRJqCgpE",
+            "ZWxldGVRdWl6EjwuU2hhcmVkLkNvbnRyYWN0cy5RdWl6TWFuYWdlbWVudC5R",
+            "dWl6emVzLkRlbGV0ZVF1aXpQYXJhbWV0ZXIaHi5TaGFyZWQuQ29udHJhY3Rz",
+            "LkNvbW1vbi5FbXB0eRJ8ChNEZWxldGVRdWl6emVzQnlVc2VyEkUuU2hhcmVk",
+            "LkNvbnRyYWN0cy5RdWl6TWFuYWdlbWVudC5RdWl6emVzLkRlbGV0ZVF1aXp6",
+            "ZXNCeVVzZXJQYXJhbWV0ZXIaHi5TaGFyZWQuQ29udHJhY3RzLkNvbW1vbi5F",
+            "bXB0eWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Shared.Contracts.Common.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -95,7 +95,7 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
             new pbr::GeneratedClrTypeInfo(typeof(global::Shared.Contracts.QuizManagement.Quizzes.GetQuizzesByTopicPagedParameter), global::Shared.Contracts.QuizManagement.Quizzes.GetQuizzesByTopicPagedParameter.Parser, new[]{ "PageInfo", "TopicId" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Shared.Contracts.QuizManagement.Quizzes.DeleteQuizParameter), global::Shared.Contracts.QuizManagement.Quizzes.DeleteQuizParameter.Parser, new[]{ "QuizId" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Shared.Contracts.QuizManagement.Quizzes.DeleteQuizzesByUserParameter), global::Shared.Contracts.QuizManagement.Quizzes.DeleteQuizzesByUserParameter.Parser, new[]{ "UserId", "KeepPublic" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Shared.Contracts.QuizManagement.Quizzes.CreateQuizParameter), global::Shared.Contracts.QuizManagement.Quizzes.CreateQuizParameter.Parser, new[]{ "Name", "CreationTimestamp", "UserId", "Questions", "TopicId", "IsPublic" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Shared.Contracts.QuizManagement.Quizzes.CreateQuizParameter), global::Shared.Contracts.QuizManagement.Quizzes.CreateQuizParameter.Parser, new[]{ "Name", "UserId", "Questions", "TopicId", "IsPublic" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Shared.Contracts.QuizManagement.Quizzes.QuestionParameter), global::Shared.Contracts.QuizManagement.Quizzes.QuestionParameter.Parser, new[]{ "Text", "IsMultipleChoice", "Answers" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Shared.Contracts.QuizManagement.Quizzes.AnswerParameter), global::Shared.Contracts.QuizManagement.Quizzes.AnswerParameter.Parser, new[]{ "Text", "IsCorrect" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Shared.Contracts.QuizManagement.Quizzes.GetQuizByIdResult), global::Shared.Contracts.QuizManagement.Quizzes.GetQuizByIdResult.Parser, new[]{ "QuizId", "Name", "CreationTimestamp", "UserId", "Questions", "Topic", "IsPublic" }, null, null, null),
@@ -877,7 +877,6 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public CreateQuizParameter(CreateQuizParameter other) : this() {
       name_ = other.name_;
-      creationTimestamp_ = other.creationTimestamp_;
       userId_ = other.userId_;
       questions_ = other.questions_.Clone();
       topicId_ = other.topicId_;
@@ -901,19 +900,8 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
       }
     }
 
-    /// <summary>Field number for the "CreationTimestamp" field.</summary>
-    public const int CreationTimestampFieldNumber = 2;
-    private long creationTimestamp_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public long CreationTimestamp {
-      get { return creationTimestamp_; }
-      set {
-        creationTimestamp_ = value;
-      }
-    }
-
     /// <summary>Field number for the "UserId" field.</summary>
-    public const int UserIdFieldNumber = 3;
+    public const int UserIdFieldNumber = 2;
     private int userId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int UserId {
@@ -924,9 +912,9 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
     }
 
     /// <summary>Field number for the "Questions" field.</summary>
-    public const int QuestionsFieldNumber = 4;
+    public const int QuestionsFieldNumber = 3;
     private static readonly pb::FieldCodec<global::Shared.Contracts.QuizManagement.Quizzes.QuestionParameter> _repeated_questions_codec
-        = pb::FieldCodec.ForMessage(34, global::Shared.Contracts.QuizManagement.Quizzes.QuestionParameter.Parser);
+        = pb::FieldCodec.ForMessage(26, global::Shared.Contracts.QuizManagement.Quizzes.QuestionParameter.Parser);
     private readonly pbc::RepeatedField<global::Shared.Contracts.QuizManagement.Quizzes.QuestionParameter> questions_ = new pbc::RepeatedField<global::Shared.Contracts.QuizManagement.Quizzes.QuestionParameter>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Shared.Contracts.QuizManagement.Quizzes.QuestionParameter> Questions {
@@ -934,7 +922,7 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
     }
 
     /// <summary>Field number for the "TopicId" field.</summary>
-    public const int TopicIdFieldNumber = 5;
+    public const int TopicIdFieldNumber = 4;
     private int topicId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int TopicId {
@@ -945,7 +933,7 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
     }
 
     /// <summary>Field number for the "IsPublic" field.</summary>
-    public const int IsPublicFieldNumber = 6;
+    public const int IsPublicFieldNumber = 5;
     private bool isPublic_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool IsPublic {
@@ -969,7 +957,6 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
         return true;
       }
       if (Name != other.Name) return false;
-      if (CreationTimestamp != other.CreationTimestamp) return false;
       if (UserId != other.UserId) return false;
       if(!questions_.Equals(other.questions_)) return false;
       if (TopicId != other.TopicId) return false;
@@ -981,7 +968,6 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
-      if (CreationTimestamp != 0L) hash ^= CreationTimestamp.GetHashCode();
       if (UserId != 0) hash ^= UserId.GetHashCode();
       hash ^= questions_.GetHashCode();
       if (TopicId != 0) hash ^= TopicId.GetHashCode();
@@ -1003,21 +989,17 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (CreationTimestamp != 0L) {
-        output.WriteRawTag(16);
-        output.WriteInt64(CreationTimestamp);
-      }
       if (UserId != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(16);
         output.WriteInt32(UserId);
       }
       questions_.WriteTo(output, _repeated_questions_codec);
       if (TopicId != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(32);
         output.WriteInt32(TopicId);
       }
       if (IsPublic != false) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(40);
         output.WriteBool(IsPublic);
       }
       if (_unknownFields != null) {
@@ -1030,9 +1012,6 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
       int size = 0;
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
-      }
-      if (CreationTimestamp != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(CreationTimestamp);
       }
       if (UserId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(UserId);
@@ -1057,9 +1036,6 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
       }
       if (other.Name.Length != 0) {
         Name = other.Name;
-      }
-      if (other.CreationTimestamp != 0L) {
-        CreationTimestamp = other.CreationTimestamp;
       }
       if (other.UserId != 0) {
         UserId = other.UserId;
@@ -1087,22 +1063,18 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
             break;
           }
           case 16: {
-            CreationTimestamp = input.ReadInt64();
-            break;
-          }
-          case 24: {
             UserId = input.ReadInt32();
             break;
           }
-          case 34: {
+          case 26: {
             questions_.AddEntriesFrom(input, _repeated_questions_codec);
             break;
           }
-          case 40: {
+          case 32: {
             TopicId = input.ReadInt32();
             break;
           }
-          case 48: {
+          case 40: {
             IsPublic = input.ReadBool();
             break;
           }

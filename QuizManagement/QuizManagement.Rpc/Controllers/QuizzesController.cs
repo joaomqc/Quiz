@@ -158,7 +158,6 @@
                 .ExecuteAsync<CreateQuizParameters, CreateQuizResults>(
                     new CreateQuizParameters(
                         name: request.Name,
-                        creationTimestamp: DateTime.FromBinary(request.CreationTimestamp),
                         userId: request.UserId,
                         questions: request.Questions.Select(
                             question => Question.CreateNewQuestion(

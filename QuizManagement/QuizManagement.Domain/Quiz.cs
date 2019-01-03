@@ -7,7 +7,6 @@
     {
         public static Quiz CreateNewQuiz(
             string name,
-            DateTime creationTimestamp,
             int userId,
             IEnumerable<Question> questions,
             int topicId,
@@ -16,7 +15,7 @@
             return new Quiz(
                 0,
                 name,
-                creationTimestamp,
+                DateTime.UtcNow,
                 userId,
                 questions,
                 topicId,

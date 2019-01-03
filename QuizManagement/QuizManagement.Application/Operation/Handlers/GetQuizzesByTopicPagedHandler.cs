@@ -1,13 +1,9 @@
 ﻿namespace QuizManagement.Application.Operation.Handlers
 {
-    using System.Linq;
-    using System.Threading;
     using System.Threading.Tasks;
-    using Domain;
     using Parameters;
     using Repositories;
     using Results;
-    //using Shared.Contracts.QuizManagement.Results.InnerTypes;
     using Shared.Operation;
 
     public class GetQuizzesByTopicPagedHandler

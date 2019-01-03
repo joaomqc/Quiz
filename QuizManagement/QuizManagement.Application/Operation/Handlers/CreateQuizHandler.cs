@@ -27,7 +27,6 @@
                 .InsertAsync(
                     Quiz.CreateNewQuiz(
                         parameters.Name,
-                        parameters.CreationTimestamp,
                         parameters.UserId,
                         parameters.Questions.Select(
                             question => Question.CreateNewQuestion(

@@ -4,12 +4,7 @@
     using Results;
     using Repositories;
     using System;
-    using System.Linq;
-    using System.Threading;
     using System.Threading.Tasks;
-    using Domain;
-
-    //using Shared.Contracts.QuizManagement.Results.InnerTypes;
 
     public class GetAllTopicsHandler
     {

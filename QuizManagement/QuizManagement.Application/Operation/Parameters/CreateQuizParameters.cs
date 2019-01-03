@@ -9,14 +9,12 @@
     {
         public CreateQuizParameters(
             string name,
-            DateTime creationTimestamp,
             int userId,
             IEnumerable<Question> questions,
             int topicId,
             bool isPublic)
         {
             Name = name;
-            CreationTimestamp = creationTimestamp;
             UserId = userId;
             Questions = questions;
             TopicId = topicId;
@@ -24,7 +22,6 @@
         }
         
         public string Name { get; }
-        public DateTime CreationTimestamp { get; }
         public int UserId { get; }
         public IEnumerable<Question> Questions { get; }
         public int TopicId { get; }
