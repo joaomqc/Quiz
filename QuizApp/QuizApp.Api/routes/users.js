@@ -3,8 +3,8 @@ var router = express.Router();
 var userManagementRepository = require('../repositories/user_management_repository');
 
 /* GET user. */
-router.get('/:userId', function(req, res, next) {
-  userManagementRepository.getUserById(req.params.userId, function(err, message){
+router.get('/:username', function(req, res, next) {
+  userManagementRepository.getUserByUsername(req.params.username, function(err, message){
     if(err) next(err);
     res.send(message);
   });

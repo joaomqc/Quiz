@@ -1,9 +1,9 @@
 var rpc_service = require('../rpc_service');
 var usersClient = rpc_service.setupUsersClient();
 
-module.exports.getUserById = function (userId, callback){
+module.exports.getUserByUsername = function (username, callback){
     usersClient.getUserById({
-        UserId: userId
+        Username: username
     }, function(err, response){
         callback(err, response && response.message);
     });
