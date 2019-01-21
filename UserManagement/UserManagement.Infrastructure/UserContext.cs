@@ -24,6 +24,11 @@
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.HasDefaultSchema("usermanagement");
+
+            modelBuilder.Entity<User>()
+                .HasIndex(u => u.Username)
+                .HasName("Index_Username")
+                .IsUnique();
         }
     }
 }

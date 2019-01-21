@@ -1,15 +1,19 @@
 ﻿namespace UserManagement.Application.Operation.Results
 {
+    using System;
     using Shared.Operation;
 
     public class GetUserByUsernameResults : IResult
     {
         public GetUserByUsernameResults(
-            int id)
+            string username,
+            string email)
         {
-            Id = id;
+            Username = username;
+            Email = email;
         }
 
-        public int Id { get; }
+        public string Username { get; }
+        public string Email { get; }
     }
 }

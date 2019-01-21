@@ -1,7 +1,6 @@
 ﻿namespace UserManagement.Application.Operation.Handler
 {
     using System;
-    using System.Threading;
     using System.Threading.Tasks;
     using Domain;
     using Parameters;
@@ -25,10 +24,10 @@
         {
             await _usersRepository
                 .RegisterUser(
-                    User.CreateNewUser(
+                    new User(
                         parameters.Email,
-                        parameters.Username,
-                        parameters.Password))
+                        parameters.Username),
+                    parameters.Password)
                 .ConfigureAwait(false);
 
             return new RegisterUserResults();

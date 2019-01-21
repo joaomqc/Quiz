@@ -23,21 +23,6 @@
                        ?? throw new ArgumentNullException(nameof(context));
         }
 
-        public async Task<User> GetById(
-            int id,
-            CancellationToken ct = default(CancellationToken))
-        {
-            var user =
-                await _context.Users
-                    .FirstOrDefaultAsync(u => u.Id == id, ct)
-                    .ConfigureAwait(false);
-
-            return User.CreateUser(
-                user.Id,
-                user.Email,
-                user.Username);
-        }
-
         public async Task<User> GetByUsername(
             string username,
             CancellationToken ct = default(CancellationToken))
@@ -47,14 +32,14 @@
                     .FirstOrDefaultAsync(u => u.Username == username, ct)
                     .ConfigureAwait(false);
 
-            return User.CreateUser(
-                user.Id,
+            return new User(
                 user.Email,
                 user.Username);
         }
 
         public async Task RegisterUser(
             User user,
+            string password,
             CancellationToken ct = default(CancellationToken))
         {
             var userEntity =
@@ -62,7 +47,7 @@
                 {
                     Email = user.Email,
                     Username = user.Username,
-                    Password = _passwordHasher.HashPassword(user.Password)
+                    Password = _passwordHasher.HashPassword(password)
                 };
 
             _context.Users.Add(userEntity);

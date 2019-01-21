@@ -12,19 +12,19 @@ namespace Shared.Contracts.UserManagement.Users {
   {
     static readonly string __ServiceName = "Shared.Contracts.UserManagement.Users.UsersService";
 
-    static readonly grpc::Marshaller<global::Shared.Contracts.UserManagement.Users.GetUserByIdParameter> __Marshaller_Shared_Contracts_UserManagement_Users_GetUserByIdParameter = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Shared.Contracts.UserManagement.Users.GetUserByIdParameter.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Shared.Contracts.UserManagement.Users.GetUserByIdResult> __Marshaller_Shared_Contracts_UserManagement_Users_GetUserByIdResult = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Shared.Contracts.UserManagement.Users.GetUserByIdResult.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Shared.Contracts.UserManagement.Users.GetUserByUsernameParameter> __Marshaller_Shared_Contracts_UserManagement_Users_GetUserByUsernameParameter = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Shared.Contracts.UserManagement.Users.GetUserByUsernameParameter.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Shared.Contracts.UserManagement.Users.GetUserByUsernameResult> __Marshaller_Shared_Contracts_UserManagement_Users_GetUserByUsernameResult = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Shared.Contracts.UserManagement.Users.GetUserByUsernameResult.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Shared.Contracts.UserManagement.Users.RegisterUserParameter> __Marshaller_Shared_Contracts_UserManagement_Users_RegisterUserParameter = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Shared.Contracts.UserManagement.Users.RegisterUserParameter.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Shared.Contracts.Common.Empty> __Marshaller_Shared_Contracts_Common_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Shared.Contracts.Common.Empty.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Shared.Contracts.UserManagement.Users.AuthenticateUserParameter> __Marshaller_Shared_Contracts_UserManagement_Users_AuthenticateUserParameter = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Shared.Contracts.UserManagement.Users.AuthenticateUserParameter.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Shared.Contracts.UserManagement.Users.AuthenticateUserResult> __Marshaller_Shared_Contracts_UserManagement_Users_AuthenticateUserResult = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Shared.Contracts.UserManagement.Users.AuthenticateUserResult.Parser.ParseFrom);
 
-    static readonly grpc::Method<global::Shared.Contracts.UserManagement.Users.GetUserByIdParameter, global::Shared.Contracts.UserManagement.Users.GetUserByIdResult> __Method_GetUserById = new grpc::Method<global::Shared.Contracts.UserManagement.Users.GetUserByIdParameter, global::Shared.Contracts.UserManagement.Users.GetUserByIdResult>(
+    static readonly grpc::Method<global::Shared.Contracts.UserManagement.Users.GetUserByUsernameParameter, global::Shared.Contracts.UserManagement.Users.GetUserByUsernameResult> __Method_GetUserByUsername = new grpc::Method<global::Shared.Contracts.UserManagement.Users.GetUserByUsernameParameter, global::Shared.Contracts.UserManagement.Users.GetUserByUsernameResult>(
         grpc::MethodType.Unary,
         __ServiceName,
-        "GetUserById",
-        __Marshaller_Shared_Contracts_UserManagement_Users_GetUserByIdParameter,
-        __Marshaller_Shared_Contracts_UserManagement_Users_GetUserByIdResult);
+        "GetUserByUsername",
+        __Marshaller_Shared_Contracts_UserManagement_Users_GetUserByUsernameParameter,
+        __Marshaller_Shared_Contracts_UserManagement_Users_GetUserByUsernameResult);
 
     static readonly grpc::Method<global::Shared.Contracts.UserManagement.Users.RegisterUserParameter, global::Shared.Contracts.Common.Empty> __Method_RegisterUser = new grpc::Method<global::Shared.Contracts.UserManagement.Users.RegisterUserParameter, global::Shared.Contracts.Common.Empty>(
         grpc::MethodType.Unary,
@@ -49,7 +49,7 @@ namespace Shared.Contracts.UserManagement.Users {
     /// <summary>Base class for server-side implementations of UsersService</summary>
     public abstract partial class UsersServiceBase
     {
-      public virtual global::System.Threading.Tasks.Task<global::Shared.Contracts.UserManagement.Users.GetUserByIdResult> GetUserById(global::Shared.Contracts.UserManagement.Users.GetUserByIdParameter request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Shared.Contracts.UserManagement.Users.GetUserByUsernameResult> GetUserByUsername(global::Shared.Contracts.UserManagement.Users.GetUserByUsernameParameter request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -89,21 +89,21 @@ namespace Shared.Contracts.UserManagement.Users {
       {
       }
 
-      public virtual global::Shared.Contracts.UserManagement.Users.GetUserByIdResult GetUserById(global::Shared.Contracts.UserManagement.Users.GetUserByIdParameter request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Shared.Contracts.UserManagement.Users.GetUserByUsernameResult GetUserByUsername(global::Shared.Contracts.UserManagement.Users.GetUserByUsernameParameter request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return GetUserById(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return GetUserByUsername(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::Shared.Contracts.UserManagement.Users.GetUserByIdResult GetUserById(global::Shared.Contracts.UserManagement.Users.GetUserByIdParameter request, grpc::CallOptions options)
+      public virtual global::Shared.Contracts.UserManagement.Users.GetUserByUsernameResult GetUserByUsername(global::Shared.Contracts.UserManagement.Users.GetUserByUsernameParameter request, grpc::CallOptions options)
       {
-        return CallInvoker.BlockingUnaryCall(__Method_GetUserById, null, options, request);
+        return CallInvoker.BlockingUnaryCall(__Method_GetUserByUsername, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::Shared.Contracts.UserManagement.Users.GetUserByIdResult> GetUserByIdAsync(global::Shared.Contracts.UserManagement.Users.GetUserByIdParameter request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Shared.Contracts.UserManagement.Users.GetUserByUsernameResult> GetUserByUsernameAsync(global::Shared.Contracts.UserManagement.Users.GetUserByUsernameParameter request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return GetUserByIdAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return GetUserByUsernameAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::Shared.Contracts.UserManagement.Users.GetUserByIdResult> GetUserByIdAsync(global::Shared.Contracts.UserManagement.Users.GetUserByIdParameter request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Shared.Contracts.UserManagement.Users.GetUserByUsernameResult> GetUserByUsernameAsync(global::Shared.Contracts.UserManagement.Users.GetUserByUsernameParameter request, grpc::CallOptions options)
       {
-        return CallInvoker.AsyncUnaryCall(__Method_GetUserById, null, options, request);
+        return CallInvoker.AsyncUnaryCall(__Method_GetUserByUsername, null, options, request);
       }
       public virtual global::Shared.Contracts.Common.Empty RegisterUser(global::Shared.Contracts.UserManagement.Users.RegisterUserParameter request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -149,7 +149,7 @@ namespace Shared.Contracts.UserManagement.Users {
     public static grpc::ServerServiceDefinition BindService(UsersServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
-          .AddMethod(__Method_GetUserById, serviceImpl.GetUserById)
+          .AddMethod(__Method_GetUserByUsername, serviceImpl.GetUserByUsername)
           .AddMethod(__Method_RegisterUser, serviceImpl.RegisterUser)
           .AddMethod(__Method_AuthenticateUser, serviceImpl.AuthenticateUser).Build();
     }
@@ -160,7 +160,7 @@ namespace Shared.Contracts.UserManagement.Users {
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
     public static void BindService(grpc::ServiceBinderBase serviceBinder, UsersServiceBase serviceImpl)
     {
-      serviceBinder.AddMethod(__Method_GetUserById, serviceImpl.GetUserById);
+      serviceBinder.AddMethod(__Method_GetUserByUsername, serviceImpl.GetUserByUsername);
       serviceBinder.AddMethod(__Method_RegisterUser, serviceImpl.RegisterUser);
       serviceBinder.AddMethod(__Method_AuthenticateUser, serviceImpl.AuthenticateUser);
     }

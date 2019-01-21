@@ -18,21 +18,19 @@
             _executor = executor ?? throw new ArgumentNullException(nameof(executor));
         }
 
-        public override async Task<GetUserByIdResult> GetUserById(
-            GetUserByIdParameter request,
+        public override async Task<GetUserByUsernameResult> GetUserByUsername(
+            GetUserByUsernameParameter request,
             ServerCallContext context)
         {
             var user =
                 await _executor
-                    .ExecuteAsync<GetUserByIdParameters, GetUserByIdResults>(
-                        new GetUserByIdParameters(request.UserId))
+                    .ExecuteAsync<GetUserByUsernameParameters, GetUserByUsernameResults>(
+                        new GetUserByUsernameParameters(request.Username))
                     .ConfigureAwait(false);
 
-            return new GetUserByIdResult {
-                UserId = user.Id,
+            return new GetUserByUsernameResult {
                 Email = user.Email,
-                Username = user.Username,
-                Password = user.Password
+                Username = user.Username
             };
         }
 
@@ -62,21 +60,10 @@
                             request.Username,
                             request.Password))
                     .ConfigureAwait(false);
-
-            if (!isAuthenticated.IsAuthenticated)
-            {
-                throw new RpcException(new Status(StatusCode.PermissionDenied, "User is not authenticated"));
-            }
-
-            var user =
-                await _executor
-                    .ExecuteAsync<GetUserByUsernameParameters, GetUserByUsernameResults>(
-                        new GetUserByUsernameParameters(request.Username))
-                    .ConfigureAwait(false);
-
+            
             return new AuthenticateUserResult
             {
-                UserId = user.Id
+                IsAuthenticated = isAuthenticated.IsAuthenticated
             };
         }
     }

@@ -1,7 +1,6 @@
 ﻿namespace UserManagement.Application.Operation.Handler
 {
     using System;
-    using System.Threading;
     using System.Threading.Tasks;
     using Parameters;
     using Repositories;
@@ -27,7 +26,9 @@
                     .GetByUsername(parameters.Username)
                     .ConfigureAwait(false);
 
-            return new GetUserByUsernameResults(user.Id);
+            return new GetUserByUsernameResults(
+                user.Username,
+                user.Email);
         }
     }
 }

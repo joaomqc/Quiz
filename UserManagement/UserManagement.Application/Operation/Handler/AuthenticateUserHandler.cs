@@ -1,7 +1,6 @@
 ﻿namespace UserManagement.Application.Operation.Handler
 {
     using System;
-    using System.Threading;
     using System.Threading.Tasks;
     using Parameters;
     using Repositories;
@@ -11,7 +10,7 @@
     public class AuthenticateUserHandler
         : IHandler<AuthenticateUserParameters, AuthenticateUserResults>
     {
-        private IUsersRepository _usersRepository;
+        private readonly IUsersRepository _usersRepository;
 
         public AuthenticateUserHandler(
             IUsersRepository usersRepository)
