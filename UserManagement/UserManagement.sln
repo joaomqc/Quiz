@@ -18,7 +18,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{E4F387
 		.nuget\NuGet.Config = .nuget\NuGet.Config
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserManagement.RPC", "UserManagement.RPC\UserManagement.RPC.csproj", "{47D0F235-AE86-4833-BB6D-9331167854E1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UserManagement.RPC", "UserManagement.RPC\UserManagement.RPC.csproj", "{47D0F235-AE86-4833-BB6D-9331167854E1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

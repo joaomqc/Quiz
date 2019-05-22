@@ -1,12 +1,10 @@
 var rpc_service = require('../rpc_service');
 var usersClient = rpc_service.setupUsersClient();
 
-module.exports.getUserByUsername = function (username, callback){
-    usersClient.getUserById({
-        Username: username
-    }, function(err, response){
-        callback(err, response && response.message);
-    });
+module.exports.getUserByUserId = function (userId, callback) {
+    usersClient.getUserByUserId({
+        UserId: userId
+    }, callback);
 }
 
 module.exports.registerUser = function (user, callback) {
@@ -14,16 +12,12 @@ module.exports.registerUser = function (user, callback) {
         Username: user.username,
         Email: user.email,
         Password: user.password
-    }, function(err, response){
-        callback(err, response && response.message);
-    });
+    }, callback);
 }
 
-module.exports.authenticateUser = function(user, callback) {
+module.exports.authenticateUser = function (user, callback) {
     usersClient.authenticateUser({
         Username: user.username,
         Password: user.password
-    }, function(err, response){
-        callback(err, response && response.message);
-    });
+    }, callback);
 }

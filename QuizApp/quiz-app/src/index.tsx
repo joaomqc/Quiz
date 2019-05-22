@@ -1,22 +1,26 @@
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import { Router, Route } from 'react-router';
-import createBrowserHistory from 'history/createBrowserHistory';
+import * as ReactDOM from 'react-dom'
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
 
 import registerServiceWorker from 'registerServiceWorker';
+import { rootReducer } from 'state';
 
 import 'scss/index.scss';
 
 import App from 'app/app';
 
-let history = createBrowserHistory();
+const store = createStore(
+    rootReducer,
+    applyMiddleware(thunk)
+);
 
 ReactDOM.render(
-  <Router history={history}>
-    <Route
-      path={'/'}
-      component={App} />
-  </Router>,
-  document.getElementById('react-app') as HTMLElement
+    <Provider store={store}>
+        <App />
+    </Provider>,
+    document.getElementById('react-app') as HTMLElement
 );
+
 registerServiceWorker();

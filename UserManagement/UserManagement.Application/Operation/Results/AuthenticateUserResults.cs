@@ -1,15 +1,16 @@
 ﻿namespace UserManagement.Application.Operation.Results
 {
+    using Domain;
     using Shared.Operation;
 
     public class AuthenticateUserResults : IResult
     {
         public AuthenticateUserResults(
-            bool isAuthenticated)
+            Token token)
         {
-            IsAuthenticated = isAuthenticated;
+            Token = token;
         }
 
-        public bool IsAuthenticated { get; }
+        public Token Token { get; }
     }
 }

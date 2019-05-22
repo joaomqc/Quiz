@@ -1,4 +1,4 @@
-﻿namespace UserManagement.Application
+﻿namespace UserManagement.Application.Services
 {
     public interface IPasswordHasher
     {

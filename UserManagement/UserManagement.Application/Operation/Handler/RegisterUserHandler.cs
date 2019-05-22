@@ -22,15 +22,28 @@
 
         public async Task<RegisterUserResults> ExecuteAsync(RegisterUserParameters parameters)
         {
+            var userExists =
+                await _usersRepository
+                    .CheckUserExistsAsync(
+                        new User(
+                            email: parameters.Email,
+                            username: parameters.Username))
+                    .ConfigureAwait(false);
+
+            if (userExists)
+            {
+                return new RegisterUserResults(false);
+            }
+
             await _usersRepository
-                .RegisterUser(
+                .RegisterUserAsync(
                     new User(
                         parameters.Email,
                         parameters.Username),
                     parameters.Password)
                 .ConfigureAwait(false);
 
-            return new RegisterUserResults();
+            return new RegisterUserResults(true);
         }
     }
 }

@@ -25,43 +25,43 @@ namespace Shared.Contracts.UserManagement.Users {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChpVc2VyTWFuYWdlbWVudC9Vc2Vycy5wcm90bxIlU2hhcmVkLkNvbnRyYWN0",
-            "cy5Vc2VyTWFuYWdlbWVudC5Vc2VycxoTQ29tbW9uL0NvbW1vbi5wcm90byIu",
-            "ChpHZXRVc2VyQnlVc2VybmFtZVBhcmFtZXRlchIQCghVc2VybmFtZRgBIAEo",
-            "CSI/ChlBdXRoZW50aWNhdGVVc2VyUGFyYW1ldGVyEhAKCFVzZXJuYW1lGAEg",
-            "ASgJEhAKCFBhc3N3b3JkGAIgASgJIkoKFVJlZ2lzdGVyVXNlclBhcmFtZXRl",
-            "chIQCghVc2VybmFtZRgBIAEoCRINCgVFbWFpbBgCIAEoCRIQCghQYXNzd29y",
-            "ZBgDIAEoCSIxChZBdXRoZW50aWNhdGVVc2VyUmVzdWx0EhcKD0lzQXV0aGVu",
-            "dGljYXRlZBgBIAEoCCI6ChdHZXRVc2VyQnlVc2VybmFtZVJlc3VsdBIQCghV",
-            "c2VybmFtZRgBIAEoCRINCgVFbWFpbBgCIAEoCTKrAwoMVXNlcnNTZXJ2aWNl",
-            "EpYBChFHZXRVc2VyQnlVc2VybmFtZRJBLlNoYXJlZC5Db250cmFjdHMuVXNl",
-            "ck1hbmFnZW1lbnQuVXNlcnMuR2V0VXNlckJ5VXNlcm5hbWVQYXJhbWV0ZXIa",
-            "Pi5TaGFyZWQuQ29udHJhY3RzLlVzZXJNYW5hZ2VtZW50LlVzZXJzLkdldFVz",
-            "ZXJCeVVzZXJuYW1lUmVzdWx0EmwKDFJlZ2lzdGVyVXNlchI8LlNoYXJlZC5D",
-            "b250cmFjdHMuVXNlck1hbmFnZW1lbnQuVXNlcnMuUmVnaXN0ZXJVc2VyUGFy",
-            "YW1ldGVyGh4uU2hhcmVkLkNvbnRyYWN0cy5Db21tb24uRW1wdHkSkwEKEEF1",
-            "dGhlbnRpY2F0ZVVzZXISQC5TaGFyZWQuQ29udHJhY3RzLlVzZXJNYW5hZ2Vt",
-            "ZW50LlVzZXJzLkF1dGhlbnRpY2F0ZVVzZXJQYXJhbWV0ZXIaPS5TaGFyZWQu",
-            "Q29udHJhY3RzLlVzZXJNYW5hZ2VtZW50LlVzZXJzLkF1dGhlbnRpY2F0ZVVz",
-            "ZXJSZXN1bHRiBnByb3RvMw=="));
+            "cy5Vc2VyTWFuYWdlbWVudC5Vc2VycxoTQ29tbW9uL0NvbW1vbi5wcm90byIq",
+            "ChhHZXRVc2VyQnlVc2VySWRQYXJhbWV0ZXISDgoGVXNlcklkGAEgASgJIj8K",
+            "GUF1dGhlbnRpY2F0ZVVzZXJQYXJhbWV0ZXISEAoIVXNlcm5hbWUYASABKAkS",
+            "EAoIUGFzc3dvcmQYAiABKAkiSgoVUmVnaXN0ZXJVc2VyUGFyYW1ldGVyEhAK",
+            "CFVzZXJuYW1lGAEgASgJEg0KBUVtYWlsGAIgASgJEhAKCFBhc3N3b3JkGAMg",
+            "ASgJIkAKFkF1dGhlbnRpY2F0ZVVzZXJSZXN1bHQSEwoLQWNjZXNzVG9rZW4Y",
+            "ASABKAkSEQoJRXhwaXJlc0luGAIgASgFIjgKFUdldFVzZXJCeVVzZXJJZFJl",
+            "c3VsdBIQCghVc2VybmFtZRgBIAEoCRINCgVFbWFpbBgCIAEoCTKlAwoMVXNl",
+            "cnNTZXJ2aWNlEpABCg9HZXRVc2VyQnlVc2VySWQSPy5TaGFyZWQuQ29udHJh",
+            "Y3RzLlVzZXJNYW5hZ2VtZW50LlVzZXJzLkdldFVzZXJCeVVzZXJJZFBhcmFt",
+            "ZXRlcho8LlNoYXJlZC5Db250cmFjdHMuVXNlck1hbmFnZW1lbnQuVXNlcnMu",
+            "R2V0VXNlckJ5VXNlcklkUmVzdWx0EmwKDFJlZ2lzdGVyVXNlchI8LlNoYXJl",
+            "ZC5Db250cmFjdHMuVXNlck1hbmFnZW1lbnQuVXNlcnMuUmVnaXN0ZXJVc2Vy",
+            "UGFyYW1ldGVyGh4uU2hhcmVkLkNvbnRyYWN0cy5Db21tb24uRW1wdHkSkwEK",
+            "EEF1dGhlbnRpY2F0ZVVzZXISQC5TaGFyZWQuQ29udHJhY3RzLlVzZXJNYW5h",
+            "Z2VtZW50LlVzZXJzLkF1dGhlbnRpY2F0ZVVzZXJQYXJhbWV0ZXIaPS5TaGFy",
+            "ZWQuQ29udHJhY3RzLlVzZXJNYW5hZ2VtZW50LlVzZXJzLkF1dGhlbnRpY2F0",
+            "ZVVzZXJSZXN1bHRiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Shared.Contracts.Common.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Shared.Contracts.UserManagement.Users.GetUserByUsernameParameter), global::Shared.Contracts.UserManagement.Users.GetUserByUsernameParameter.Parser, new[]{ "Username" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Shared.Contracts.UserManagement.Users.GetUserByUserIdParameter), global::Shared.Contracts.UserManagement.Users.GetUserByUserIdParameter.Parser, new[]{ "UserId" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Shared.Contracts.UserManagement.Users.AuthenticateUserParameter), global::Shared.Contracts.UserManagement.Users.AuthenticateUserParameter.Parser, new[]{ "Username", "Password" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Shared.Contracts.UserManagement.Users.RegisterUserParameter), global::Shared.Contracts.UserManagement.Users.RegisterUserParameter.Parser, new[]{ "Username", "Email", "Password" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Shared.Contracts.UserManagement.Users.AuthenticateUserResult), global::Shared.Contracts.UserManagement.Users.AuthenticateUserResult.Parser, new[]{ "IsAuthenticated" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Shared.Contracts.UserManagement.Users.GetUserByUsernameResult), global::Shared.Contracts.UserManagement.Users.GetUserByUsernameResult.Parser, new[]{ "Username", "Email" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Shared.Contracts.UserManagement.Users.AuthenticateUserResult), global::Shared.Contracts.UserManagement.Users.AuthenticateUserResult.Parser, new[]{ "AccessToken", "ExpiresIn" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Shared.Contracts.UserManagement.Users.GetUserByUserIdResult), global::Shared.Contracts.UserManagement.Users.GetUserByUserIdResult.Parser, new[]{ "Username", "Email" }, null, null, null)
           }));
     }
     #endregion
 
   }
   #region Messages
-  public sealed partial class GetUserByUsernameParameter : pb::IMessage<GetUserByUsernameParameter> {
-    private static readonly pb::MessageParser<GetUserByUsernameParameter> _parser = new pb::MessageParser<GetUserByUsernameParameter>(() => new GetUserByUsernameParameter());
+  public sealed partial class GetUserByUserIdParameter : pb::IMessage<GetUserByUserIdParameter> {
+    private static readonly pb::MessageParser<GetUserByUserIdParameter> _parser = new pb::MessageParser<GetUserByUserIdParameter>(() => new GetUserByUserIdParameter());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<GetUserByUsernameParameter> Parser { get { return _parser; } }
+    public static pb::MessageParser<GetUserByUserIdParameter> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
@@ -74,55 +74,55 @@ namespace Shared.Contracts.UserManagement.Users {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public GetUserByUsernameParameter() {
+    public GetUserByUserIdParameter() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public GetUserByUsernameParameter(GetUserByUsernameParameter other) : this() {
-      username_ = other.username_;
+    public GetUserByUserIdParameter(GetUserByUserIdParameter other) : this() {
+      userId_ = other.userId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public GetUserByUsernameParameter Clone() {
-      return new GetUserByUsernameParameter(this);
+    public GetUserByUserIdParameter Clone() {
+      return new GetUserByUserIdParameter(this);
     }
 
-    /// <summary>Field number for the "Username" field.</summary>
-    public const int UsernameFieldNumber = 1;
-    private string username_ = "";
+    /// <summary>Field number for the "UserId" field.</summary>
+    public const int UserIdFieldNumber = 1;
+    private string userId_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Username {
-      get { return username_; }
+    public string UserId {
+      get { return userId_; }
       set {
-        username_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        userId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as GetUserByUsernameParameter);
+      return Equals(other as GetUserByUserIdParameter);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(GetUserByUsernameParameter other) {
+    public bool Equals(GetUserByUserIdParameter other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Username != other.Username) return false;
+      if (UserId != other.UserId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Username.Length != 0) hash ^= Username.GetHashCode();
+      if (UserId.Length != 0) hash ^= UserId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -136,9 +136,9 @@ namespace Shared.Contracts.UserManagement.Users {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Username.Length != 0) {
+      if (UserId.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(Username);
+        output.WriteString(UserId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -148,8 +148,8 @@ namespace Shared.Contracts.UserManagement.Users {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Username.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Username);
+      if (UserId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(UserId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -158,12 +158,12 @@ namespace Shared.Contracts.UserManagement.Users {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(GetUserByUsernameParameter other) {
+    public void MergeFrom(GetUserByUserIdParameter other) {
       if (other == null) {
         return;
       }
-      if (other.Username.Length != 0) {
-        Username = other.Username;
+      if (other.UserId.Length != 0) {
+        UserId = other.UserId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -177,7 +177,7 @@ namespace Shared.Contracts.UserManagement.Users {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            Username = input.ReadString();
+            UserId = input.ReadString();
             break;
           }
         }
@@ -553,7 +553,8 @@ namespace Shared.Contracts.UserManagement.Users {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public AuthenticateUserResult(AuthenticateUserResult other) : this() {
-      isAuthenticated_ = other.isAuthenticated_;
+      accessToken_ = other.accessToken_;
+      expiresIn_ = other.expiresIn_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -562,14 +563,25 @@ namespace Shared.Contracts.UserManagement.Users {
       return new AuthenticateUserResult(this);
     }
 
-    /// <summary>Field number for the "IsAuthenticated" field.</summary>
-    public const int IsAuthenticatedFieldNumber = 1;
-    private bool isAuthenticated_;
+    /// <summary>Field number for the "AccessToken" field.</summary>
+    public const int AccessTokenFieldNumber = 1;
+    private string accessToken_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool IsAuthenticated {
-      get { return isAuthenticated_; }
+    public string AccessToken {
+      get { return accessToken_; }
       set {
-        isAuthenticated_ = value;
+        accessToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "ExpiresIn" field.</summary>
+    public const int ExpiresInFieldNumber = 2;
+    private int expiresIn_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int ExpiresIn {
+      get { return expiresIn_; }
+      set {
+        expiresIn_ = value;
       }
     }
 
@@ -586,14 +598,16 @@ namespace Shared.Contracts.UserManagement.Users {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (IsAuthenticated != other.IsAuthenticated) return false;
+      if (AccessToken != other.AccessToken) return false;
+      if (ExpiresIn != other.ExpiresIn) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (IsAuthenticated != false) hash ^= IsAuthenticated.GetHashCode();
+      if (AccessToken.Length != 0) hash ^= AccessToken.GetHashCode();
+      if (ExpiresIn != 0) hash ^= ExpiresIn.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -607,9 +621,13 @@ namespace Shared.Contracts.UserManagement.Users {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (IsAuthenticated != false) {
-        output.WriteRawTag(8);
-        output.WriteBool(IsAuthenticated);
+      if (AccessToken.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(AccessToken);
+      }
+      if (ExpiresIn != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(ExpiresIn);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -619,8 +637,11 @@ namespace Shared.Contracts.UserManagement.Users {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (IsAuthenticated != false) {
-        size += 1 + 1;
+      if (AccessToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AccessToken);
+      }
+      if (ExpiresIn != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(ExpiresIn);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -633,8 +654,11 @@ namespace Shared.Contracts.UserManagement.Users {
       if (other == null) {
         return;
       }
-      if (other.IsAuthenticated != false) {
-        IsAuthenticated = other.IsAuthenticated;
+      if (other.AccessToken.Length != 0) {
+        AccessToken = other.AccessToken;
+      }
+      if (other.ExpiresIn != 0) {
+        ExpiresIn = other.ExpiresIn;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -647,8 +671,12 @@ namespace Shared.Contracts.UserManagement.Users {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            IsAuthenticated = input.ReadBool();
+          case 10: {
+            AccessToken = input.ReadString();
+            break;
+          }
+          case 16: {
+            ExpiresIn = input.ReadInt32();
             break;
           }
         }
@@ -657,11 +685,11 @@ namespace Shared.Contracts.UserManagement.Users {
 
   }
 
-  public sealed partial class GetUserByUsernameResult : pb::IMessage<GetUserByUsernameResult> {
-    private static readonly pb::MessageParser<GetUserByUsernameResult> _parser = new pb::MessageParser<GetUserByUsernameResult>(() => new GetUserByUsernameResult());
+  public sealed partial class GetUserByUserIdResult : pb::IMessage<GetUserByUserIdResult> {
+    private static readonly pb::MessageParser<GetUserByUserIdResult> _parser = new pb::MessageParser<GetUserByUserIdResult>(() => new GetUserByUserIdResult());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<GetUserByUsernameResult> Parser { get { return _parser; } }
+    public static pb::MessageParser<GetUserByUserIdResult> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
@@ -674,22 +702,22 @@ namespace Shared.Contracts.UserManagement.Users {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public GetUserByUsernameResult() {
+    public GetUserByUserIdResult() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public GetUserByUsernameResult(GetUserByUsernameResult other) : this() {
+    public GetUserByUserIdResult(GetUserByUserIdResult other) : this() {
       username_ = other.username_;
       email_ = other.email_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public GetUserByUsernameResult Clone() {
-      return new GetUserByUsernameResult(this);
+    public GetUserByUserIdResult Clone() {
+      return new GetUserByUserIdResult(this);
     }
 
     /// <summary>Field number for the "Username" field.</summary>
@@ -716,11 +744,11 @@ namespace Shared.Contracts.UserManagement.Users {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as GetUserByUsernameResult);
+      return Equals(other as GetUserByUserIdResult);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(GetUserByUsernameResult other) {
+    public bool Equals(GetUserByUserIdResult other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -779,7 +807,7 @@ namespace Shared.Contracts.UserManagement.Users {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(GetUserByUsernameResult other) {
+    public void MergeFrom(GetUserByUserIdResult other) {
       if (other == null) {
         return;
       }

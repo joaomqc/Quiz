@@ -5,6 +5,7 @@
     using System.Threading.Tasks;
     using Application;
     using Application.Repositories;
+    using Application.Services;
     using Domain;
     using Microsoft.EntityFrameworkCore;
 
@@ -23,13 +24,13 @@
                        ?? throw new ArgumentNullException(nameof(context));
         }
 
-        public async Task<User> GetByUsername(
-            string username,
+        public async Task<User> GetByExternalIdAsync(
+            Guid externalId,
             CancellationToken ct = default(CancellationToken))
         {
             var user =
                 await _context.Users
-                    .FirstOrDefaultAsync(u => u.Username == username, ct)
+                    .FirstOrDefaultAsync(u => u.ExternalId == externalId, ct)
                     .ConfigureAwait(false);
 
             return new User(
@@ -37,7 +38,7 @@
                 user.Username);
         }
 
-        public async Task RegisterUser(
+        public async Task RegisterUserAsync(
             User user,
             string password,
             CancellationToken ct = default(CancellationToken))
@@ -45,6 +46,7 @@
             var userEntity =
                 new Entities.User
                 {
+                    ExternalId = Guid.NewGuid(),
                     Email = user.Email,
                     Username = user.Username,
                     Password = _passwordHasher.HashPassword(password)
@@ -55,7 +57,7 @@
             await _context.SaveChangesAsync(ct);
         }
 
-        public async Task<bool> ValidateCredentials(
+        public async Task<Guid?> ValidateCredentialsAsync(
             string username,
             string password,
             CancellationToken ct = default(CancellationToken))
@@ -65,7 +67,25 @@
                     .FirstOrDefaultAsync(u => u.Username == username, ct)
                     .ConfigureAwait(false);
 
-            return _passwordHasher.VerifyPassword(user.Password, password);
+            if (user == null || !_passwordHasher.VerifyPassword(password, user.Password))
+            {
+                return null;
+            }
+
+            return user.ExternalId;
+        }
+
+        public async Task<bool> CheckUserExistsAsync(
+            User user,
+            CancellationToken ct = default(CancellationToken))
+        {
+            return await _context.Users
+                .AnyAsync(
+                    dbUser => 
+                        dbUser.Username == user.Username
+                        || dbUser.Email == user.Email,
+                    ct)
+                .ConfigureAwait(false);
         }
     }
 }

@@ -7,26 +7,26 @@
     using Results;
     using Shared.Operation;
 
-    public class GetUserByUsernameHandler
-        : IHandler<GetUserByUsernameParameters, GetUserByUsernameResults>
+    public class GetUserByExternalIdHandler
+        : IHandler<GetUserByExternalIdParameters, GetUserByExternalIdResults>
     {
         private readonly IUsersRepository _usersRepository;
 
-        public GetUserByUsernameHandler(
+        public GetUserByExternalIdHandler(
             IUsersRepository usersRepository)
         {
             _usersRepository = usersRepository
                               ?? throw new ArgumentNullException(nameof(usersRepository));
         }
 
-        public async Task<GetUserByUsernameResults> ExecuteAsync(GetUserByUsernameParameters parameters)
+        public async Task<GetUserByExternalIdResults> ExecuteAsync(GetUserByExternalIdParameters parameters)
         {
             var user =
                 await _usersRepository
-                    .GetByUsername(parameters.Username)
+                    .GetByExternalIdAsync(parameters.ExternalId)
                     .ConfigureAwait(false);
 
-            return new GetUserByUsernameResults(
+            return new GetUserByExternalIdResults(
                 user.Username,
                 user.Email);
         }

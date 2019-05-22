@@ -1,23 +1,28 @@
 ﻿namespace UserManagement.Application.Repositories
 {
+    using System;
     using System.Threading;
     using System.Threading.Tasks;
     using Domain;
 
     public interface IUsersRepository
     {
-        Task<User> GetByUsername(
-            string username,
+        Task<User> GetByExternalIdAsync(
+            Guid externalId,
             CancellationToken ct = default(CancellationToken));
 
-        Task RegisterUser(
+        Task RegisterUserAsync(
             User user,
             string password,
             CancellationToken ct = default(CancellationToken));
 
-        Task<bool> ValidateCredentials(
+        Task<Guid?> ValidateCredentialsAsync(
             string username,
             string password,
+            CancellationToken ct = default(CancellationToken));
+
+        Task<bool> CheckUserExistsAsync(
+            User user,
             CancellationToken ct = default(CancellationToken));
     }
 }

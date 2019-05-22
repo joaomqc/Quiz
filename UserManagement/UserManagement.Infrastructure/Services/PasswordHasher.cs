@@ -1,6 +1,6 @@
 ﻿namespace UserManagement.Infrastructure
 {
-    using Application;
+    using Application.Services;
     using BCrypt.Net;
 
     public class PasswordHasher : IPasswordHasher

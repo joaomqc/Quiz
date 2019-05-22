@@ -367,7 +367,7 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
       }
       if (other.pageInfo_ != null) {
         if (pageInfo_ == null) {
-          pageInfo_ = new global::Shared.Contracts.Common.GetPagedParameter();
+          PageInfo = new global::Shared.Contracts.Common.GetPagedParameter();
         }
         PageInfo.MergeFrom(other.PageInfo);
       }
@@ -387,9 +387,9 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
             break;
           case 10: {
             if (pageInfo_ == null) {
-              pageInfo_ = new global::Shared.Contracts.Common.GetPagedParameter();
+              PageInfo = new global::Shared.Contracts.Common.GetPagedParameter();
             }
-            input.ReadMessage(pageInfo_);
+            input.ReadMessage(PageInfo);
             break;
           }
           case 16: {
@@ -530,7 +530,7 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
       }
       if (other.pageInfo_ != null) {
         if (pageInfo_ == null) {
-          pageInfo_ = new global::Shared.Contracts.Common.GetPagedParameter();
+          PageInfo = new global::Shared.Contracts.Common.GetPagedParameter();
         }
         PageInfo.MergeFrom(other.PageInfo);
       }
@@ -550,9 +550,9 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
             break;
           case 10: {
             if (pageInfo_ == null) {
-              pageInfo_ = new global::Shared.Contracts.Common.GetPagedParameter();
+              PageInfo = new global::Shared.Contracts.Common.GetPagedParameter();
             }
-            input.ReadMessage(pageInfo_);
+            input.ReadMessage(PageInfo);
             break;
           }
           case 16: {
@@ -1658,7 +1658,7 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
       questions_.Add(other.questions_);
       if (other.topic_ != null) {
         if (topic_ == null) {
-          topic_ = new global::Shared.Contracts.QuizManagement.Quizzes.TopicResult();
+          Topic = new global::Shared.Contracts.QuizManagement.Quizzes.TopicResult();
         }
         Topic.MergeFrom(other.Topic);
       }
@@ -1698,9 +1698,9 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
           }
           case 50: {
             if (topic_ == null) {
-              topic_ = new global::Shared.Contracts.QuizManagement.Quizzes.TopicResult();
+              Topic = new global::Shared.Contracts.QuizManagement.Quizzes.TopicResult();
             }
-            input.ReadMessage(topic_);
+            input.ReadMessage(Topic);
             break;
           }
           case 56: {
@@ -1835,7 +1835,7 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
       }
       if (other.pageInfo_ != null) {
         if (pageInfo_ == null) {
-          pageInfo_ = new global::Shared.Contracts.Common.GetPagedResult();
+          PageInfo = new global::Shared.Contracts.Common.GetPagedResult();
         }
         PageInfo.MergeFrom(other.PageInfo);
       }
@@ -1853,9 +1853,9 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
             break;
           case 10: {
             if (pageInfo_ == null) {
-              pageInfo_ = new global::Shared.Contracts.Common.GetPagedResult();
+              PageInfo = new global::Shared.Contracts.Common.GetPagedResult();
             }
-            input.ReadMessage(pageInfo_);
+            input.ReadMessage(PageInfo);
             break;
           }
           case 18: {
@@ -2485,7 +2485,7 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
       }
       if (other.topic_ != null) {
         if (topic_ == null) {
-          topic_ = new global::Shared.Contracts.QuizManagement.Quizzes.TopicResult();
+          Topic = new global::Shared.Contracts.QuizManagement.Quizzes.TopicResult();
         }
         Topic.MergeFrom(other.Topic);
       }
@@ -2521,9 +2521,9 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
           }
           case 42: {
             if (topic_ == null) {
-              topic_ = new global::Shared.Contracts.QuizManagement.Quizzes.TopicResult();
+              Topic = new global::Shared.Contracts.QuizManagement.Quizzes.TopicResult();
             }
-            input.ReadMessage(topic_);
+            input.ReadMessage(Topic);
             break;
           }
           case 48: {

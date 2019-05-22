@@ -1,11 +1,10 @@
 ﻿namespace UserManagement.Application.Operation.Results
 {
-    using System;
     using Shared.Operation;
 
-    public class GetUserByUsernameResults : IResult
+    public class GetUserByExternalIdResults : IResult
     {
-        public GetUserByUsernameResults(
+        public GetUserByExternalIdResults(
             string username,
             string email)
         {

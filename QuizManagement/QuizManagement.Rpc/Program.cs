@@ -1,12 +1,19 @@
 ﻿namespace QuizManagement.Rpc
 {
-    using Topshelf;
+    using System.Threading.Tasks;
+    using Microsoft.Extensions.DependencyInjection;
+    using Microsoft.Extensions.Hosting;
 
     public class Program
     {
-        public static int Main(string[] args)
+        public static async Task Main(string[] args)
         {
-            return (int) HostFactory.Run(x => x.Service<Service>());
+            await new HostBuilder()
+                .ConfigureServices((context, services) =>
+                {
+                    services.AddHostedService<Service>();
+                })
+                .RunConsoleAsync();
         }
     }
 }

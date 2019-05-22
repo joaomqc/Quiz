@@ -1,0 +1,9 @@
+$color-map: (
+    blue: #128FFF,
+    light-blue: #79C0FF,
+    orange: #FF9500
+);
+
+@function color-picker($color){
+    @return map-get($color-map, $color);
+}

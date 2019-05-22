@@ -12,19 +12,19 @@ namespace Shared.Contracts.UserManagement.Users {
   {
     static readonly string __ServiceName = "Shared.Contracts.UserManagement.Users.UsersService";
 
-    static readonly grpc::Marshaller<global::Shared.Contracts.UserManagement.Users.GetUserByUsernameParameter> __Marshaller_Shared_Contracts_UserManagement_Users_GetUserByUsernameParameter = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Shared.Contracts.UserManagement.Users.GetUserByUsernameParameter.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Shared.Contracts.UserManagement.Users.GetUserByUsernameResult> __Marshaller_Shared_Contracts_UserManagement_Users_GetUserByUsernameResult = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Shared.Contracts.UserManagement.Users.GetUserByUsernameResult.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Shared.Contracts.UserManagement.Users.GetUserByUserIdParameter> __Marshaller_Shared_Contracts_UserManagement_Users_GetUserByUserIdParameter = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Shared.Contracts.UserManagement.Users.GetUserByUserIdParameter.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Shared.Contracts.UserManagement.Users.GetUserByUserIdResult> __Marshaller_Shared_Contracts_UserManagement_Users_GetUserByUserIdResult = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Shared.Contracts.UserManagement.Users.GetUserByUserIdResult.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Shared.Contracts.UserManagement.Users.RegisterUserParameter> __Marshaller_Shared_Contracts_UserManagement_Users_RegisterUserParameter = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Shared.Contracts.UserManagement.Users.RegisterUserParameter.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Shared.Contracts.Common.Empty> __Marshaller_Shared_Contracts_Common_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Shared.Contracts.Common.Empty.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Shared.Contracts.UserManagement.Users.AuthenticateUserParameter> __Marshaller_Shared_Contracts_UserManagement_Users_AuthenticateUserParameter = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Shared.Contracts.UserManagement.Users.AuthenticateUserParameter.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Shared.Contracts.UserManagement.Users.AuthenticateUserResult> __Marshaller_Shared_Contracts_UserManagement_Users_AuthenticateUserResult = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Shared.Contracts.UserManagement.Users.AuthenticateUserResult.Parser.ParseFrom);
 
-    static readonly grpc::Method<global::Shared.Contracts.UserManagement.Users.GetUserByUsernameParameter, global::Shared.Contracts.UserManagement.Users.GetUserByUsernameResult> __Method_GetUserByUsername = new grpc::Method<global::Shared.Contracts.UserManagement.Users.GetUserByUsernameParameter, global::Shared.Contracts.UserManagement.Users.GetUserByUsernameResult>(
+    static readonly grpc::Method<global::Shared.Contracts.UserManagement.Users.GetUserByUserIdParameter, global::Shared.Contracts.UserManagement.Users.GetUserByUserIdResult> __Method_GetUserByUserId = new grpc::Method<global::Shared.Contracts.UserManagement.Users.GetUserByUserIdParameter, global::Shared.Contracts.UserManagement.Users.GetUserByUserIdResult>(
         grpc::MethodType.Unary,
         __ServiceName,
-        "GetUserByUsername",
-        __Marshaller_Shared_Contracts_UserManagement_Users_GetUserByUsernameParameter,
-        __Marshaller_Shared_Contracts_UserManagement_Users_GetUserByUsernameResult);
+        "GetUserByUserId",
+        __Marshaller_Shared_Contracts_UserManagement_Users_GetUserByUserIdParameter,
+        __Marshaller_Shared_Contracts_UserManagement_Users_GetUserByUserIdResult);
 
     static readonly grpc::Method<global::Shared.Contracts.UserManagement.Users.RegisterUserParameter, global::Shared.Contracts.Common.Empty> __Method_RegisterUser = new grpc::Method<global::Shared.Contracts.UserManagement.Users.RegisterUserParameter, global::Shared.Contracts.Common.Empty>(
         grpc::MethodType.Unary,
@@ -49,7 +49,7 @@ namespace Shared.Contracts.UserManagement.Users {
     /// <summary>Base class for server-side implementations of UsersService</summary>
     public abstract partial class UsersServiceBase
     {
-      public virtual global::System.Threading.Tasks.Task<global::Shared.Contracts.UserManagement.Users.GetUserByUsernameResult> GetUserByUsername(global::Shared.Contracts.UserManagement.Users.GetUserByUsernameParameter request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Shared.Contracts.UserManagement.Users.GetUserByUserIdResult> GetUserByUserId(global::Shared.Contracts.UserManagement.Users.GetUserByUserIdParameter request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -89,21 +89,21 @@ namespace Shared.Contracts.UserManagement.Users {
       {
       }
 
-      public virtual global::Shared.Contracts.UserManagement.Users.GetUserByUsernameResult GetUserByUsername(global::Shared.Contracts.UserManagement.Users.GetUserByUsernameParameter request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Shared.Contracts.UserManagement.Users.GetUserByUserIdResult GetUserByUserId(global::Shared.Contracts.UserManagement.Users.GetUserByUserIdParameter request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return GetUserByUsername(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return GetUserByUserId(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::Shared.Contracts.UserManagement.Users.GetUserByUsernameResult GetUserByUsername(global::Shared.Contracts.UserManagement.Users.GetUserByUsernameParameter request, grpc::CallOptions options)
+      public virtual global::Shared.Contracts.UserManagement.Users.GetUserByUserIdResult GetUserByUserId(global::Shared.Contracts.UserManagement.Users.GetUserByUserIdParameter request, grpc::CallOptions options)
       {
-        return CallInvoker.BlockingUnaryCall(__Method_GetUserByUsername, null, options, request);
+        return CallInvoker.BlockingUnaryCall(__Method_GetUserByUserId, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::Shared.Contracts.UserManagement.Users.GetUserByUsernameResult> GetUserByUsernameAsync(global::Shared.Contracts.UserManagement.Users.GetUserByUsernameParameter request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Shared.Contracts.UserManagement.Users.GetUserByUserIdResult> GetUserByUserIdAsync(global::Shared.Contracts.UserManagement.Users.GetUserByUserIdParameter request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return GetUserByUsernameAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return GetUserByUserIdAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::Shared.Contracts.UserManagement.Users.GetUserByUsernameResult> GetUserByUsernameAsync(global::Shared.Contracts.UserManagement.Users.GetUserByUsernameParameter request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Shared.Contracts.UserManagement.Users.GetUserByUserIdResult> GetUserByUserIdAsync(global::Shared.Contracts.UserManagement.Users.GetUserByUserIdParameter request, grpc::CallOptions options)
       {
-        return CallInvoker.AsyncUnaryCall(__Method_GetUserByUsername, null, options, request);
+        return CallInvoker.AsyncUnaryCall(__Method_GetUserByUserId, null, options, request);
       }
       public virtual global::Shared.Contracts.Common.Empty RegisterUser(global::Shared.Contracts.UserManagement.Users.RegisterUserParameter request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -149,20 +149,20 @@ namespace Shared.Contracts.UserManagement.Users {
     public static grpc::ServerServiceDefinition BindService(UsersServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
-          .AddMethod(__Method_GetUserByUsername, serviceImpl.GetUserByUsername)
+          .AddMethod(__Method_GetUserByUserId, serviceImpl.GetUserByUserId)
           .AddMethod(__Method_RegisterUser, serviceImpl.RegisterUser)
           .AddMethod(__Method_AuthenticateUser, serviceImpl.AuthenticateUser).Build();
     }
 
-    /// <summary>Register service method implementations with a service binder. Useful when customizing the service binding logic.
+    /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
     public static void BindService(grpc::ServiceBinderBase serviceBinder, UsersServiceBase serviceImpl)
     {
-      serviceBinder.AddMethod(__Method_GetUserByUsername, serviceImpl.GetUserByUsername);
-      serviceBinder.AddMethod(__Method_RegisterUser, serviceImpl.RegisterUser);
-      serviceBinder.AddMethod(__Method_AuthenticateUser, serviceImpl.AuthenticateUser);
+      serviceBinder.AddMethod(__Method_GetUserByUserId, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Shared.Contracts.UserManagement.Users.GetUserByUserIdParameter, global::Shared.Contracts.UserManagement.Users.GetUserByUserIdResult>(serviceImpl.GetUserByUserId));
+      serviceBinder.AddMethod(__Method_RegisterUser, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Shared.Contracts.UserManagement.Users.RegisterUserParameter, global::Shared.Contracts.Common.Empty>(serviceImpl.RegisterUser));
+      serviceBinder.AddMethod(__Method_AuthenticateUser, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Shared.Contracts.UserManagement.Users.AuthenticateUserParameter, global::Shared.Contracts.UserManagement.Users.AuthenticateUserResult>(serviceImpl.AuthenticateUser));
     }
 
   }

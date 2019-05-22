@@ -303,20 +303,20 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
           .AddMethod(__Method_DeleteQuizzesByUser, serviceImpl.DeleteQuizzesByUser).Build();
     }
 
-    /// <summary>Register service method implementations with a service binder. Useful when customizing the service binding logic.
+    /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
     public static void BindService(grpc::ServiceBinderBase serviceBinder, QuizzesServiceBase serviceImpl)
     {
-      serviceBinder.AddMethod(__Method_GetQuizzesPaged, serviceImpl.GetQuizzesPaged);
-      serviceBinder.AddMethod(__Method_GetQuiz, serviceImpl.GetQuiz);
-      serviceBinder.AddMethod(__Method_GetQuizzesByUserPaged, serviceImpl.GetQuizzesByUserPaged);
-      serviceBinder.AddMethod(__Method_GetPublicQuizzesByUserPaged, serviceImpl.GetPublicQuizzesByUserPaged);
-      serviceBinder.AddMethod(__Method_GetQuizzesByTopicPaged, serviceImpl.GetQuizzesByTopicPaged);
-      serviceBinder.AddMethod(__Method_CreateQuiz, serviceImpl.CreateQuiz);
-      serviceBinder.AddMethod(__Method_DeleteQuiz, serviceImpl.DeleteQuiz);
-      serviceBinder.AddMethod(__Method_DeleteQuizzesByUser, serviceImpl.DeleteQuizzesByUser);
+      serviceBinder.AddMethod(__Method_GetQuizzesPaged, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Shared.Contracts.Common.GetPagedParameter, global::Shared.Contracts.QuizManagement.Quizzes.GetQuizzesPagedResult>(serviceImpl.GetQuizzesPaged));
+      serviceBinder.AddMethod(__Method_GetQuiz, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Shared.Contracts.QuizManagement.Quizzes.GetQuizByIdParameter, global::Shared.Contracts.QuizManagement.Quizzes.GetQuizByIdResult>(serviceImpl.GetQuiz));
+      serviceBinder.AddMethod(__Method_GetQuizzesByUserPaged, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Shared.Contracts.QuizManagement.Quizzes.GetQuizzesByUserPagedParameter, global::Shared.Contracts.QuizManagement.Quizzes.GetQuizzesPagedResult>(serviceImpl.GetQuizzesByUserPaged));
+      serviceBinder.AddMethod(__Method_GetPublicQuizzesByUserPaged, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Shared.Contracts.QuizManagement.Quizzes.GetQuizzesByUserPagedParameter, global::Shared.Contracts.QuizManagement.Quizzes.GetQuizzesPagedResult>(serviceImpl.GetPublicQuizzesByUserPaged));
+      serviceBinder.AddMethod(__Method_GetQuizzesByTopicPaged, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Shared.Contracts.QuizManagement.Quizzes.GetQuizzesByTopicPagedParameter, global::Shared.Contracts.QuizManagement.Quizzes.GetQuizzesPagedResult>(serviceImpl.GetQuizzesByTopicPaged));
+      serviceBinder.AddMethod(__Method_CreateQuiz, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Shared.Contracts.QuizManagement.Quizzes.CreateQuizParameter, global::Shared.Contracts.Common.Empty>(serviceImpl.CreateQuiz));
+      serviceBinder.AddMethod(__Method_DeleteQuiz, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Shared.Contracts.QuizManagement.Quizzes.DeleteQuizParameter, global::Shared.Contracts.Common.Empty>(serviceImpl.DeleteQuiz));
+      serviceBinder.AddMethod(__Method_DeleteQuizzesByUser, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Shared.Contracts.QuizManagement.Quizzes.DeleteQuizzesByUserParameter, global::Shared.Contracts.Common.Empty>(serviceImpl.DeleteQuizzesByUser));
     }
 
   }

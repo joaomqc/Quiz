@@ -1,17 +1,15 @@
-.navbar {
+.navbar-wrapper {
     background: white;
-    color: #222;
-    position: static;
+    position: fixed;
     top: 0;
-    height: 60px;
-    line-height: 60px;
+    min-height: 60px;
     width: 100vw;
-    -webkit-box-shadow: 0px 1px 10px 0px #000a;
-    -moz-box-shadow: 0px 1px 10px 0px #000a;
-    box-shadow: 0px 1px 10px 0px #000a;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    z-index: 1000;
 }
 
-.nav-wrapper {
+.navbar-body {
+    display: flex;
     margin: auto;
     text-align: center;
     width: 80%;
@@ -25,7 +23,6 @@
     float: left;
     margin-left: 28px;
     font-size: 1.5em;
-    height: 60px;
     letter-spacing: 1px;
 }
 
@@ -46,13 +43,13 @@
 .nav-menu-item {
     color: rgb(13, 26, 38);
     font-size: 0.7em;
-    height: 50px;
     letter-spacing: 1px;
     margin: 0 20px;
     padding: 0 4px;
     position: relative;
     text-decoration: none;
     text-transform: uppercase;
+    width: fit-content;
 }
 
 .nav-menu-item-link:hover {
@@ -62,21 +59,21 @@
 }
 
 /* Animated Bottom Line */
-.nav-menu-item-link:before {
+.nav-menu-item-link::before {
     content: '';
     position: absolute;
     width: 0%;
     height: 1px;
     bottom: -1px;
-    background: #222;
+    background: rgba(0, 0, 0, 0.5);
 }
 
-.nav-menu-item-link:before {
+.nav-menu-item-link::before {
     left: 0;
     transition: 0.5s;
 }
 
-.nav-menu-item-link:hover:before {
-    background: rgb(13, 26, 38);
+.nav-menu-item-link:hover::before {
+    background: rgba(0, 0, 0, 0.5);
     width: 100%;
 }

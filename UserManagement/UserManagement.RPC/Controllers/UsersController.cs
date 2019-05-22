@@ -1,6 +1,7 @@
 ﻿namespace UserManagement.RPC.Controllers
 {
     using System;
+    using System.Net.Mail;
     using System.Threading.Tasks;
     using Application.Operation.Parameters;
     using Application.Operation.Results;
@@ -18,17 +19,22 @@
             _executor = executor ?? throw new ArgumentNullException(nameof(executor));
         }
 
-        public override async Task<GetUserByUsernameResult> GetUserByUsername(
-            GetUserByUsernameParameter request,
+        public override async Task<GetUserByUserIdResult> GetUserByUserId(
+            GetUserByUserIdParameter request,
             ServerCallContext context)
         {
+            if (string.IsNullOrWhiteSpace(request.UserId) || !Guid.TryParse(request.UserId, out var userId))
+            {
+                throw new RpcException(new Status(StatusCode.InvalidArgument, "username"));
+            }
+
             var user =
                 await _executor
-                    .ExecuteAsync<GetUserByUsernameParameters, GetUserByUsernameResults>(
-                        new GetUserByUsernameParameters(request.Username))
+                    .ExecuteAsync<GetUserByExternalIdParameters, GetUserByExternalIdResults>(
+                        new GetUserByExternalIdParameters(userId))
                     .ConfigureAwait(false);
 
-            return new GetUserByUsernameResult {
+            return new GetUserByUserIdResult {
                 Email = user.Email,
                 Username = user.Username
             };
@@ -38,13 +44,34 @@
             RegisterUserParameter request,
             ServerCallContext context)
         {
-            await _executor
-                .ExecuteAsync<RegisterUserParameters, RegisterUserResults>(
-                    new RegisterUserParameters(
-                        request.Username,
-                        request.Email,
-                        request.Password))
-                .ConfigureAwait(false);
+            if (string.IsNullOrWhiteSpace(request.Username) ||
+                string.IsNullOrWhiteSpace(request.Email))
+            {
+                throw new RpcException(new Status(StatusCode.InvalidArgument, "Invalid fields."));
+            }
+
+            try
+            {
+                new MailAddress(request.Email);
+            }
+            catch
+            {
+                throw new RpcException(new Status(StatusCode.InvalidArgument, "Invalid field."));
+            }
+            
+            var registerResult =
+                await _executor
+                    .ExecuteAsync<RegisterUserParameters, RegisterUserResults>(
+                        new RegisterUserParameters(
+                            request.Email,
+                            request.Username,
+                            request.Password))
+                    .ConfigureAwait(false);
+
+            if (!registerResult.Succeeded)
+            {
+                throw new RpcException(new Status(StatusCode.Unauthenticated, "Credentials already registered."));
+            }
 
             return new Empty();
         }
@@ -53,17 +80,28 @@
             AuthenticateUserParameter request,
             ServerCallContext context)
         {
-            var isAuthenticated =
+            if (string.IsNullOrWhiteSpace(request.Username) || string.IsNullOrWhiteSpace(request.Password))
+            {
+                throw new RpcException(new Status(StatusCode.InvalidArgument, "Invalid fields."));
+            }
+
+            var tokenResult =
                 await _executor
                     .ExecuteAsync<AuthenticateUserParameters, AuthenticateUserResults>(
                         new AuthenticateUserParameters(
                             request.Username,
                             request.Password))
                     .ConfigureAwait(false);
+
+            if (tokenResult.Token == null)
+            {
+                throw new RpcException(new Status(StatusCode.Unauthenticated, "Invalid credentials."));
+            }
             
             return new AuthenticateUserResult
             {
-                IsAuthenticated = isAuthenticated.IsAuthenticated
+                AccessToken = tokenResult.Token.AccessToken,
+                ExpiresIn = tokenResult.Token.ExpiresIn
             };
         }
     }

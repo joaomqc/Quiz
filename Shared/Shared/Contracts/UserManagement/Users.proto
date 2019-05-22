@@ -5,15 +5,15 @@ package Shared.Contracts.UserManagement.Users;
 import "Common/Common.proto";
 
 service UsersService {
-	rpc GetUserByUsername (GetUserByUsernameParameter) returns (GetUserByUsernameResult);
+	rpc GetUserByUserId (GetUserByUserIdParameter) returns (GetUserByUserIdResult);
 	rpc RegisterUser (RegisterUserParameter) returns (Shared.Contracts.Common.Empty);
 	rpc AuthenticateUser (AuthenticateUserParameter) returns (AuthenticateUserResult);
 }
 
 // Parameters
 
-message GetUserByUsernameParameter {
-	string Username = 1;
+message GetUserByUserIdParameter {
+	string UserId = 1;
 }
 
 message AuthenticateUserParameter {
@@ -30,10 +30,11 @@ message RegisterUserParameter {
 // Results
 
 message AuthenticateUserResult {
-	bool IsAuthenticated = 1;
+	string AccessToken = 1;
+	int32 ExpiresIn = 2;
 }
 
-message GetUserByUsernameResult {
+message GetUserByUserIdResult {
 	string Username = 1;
 	string Email = 2;
 }

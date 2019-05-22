@@ -1,37 +1,41 @@
 ﻿namespace UserManagement.RPC
 {
-    using Castle.Windsor;
+    using System;
+    using System.Threading;
+    using System.Threading.Tasks;
     using Configuration;
     using Grpc.Core;
+    using Lamar;
     using Microsoft.Extensions.Configuration;
-    using Topshelf;
+    using Microsoft.Extensions.Hosting;
 
-    public class Service : ServiceControl
+    public class Service : IHostedService
     {
-        private IWindsorContainer _container;
+        private Container _container;
         private Server _rpcServer;
 
-        public bool Start(HostControl hostControl)
+        public Task StartAsync(CancellationToken cancellationToken)
         {
             var builder = new ConfigurationBuilder()
-                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
+                .AddJsonFile(
+                    path: "appsettings.json",
+                    optional: false,
+                    reloadOnChange: true);
 
             var configuration = builder.Build();
 
-            _container = ServiceResolver.Configure(configuration);
+            _container = ServicesConfiguration.Configure(configuration);
             _rpcServer = RpcServerConfiguration.Configure(_container, configuration);
-
+            
             _rpcServer.Start();
 
-            return true;
+            return Task.CompletedTask;
         }
 
-        public bool Stop(HostControl hostControl)
+        public async Task StopAsync(CancellationToken cancellationToken)
         {
-            _rpcServer.ShutdownAsync().Wait();
+            await _rpcServer.ShutdownAsync();
             _container.Dispose();
-
-            return true;
         }
     }
 }

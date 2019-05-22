@@ -6,56 +6,50 @@ module.exports.getQuizzesPaged = function (startIndex, itemCount, callback) {
     quizzesClient.getQuizzesPaged({
         StartIndex: startIndex,
         ItemCount: itemCount
-    }, function(err, response){
+    }, function (err, response) {
         callback(err, response && response.message);
     });
 }
 
-module.exports.getQuiz = function (quizId, callback){
+module.exports.getQuiz = function (quizId, callback) {
     quizzesClient.getQuiz({
         QuizId: quizId
-    }, function(err, response){
+    }, function (err, response) {
         callback(err, response && response.message);
     });
 }
 
-module.exports.getQuizzesByUserPaged = function (userId, startIndex, itemCount, callback){
+module.exports.getQuizzesByUserPaged = function (userId, startIndex, itemCount, callback) {
     quizzesClient.getQuizzesByUserPaged({
         UserId: userId,
         PageInfo: {
             StartIndex: startIndex,
             ItemCount: itemCount
         }
-    }, function(err, response){
-        callback(err, response && response.message);
-    });
+    }, callback);
 }
 
-module.exports.getPublicQuizzesByUserPaged = function(userId, startIndex, itemCount, callback){
+module.exports.getPublicQuizzesByUserPaged = function (userId, startIndex, itemCount, callback) {
     quizzesClient.getPublicQuizzesByUserPaged({
         UserId: userId,
         PageInfo: {
             StartIndex: startIndex,
             ItemCount: itemCount
         }
-    }, function(err, response){
-        callback(err, response && response.message);
-    });
+    }, callback);
 }
 
-module.exports.getQuizzesByTopicPaged = function(topicId, startIndex, itemCount, callback){
+module.exports.getQuizzesByTopicPaged = function (topicId, startIndex, itemCount, callback) {
     quizzesClient.getQuizzesByTopicPaged({
         TopicId: topicId,
         PageInfo: {
             StartIndex: startIndex,
             ItemCount: itemCount
         }
-    }, function(err, response){
-        callback(err, response && response.message);
-    });
+    }, callback);
 }
 
-module.exports.createQuiz = function(quiz, callback){
+module.exports.createQuiz = function (quiz, callback) {
     quizzesClient.createQuiz({
         Name: quiz.name,
         UserId: quiz.UserId,
@@ -77,38 +71,28 @@ module.exports.createQuiz = function(quiz, callback){
         ),
         TopicId: quiz.topicId,
         IsPublic: quiz.isPublic
-    }, function(err, response){
-        callback(err, response && response.message);
-    });
+    }, callback);
 }
 
-module.exports.deleteQuiz = function(quizId, callback){
+module.exports.deleteQuiz = function (quizId, callback) {
     quizzesClient.deleteQuiz({
         QuizId: quizId
-    }, function(err, response){
-        callback(err, response && response.message);
-    });
+    }, callback);
 }
 
-module.exports.deleteQuizzesByUser = function(userId, keepPublic, callback){
+module.exports.deleteQuizzesByUser = function (userId, keepPublic, callback) {
     quizzesClient.deleteQuizzesByUser({
         UserId: userId,
         KeepPublic: keepPublic
-    }, function(err, response){
-        callback(err, response && response.message);
-    });
+    }, callback);
 }
 
 module.exports.getAllTopics = function (callback) {
-    topicsClient.getAllTopics({}, function(err, response){
-        callback(err, response && response.message);
-    });
+    topicsClient.getAllTopics({}, callback);
 }
 
-module.exports.getTopicById = function(topicId, callback){
+module.exports.getTopicById = function (topicId, callback) {
     topicsClient.getTopicById({
         TopicId: topicId
-    }, function(err, response){
-        callback(err, response && response.message);
-    });
+    }, callback);
 }

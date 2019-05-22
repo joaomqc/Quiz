@@ -26,8 +26,8 @@
             modelBuilder.HasDefaultSchema("usermanagement");
 
             modelBuilder.Entity<User>()
-                .HasIndex(u => u.Username)
-                .HasName("Index_Username")
+                .HasIndex(u => u.ExternalId)
+                .HasName("Index_ExternalId")
                 .IsUnique();
         }
     }
