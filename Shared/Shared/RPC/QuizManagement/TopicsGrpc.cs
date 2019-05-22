@@ -38,6 +38,7 @@ namespace Shared.Contracts.QuizManagement.Topics {
     }
 
     /// <summary>Base class for server-side implementations of TopicsService</summary>
+    [grpc::BindServiceMethod(typeof(TopicsService), "BindService")]
     public abstract partial class TopicsServiceBase
     {
       public virtual global::System.Threading.Tasks.Task<global::Shared.Contracts.QuizManagement.Topics.GetAllTopicsResult> GetAllTopics(global::Shared.Contracts.Common.Empty request, grpc::ServerCallContext context)

@@ -86,6 +86,7 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
     }
 
     /// <summary>Base class for server-side implementations of QuizzesService</summary>
+    [grpc::BindServiceMethod(typeof(QuizzesService), "BindService")]
     public abstract partial class QuizzesServiceBase
     {
       public virtual global::System.Threading.Tasks.Task<global::Shared.Contracts.QuizManagement.Quizzes.GetQuizzesPagedResult> GetQuizzesPaged(global::Shared.Contracts.Common.GetPagedParameter request, grpc::ServerCallContext context)

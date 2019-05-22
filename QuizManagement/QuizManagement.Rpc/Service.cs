@@ -3,15 +3,15 @@
     using System;
     using System.Threading;
     using System.Threading.Tasks;
-    using Castle.Windsor;
     using Configuration;
     using Grpc.Core;
+    using Lamar;
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.Hosting;
 
     public class Service : IHostedService
     {
-        private IWindsorContainer _container;
+        private Container _container;
         private Server _rpcServer;
         
         public Task StartAsync(CancellationToken cancellationToken)
@@ -24,7 +24,7 @@
 
             var configuration = builder.Build();
 
-            _container = ServiceResolver.Configure(configuration);
+            _container = ServiceConfiguration.Configure(configuration);
             _rpcServer = RpcServerConfiguration.Configure(_container, configuration);
 
             _rpcServer.Start();

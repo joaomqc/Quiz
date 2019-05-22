@@ -47,6 +47,7 @@ namespace Shared.Contracts.UserManagement.Users {
     }
 
     /// <summary>Base class for server-side implementations of UsersService</summary>
+    [grpc::BindServiceMethod(typeof(UsersService), "BindService")]
     public abstract partial class UsersServiceBase
     {
       public virtual global::System.Threading.Tasks.Task<global::Shared.Contracts.UserManagement.Users.GetUserByUserIdResult> GetUserByUserId(global::Shared.Contracts.UserManagement.Users.GetUserByUserIdParameter request, grpc::ServerCallContext context)

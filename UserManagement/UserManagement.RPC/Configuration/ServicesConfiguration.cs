@@ -1,6 +1,5 @@
 ﻿namespace UserManagement.RPC.Configuration
 {
-    using System.Reflection;
     using Application.Repositories;
     using Application.Services;
     using Infrastructure;
