@@ -6,17 +6,13 @@ module.exports.getQuizzesPaged = function (startIndex, itemCount, callback) {
     quizzesClient.getQuizzesPaged({
         StartIndex: startIndex,
         ItemCount: itemCount
-    }, function (err, response) {
-        callback(err, response && response.message);
-    });
+    }, callback);
 }
 
 module.exports.getQuiz = function (quizId, callback) {
     quizzesClient.getQuiz({
         QuizId: quizId
-    }, function (err, response) {
-        callback(err, response && response.message);
-    });
+    }, callback);
 }
 
 module.exports.getQuizzesByUserPaged = function (userId, startIndex, itemCount, callback) {

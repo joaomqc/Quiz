@@ -31,7 +31,9 @@
                     .Use<QuizzesRepository>();
 
                 c.For<QuizContext>()
-                    .Use<QuizContext>();
+                    .Use<QuizContext>()
+                    .Ctor<string>("connectionString")
+                    .Is(configuration["ConnectionStrings:DefaultConnection"]);
             });
 
             return container;

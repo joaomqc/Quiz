@@ -29,13 +29,13 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
             "dG8iJgoUR2V0UXVpekJ5SWRQYXJhbWV0ZXISDgoGUXVpeklkGAEgASgFIm4K",
             "HkdldFF1aXp6ZXNCeVVzZXJQYWdlZFBhcmFtZXRlchI8CghQYWdlSW5mbxgB",
             "IAEoCzIqLlNoYXJlZC5Db250cmFjdHMuQ29tbW9uLkdldFBhZ2VkUGFyYW1l",
-            "dGVyEg4KBlVzZXJJZBgCIAEoBSJwCh9HZXRRdWl6emVzQnlUb3BpY1BhZ2Vk",
+            "dGVyEg4KBlVzZXJJZBgCIAEoCSJwCh9HZXRRdWl6emVzQnlUb3BpY1BhZ2Vk",
             "UGFyYW1ldGVyEjwKCFBhZ2VJbmZvGAEgASgLMiouU2hhcmVkLkNvbnRyYWN0",
             "cy5Db21tb24uR2V0UGFnZWRQYXJhbWV0ZXISDwoHVG9waWNJZBgCIAEoBSIl",
             "ChNEZWxldGVRdWl6UGFyYW1ldGVyEg4KBlF1aXpJZBgBIAEoBSJCChxEZWxl",
-            "dGVRdWl6emVzQnlVc2VyUGFyYW1ldGVyEg4KBlVzZXJJZBgBIAEoBRISCgpL",
+            "dGVRdWl6emVzQnlVc2VyUGFyYW1ldGVyEg4KBlVzZXJJZBgBIAEoCRISCgpL",
             "ZWVwUHVibGljGAIgASgIIqUBChNDcmVhdGVRdWl6UGFyYW1ldGVyEgwKBE5h",
-            "bWUYASABKAkSDgoGVXNlcklkGAIgASgFEk0KCVF1ZXN0aW9ucxgDIAMoCzI6",
+            "bWUYASABKAkSDgoGVXNlcklkGAIgASgJEk0KCVF1ZXN0aW9ucxgDIAMoCzI6",
             "LlNoYXJlZC5Db250cmFjdHMuUXVpek1hbmFnZW1lbnQuUXVpenplcy5RdWVz",
             "dGlvblBhcmFtZXRlchIPCgdUb3BpY0lkGAQgASgFEhAKCElzUHVibGljGAUg",
             "ASgIIoYBChFRdWVzdGlvblBhcmFtZXRlchIMCgRUZXh0GAEgASgJEhgKEElz",
@@ -44,11 +44,11 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
             "bWV0ZXIiMgoPQW5zd2VyUGFyYW1ldGVyEgwKBFRleHQYASABKAkSEQoJSXND",
             "b3JyZWN0GAIgASgIIv8BChFHZXRRdWl6QnlJZFJlc3VsdBIOCgZRdWl6SWQY",
             "ASABKAUSDAoETmFtZRgCIAEoCRIZChFDcmVhdGlvblRpbWVzdGFtcBgDIAEo",
-            "AxIOCgZVc2VySWQYBCABKAUSSgoJUXVlc3Rpb25zGAUgAygLMjcuU2hhcmVk",
+            "AxIOCgZVc2VySWQYBCABKAkSSgoJUXVlc3Rpb25zGAUgAygLMjcuU2hhcmVk",
             "LkNvbnRyYWN0cy5RdWl6TWFuYWdlbWVudC5RdWl6emVzLlF1ZXN0aW9uUmVz",
             "dWx0EkMKBVRvcGljGAYgASgLMjQuU2hhcmVkLkNvbnRyYWN0cy5RdWl6TWFu",
             "YWdlbWVudC5RdWl6emVzLlRvcGljUmVzdWx0EhAKCElzUHVibGljGAcgASgI",
-            "IpgBChVHZXRRdWl6emVzUGFnZWRSZXN1bHQSOQoIcGFnZUluZm8YASABKAsy",
+            "IpgBChVHZXRRdWl6emVzUGFnZWRSZXN1bHQSOQoIUGFnZUluZm8YASABKAsy",
             "Jy5TaGFyZWQuQ29udHJhY3RzLkNvbW1vbi5HZXRQYWdlZFJlc3VsdBJECgdR",
             "dWl6emVzGAIgAygLMjMuU2hhcmVkLkNvbnRyYWN0cy5RdWl6TWFuYWdlbWVu",
             "dC5RdWl6emVzLlF1aXpSZXN1bHQiQQoMQW5zd2VyUmVzdWx0EhAKCEFuc3dl",
@@ -58,7 +58,7 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
             "AygLMjUuU2hhcmVkLkNvbnRyYWN0cy5RdWl6TWFuYWdlbWVudC5RdWl6emVz",
             "LkFuc3dlclJlc3VsdCKsAQoKUXVpelJlc3VsdBIOCgZRdWl6SWQYASABKAUS",
             "DAoETmFtZRgCIAEoCRIZChFDcmVhdGlvblRpbWVzdGFtcBgDIAEoAxIOCgZV",
-            "c2VySWQYBCABKAUSQwoFVG9waWMYBSABKAsyNC5TaGFyZWQuQ29udHJhY3Rz",
+            "c2VySWQYBCABKAkSQwoFVG9waWMYBSABKAsyNC5TaGFyZWQuQ29udHJhY3Rz",
             "LlF1aXpNYW5hZ2VtZW50LlF1aXp6ZXMuVG9waWNSZXN1bHQSEAoISXNQdWJs",
             "aWMYBiABKAgiLAoLVG9waWNSZXN1bHQSDwoHVG9waWNJZBgBIAEoBRIMCgRO",
             "YW1lGAIgASgJMt0ICg5RdWl6emVzU2VydmljZRJ9Cg9HZXRRdWl6emVzUGFn",
@@ -287,12 +287,12 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
 
     /// <summary>Field number for the "UserId" field.</summary>
     public const int UserIdFieldNumber = 2;
-    private int userId_;
+    private string userId_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int UserId {
+    public string UserId {
       get { return userId_; }
       set {
-        userId_ = value;
+        userId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -318,7 +318,7 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
     public override int GetHashCode() {
       int hash = 1;
       if (pageInfo_ != null) hash ^= PageInfo.GetHashCode();
-      if (UserId != 0) hash ^= UserId.GetHashCode();
+      if (UserId.Length != 0) hash ^= UserId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -336,9 +336,9 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
         output.WriteRawTag(10);
         output.WriteMessage(PageInfo);
       }
-      if (UserId != 0) {
-        output.WriteRawTag(16);
-        output.WriteInt32(UserId);
+      if (UserId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(UserId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -351,8 +351,8 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
       if (pageInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(PageInfo);
       }
-      if (UserId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(UserId);
+      if (UserId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(UserId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -371,7 +371,7 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
         }
         PageInfo.MergeFrom(other.PageInfo);
       }
-      if (other.UserId != 0) {
+      if (other.UserId.Length != 0) {
         UserId = other.UserId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -392,8 +392,8 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
             input.ReadMessage(PageInfo);
             break;
           }
-          case 16: {
-            UserId = input.ReadInt32();
+          case 18: {
+            UserId = input.ReadString();
             break;
           }
         }
@@ -731,12 +731,12 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
 
     /// <summary>Field number for the "UserId" field.</summary>
     public const int UserIdFieldNumber = 1;
-    private int userId_;
+    private string userId_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int UserId {
+    public string UserId {
       get { return userId_; }
       set {
-        userId_ = value;
+        userId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -772,7 +772,7 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (UserId != 0) hash ^= UserId.GetHashCode();
+      if (UserId.Length != 0) hash ^= UserId.GetHashCode();
       if (KeepPublic != false) hash ^= KeepPublic.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -787,9 +787,9 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (UserId != 0) {
-        output.WriteRawTag(8);
-        output.WriteInt32(UserId);
+      if (UserId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(UserId);
       }
       if (KeepPublic != false) {
         output.WriteRawTag(16);
@@ -803,8 +803,8 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (UserId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(UserId);
+      if (UserId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(UserId);
       }
       if (KeepPublic != false) {
         size += 1 + 1;
@@ -820,7 +820,7 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
       if (other == null) {
         return;
       }
-      if (other.UserId != 0) {
+      if (other.UserId.Length != 0) {
         UserId = other.UserId;
       }
       if (other.KeepPublic != false) {
@@ -837,8 +837,8 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            UserId = input.ReadInt32();
+          case 10: {
+            UserId = input.ReadString();
             break;
           }
           case 16: {
@@ -902,12 +902,12 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
 
     /// <summary>Field number for the "UserId" field.</summary>
     public const int UserIdFieldNumber = 2;
-    private int userId_;
+    private string userId_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int UserId {
+    public string UserId {
       get { return userId_; }
       set {
-        userId_ = value;
+        userId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -968,7 +968,7 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
-      if (UserId != 0) hash ^= UserId.GetHashCode();
+      if (UserId.Length != 0) hash ^= UserId.GetHashCode();
       hash ^= questions_.GetHashCode();
       if (TopicId != 0) hash ^= TopicId.GetHashCode();
       if (IsPublic != false) hash ^= IsPublic.GetHashCode();
@@ -989,9 +989,9 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (UserId != 0) {
-        output.WriteRawTag(16);
-        output.WriteInt32(UserId);
+      if (UserId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(UserId);
       }
       questions_.WriteTo(output, _repeated_questions_codec);
       if (TopicId != 0) {
@@ -1013,8 +1013,8 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
-      if (UserId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(UserId);
+      if (UserId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(UserId);
       }
       size += questions_.CalculateSize(_repeated_questions_codec);
       if (TopicId != 0) {
@@ -1037,7 +1037,7 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
       if (other.Name.Length != 0) {
         Name = other.Name;
       }
-      if (other.UserId != 0) {
+      if (other.UserId.Length != 0) {
         UserId = other.UserId;
       }
       questions_.Add(other.questions_);
@@ -1062,8 +1062,8 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
             Name = input.ReadString();
             break;
           }
-          case 16: {
-            UserId = input.ReadInt32();
+          case 18: {
+            UserId = input.ReadString();
             break;
           }
           case 26: {
@@ -1493,12 +1493,12 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
 
     /// <summary>Field number for the "UserId" field.</summary>
     public const int UserIdFieldNumber = 4;
-    private int userId_;
+    private string userId_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int UserId {
+    public string UserId {
       get { return userId_; }
       set {
-        userId_ = value;
+        userId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -1563,7 +1563,7 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
       if (QuizId != 0) hash ^= QuizId.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (CreationTimestamp != 0L) hash ^= CreationTimestamp.GetHashCode();
-      if (UserId != 0) hash ^= UserId.GetHashCode();
+      if (UserId.Length != 0) hash ^= UserId.GetHashCode();
       hash ^= questions_.GetHashCode();
       if (topic_ != null) hash ^= Topic.GetHashCode();
       if (IsPublic != false) hash ^= IsPublic.GetHashCode();
@@ -1592,9 +1592,9 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
         output.WriteRawTag(24);
         output.WriteInt64(CreationTimestamp);
       }
-      if (UserId != 0) {
-        output.WriteRawTag(32);
-        output.WriteInt32(UserId);
+      if (UserId.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(UserId);
       }
       questions_.WriteTo(output, _repeated_questions_codec);
       if (topic_ != null) {
@@ -1622,8 +1622,8 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
       if (CreationTimestamp != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(CreationTimestamp);
       }
-      if (UserId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(UserId);
+      if (UserId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(UserId);
       }
       size += questions_.CalculateSize(_repeated_questions_codec);
       if (topic_ != null) {
@@ -1652,7 +1652,7 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
       if (other.CreationTimestamp != 0L) {
         CreationTimestamp = other.CreationTimestamp;
       }
-      if (other.UserId != 0) {
+      if (other.UserId.Length != 0) {
         UserId = other.UserId;
       }
       questions_.Add(other.questions_);
@@ -1688,8 +1688,8 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
             CreationTimestamp = input.ReadInt64();
             break;
           }
-          case 32: {
-            UserId = input.ReadInt32();
+          case 34: {
+            UserId = input.ReadString();
             break;
           }
           case 42: {
@@ -1748,7 +1748,7 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
       return new GetQuizzesPagedResult(this);
     }
 
-    /// <summary>Field number for the "pageInfo" field.</summary>
+    /// <summary>Field number for the "PageInfo" field.</summary>
     public const int PageInfoFieldNumber = 1;
     private global::Shared.Contracts.Common.GetPagedResult pageInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2335,12 +2335,12 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
 
     /// <summary>Field number for the "UserId" field.</summary>
     public const int UserIdFieldNumber = 4;
-    private int userId_;
+    private string userId_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int UserId {
+    public string UserId {
       get { return userId_; }
       set {
-        userId_ = value;
+        userId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -2394,7 +2394,7 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
       if (QuizId != 0) hash ^= QuizId.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (CreationTimestamp != 0L) hash ^= CreationTimestamp.GetHashCode();
-      if (UserId != 0) hash ^= UserId.GetHashCode();
+      if (UserId.Length != 0) hash ^= UserId.GetHashCode();
       if (topic_ != null) hash ^= Topic.GetHashCode();
       if (IsPublic != false) hash ^= IsPublic.GetHashCode();
       if (_unknownFields != null) {
@@ -2422,9 +2422,9 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
         output.WriteRawTag(24);
         output.WriteInt64(CreationTimestamp);
       }
-      if (UserId != 0) {
-        output.WriteRawTag(32);
-        output.WriteInt32(UserId);
+      if (UserId.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(UserId);
       }
       if (topic_ != null) {
         output.WriteRawTag(42);
@@ -2451,8 +2451,8 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
       if (CreationTimestamp != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(CreationTimestamp);
       }
-      if (UserId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(UserId);
+      if (UserId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(UserId);
       }
       if (topic_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Topic);
@@ -2480,7 +2480,7 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
       if (other.CreationTimestamp != 0L) {
         CreationTimestamp = other.CreationTimestamp;
       }
-      if (other.UserId != 0) {
+      if (other.UserId.Length != 0) {
         UserId = other.UserId;
       }
       if (other.topic_ != null) {
@@ -2515,8 +2515,8 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
             CreationTimestamp = input.ReadInt64();
             break;
           }
-          case 32: {
-            UserId = input.ReadInt32();
+          case 34: {
+            UserId = input.ReadString();
             break;
           }
           case 42: {

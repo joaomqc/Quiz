@@ -23,7 +23,7 @@ message GetQuizByIdParameter {
 
 message GetQuizzesByUserPagedParameter {
 	Shared.Contracts.Common.GetPagedParameter PageInfo = 1;
-	int32 UserId = 2;
+	string UserId = 2;
 }
 
 message GetQuizzesByTopicPagedParameter {
@@ -36,13 +36,13 @@ message DeleteQuizParameter {
 }
 
 message DeleteQuizzesByUserParameter {
-	int32 UserId = 1;
+	string UserId = 1;
 	bool KeepPublic = 2;
 }
 
 message CreateQuizParameter {
 	string Name = 1;
-	int32 UserId = 2;
+	string UserId = 2;
 	repeated QuestionParameter Questions = 3;
 	int32 TopicId = 4;
 	bool IsPublic = 5;
@@ -68,14 +68,14 @@ message GetQuizByIdResult {
 	int32 QuizId = 1;
 	string Name = 2;
 	int64 CreationTimestamp = 3;
-	int32 UserId = 4;
+	string UserId = 4;
 	repeated QuestionResult Questions = 5;
 	TopicResult Topic = 6;
 	bool IsPublic = 7;
 }
 
 message GetQuizzesPagedResult {
-	Shared.Contracts.Common.GetPagedResult pageInfo = 1;
+	Shared.Contracts.Common.GetPagedResult PageInfo = 1;
 	repeated QuizResult Quizzes = 2;
 }
 
@@ -98,7 +98,7 @@ message QuizResult {
 	int32 QuizId = 1;
 	string Name = 2;
 	int64 CreationTimestamp = 3;
-	int32 UserId = 4;
+	string UserId = 4;
 	TopicResult Topic = 5;
 	bool IsPublic = 6;
 }

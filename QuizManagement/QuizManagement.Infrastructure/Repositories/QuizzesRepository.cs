@@ -179,9 +179,9 @@
                         quiz.IsPublic))
                     .ToList(),
                 total,
-                numberOfItems,
+                quizzes.Count,
                 startIndex,
-                startIndex + numberOfItems);
+                startIndex + quizzes.Count);
         }
         
         public async Task InsertAsync(Quiz quiz)
