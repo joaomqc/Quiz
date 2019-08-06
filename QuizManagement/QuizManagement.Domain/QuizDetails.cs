@@ -8,7 +8,7 @@
             int id,
             string name,
             DateTime creationTimestamp,
-            int userId,
+            Guid userId,
             TopicDetails topic,
             bool isPublic)
         {
@@ -23,7 +23,7 @@
         public int Id { get; }
         public string Name { get; }
         public DateTime CreationTimestamp { get; }
-        public int UserId { get; }
+        public Guid UserId { get; }
         public TopicDetails Topic { get; }
         public bool IsPublic { get; }
     }

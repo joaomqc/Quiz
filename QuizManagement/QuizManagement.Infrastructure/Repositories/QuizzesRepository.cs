@@ -125,7 +125,7 @@
         }
 
         public async Task<QuizzesPaged> GetAllByUserPagedAsync(
-            int userId,
+            Guid userId,
             int startIndex,
             int numberOfItems)
         {
@@ -137,7 +137,7 @@
         }
 
         public async Task<QuizzesPaged> GetPublicByUserPagedAsync(
-            int userId,
+            Guid userId,
             int startIndex,
             int numberOfItems)
         {
@@ -261,11 +261,13 @@
             }
         }
 
-        public async Task DeleteByUserIdAsync(int userId, bool keepPublic)
+        public async Task DeleteByUserIdAsync(
+            Guid userId,
+            bool keepPublic)
         {
             var quizzesToRemove =
                 _context.Quizzes
-                    .Where(quiz => !quiz.IsPublic || !keepPublic);
+                    .Where(quiz => quiz.UserId == userId && (!keepPublic || !quiz.IsPublic));
 
             _context.Quizzes.RemoveRange(quizzesToRemove);
 

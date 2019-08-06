@@ -1,18 +1,19 @@
 ﻿namespace QuizManagement.Application.Operation.Parameters
 {
+    using System;
     using Shared.Operation;
 
     public class DeleteQuizzesByUserParameters : IParameter
     {
         public DeleteQuizzesByUserParameters(
-            int userId,
+            Guid userId,
             bool keepPublic)
         {
             UserId = userId;
             KeepPublic = keepPublic;
         }
 
-        public int UserId { get; }
+        public Guid UserId { get; }
         public bool KeepPublic { get; }
     }
 }

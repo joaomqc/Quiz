@@ -1,7 +1,8 @@
 module.exports = {
     'proto': {
-        'contracts_dir': '/../../Shared/Shared/Contracts',
+        'contracts_dir': '/../Shared/Shared/Contracts',
         'quizzes_proto_path': 'QuizManagement/Quizzes.proto',
+        'topics_proto_path': 'QuizManagement/Topics.proto',
         'users_proto_path': 'UserManagement/Users.proto'
     },
     'rpc': {

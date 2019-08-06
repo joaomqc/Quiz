@@ -1,11 +1,12 @@
 ﻿namespace QuizManagement.Application.Operation.Parameters
 {
+    using System;
     using Shared.Operation;
 
     public class GetPublicQuizzesByUserPagedParameters : IParameter
     {
         public GetPublicQuizzesByUserPagedParameters(
-            int userId,
+            Guid userId,
             int startIndex,
             int numberOfItems)
         {
@@ -14,7 +15,7 @@
             NumberOfItems = numberOfItems;
         }
 
-        public int UserId { get; }
+        public Guid UserId { get; }
         public int StartIndex { get; }
         public int NumberOfItems { get; }
     }

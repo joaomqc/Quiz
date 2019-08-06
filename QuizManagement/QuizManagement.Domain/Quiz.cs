@@ -7,7 +7,7 @@
     {
         public static Quiz CreateNewQuiz(
             string name,
-            int userId,
+            Guid userId,
             IEnumerable<Question> questions,
             int topicId,
             bool isPublic)
@@ -27,7 +27,7 @@
             int id,
             string name,
             DateTime creationTimestamp,
-            int userId,
+            Guid userId,
             IEnumerable<Question> questions,
             int topicId,
             bool isPublic,
@@ -46,7 +46,7 @@
         public int Id { get; }
         public string Name { get; }
         public DateTime CreationTimestamp { get; }
-        public int UserId { get; }
+        public Guid UserId { get; }
         public IEnumerable<Question> Questions { get; }
         public int TopicId { get; }
         public bool IsPublic { get; }

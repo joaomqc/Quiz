@@ -1,5 +1,6 @@
 ﻿namespace QuizManagement.Application.Repositories
 {
+    using System;
     using Domain;
     using System.Threading.Tasks;
 
@@ -13,12 +14,12 @@
             int numberOfItems);
 
         Task<QuizzesPaged> GetAllByUserPagedAsync(
-            int userId,
+            Guid userId,
             int startIndex,
             int numberOfItems);
 
         Task<QuizzesPaged> GetPublicByUserPagedAsync(
-            int userId,
+            Guid userId,
             int startIndex,
             int numberOfItems);
 
@@ -30,6 +31,8 @@
 
         Task DeleteByIdAsync(int quizId);
 
-        Task DeleteByUserIdAsync(int userId, bool keepPublic);
+        Task DeleteByUserIdAsync(
+            Guid userId,
+            bool keepPublic);
     }
 }

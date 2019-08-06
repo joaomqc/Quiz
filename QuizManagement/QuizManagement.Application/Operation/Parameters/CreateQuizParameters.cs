@@ -9,7 +9,7 @@
     {
         public CreateQuizParameters(
             string name,
-            int userId,
+            Guid userId,
             IEnumerable<Question> questions,
             int topicId,
             bool isPublic)
@@ -22,7 +22,7 @@
         }
         
         public string Name { get; }
-        public int UserId { get; }
+        public Guid UserId { get; }
         public IEnumerable<Question> Questions { get; }
         public int TopicId { get; }
         public bool IsPublic { get; }

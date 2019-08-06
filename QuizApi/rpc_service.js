@@ -27,12 +27,12 @@ module.exports.setupQuizzesClient = function () {
 
 module.exports.setupTopicsClient = function () {
     var packageDefinition = proto_loader.loadSync(
-        config.proto.quizzes_proto_path,
+        config.proto.topics_proto_path,
         PROTO_OPTIONS
     );
-    var quizzes_proto = grpc.loadPackageDefinition(packageDefinition).Shared.Contracts.QuizManagement.Quizzes;
+    var quizzes_proto = grpc.loadPackageDefinition(packageDefinition).Shared.Contracts.QuizManagement.Topics;
     var url = 'localhost:' + config.rpc.quiz_management_port;
-    var client = new quizzes_proto.QuizzesService(url, grpc.credentials.createInsecure());
+    var client = new quizzes_proto.TopicsService(url, grpc.credentials.createInsecure());
     return client;
 }
 

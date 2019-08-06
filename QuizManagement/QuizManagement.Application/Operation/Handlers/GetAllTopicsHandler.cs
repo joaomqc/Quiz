@@ -5,8 +5,10 @@
     using Repositories;
     using System;
     using System.Threading.Tasks;
+    using Shared.Operation;
 
     public class GetAllTopicsHandler
+        : IHandler<GetAllTopicsParameters, GetAllTopicsResults>
     {
         private readonly ITopicsRepository _topicRepository;
 

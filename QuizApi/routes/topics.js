@@ -6,7 +6,16 @@ var quizManagementRepository = require('../repositories/quiz_management_reposito
 router.get('/', function (req, res, next) {
     quizManagementRepository.getAllTopics(function (err, message) {
         if (err) next(err);
-        else res.send(message);
+        else res.send({
+            topics: message.Topics.map(topic => {
+                return {
+                    topicId: topic.TopicId,
+                    name: topic.Name,
+                    description: topic.Description,
+                    url: topic.Url
+                }
+            })
+        });
     });
 });
 

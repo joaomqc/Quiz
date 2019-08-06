@@ -23,25 +23,33 @@
             Empty request,
             ServerCallContext context)
         {
-            var topics =
-                await _executor
-                    .ExecuteAsync<GetAllTopicsParameters, GetAllTopicsResults>(
-                        new GetAllTopicsParameters())
-                    .ConfigureAwait(false);
+            try
+            {
+                var topics =
+                    await _executor
+                        .ExecuteAsync<GetAllTopicsParameters, GetAllTopicsResults>(
+                            new GetAllTopicsParameters())
+                        .ConfigureAwait(false);
 
-            return new GetAllTopicsResult{
-                Topics =
+                return new GetAllTopicsResult
                 {
-                    topics.Topics.Select(
-                        topic => new TopicResult
-                        {
-                            Description = topic.Description,
-                            Name = topic.Name,
-                            TopicId = topic.Id,
-                            Url = topic.Url
-                        })
-                }
-            };
+                    Topics =
+                    {
+                        topics.Topics.Select(
+                            topic => new TopicResult
+                            {
+                                Description = topic.Description,
+                                Name = topic.Name,
+                                TopicId = topic.Id,
+                                Url = topic.Url
+                            })
+                    }
+                };
+            }
+            catch
+            {
+                throw;
+            }
         }
 
         public override async Task<GetTopicByIdResult> GetTopicById(

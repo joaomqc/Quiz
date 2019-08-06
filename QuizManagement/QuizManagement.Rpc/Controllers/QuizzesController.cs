@@ -68,7 +68,7 @@
                     TopicId = quiz.Topic.Id,
                     Name = quiz.Topic.Name
                 },
-                UserId = quiz.UserId
+                UserId = quiz.UserId.ToString()
             };
         }
 
@@ -80,7 +80,7 @@
                 await _executor
                     .ExecuteAsync<GetAllQuizzesByUserPagedParameters, GetAllQuizzesByUserPagedResults>(
                         new GetAllQuizzesByUserPagedParameters(
-                            request.UserId,
+                            Guid.Parse(request.UserId),
                             request.PageInfo.StartIndex,
                             request.PageInfo.ItemCount))
                     .ConfigureAwait(false);
@@ -106,7 +106,7 @@
                 await _executor
                     .ExecuteAsync<GetPublicQuizzesByUserPagedParameters, GetPublicQuizzesByUserPagedResults>(
                         new GetPublicQuizzesByUserPagedParameters(
-                            request.UserId,
+                            Guid.Parse(request.UserId),
                             request.PageInfo.StartIndex,
                             request.PageInfo.ItemCount))
                     .ConfigureAwait(false);
@@ -158,7 +158,7 @@
                 .ExecuteAsync<CreateQuizParameters, CreateQuizResults>(
                     new CreateQuizParameters(
                         name: request.Name,
-                        userId: request.UserId,
+                        userId: Guid.Parse(request.UserId),
                         questions: request.Questions.Select(
                             question => Question.CreateNewQuestion(
                                 text: question.Text,
@@ -192,7 +192,9 @@
         {
             await _executor
                 .ExecuteAsync<DeleteQuizzesByUserParameters, DeleteQuizzesByUserResults>(
-                    new DeleteQuizzesByUserParameters(request.UserId, request.KeepPublic))
+                    new DeleteQuizzesByUserParameters(
+                        Guid.Parse(request.UserId),
+                        request.KeepPublic))
                 .ConfigureAwait(false);
 
             return new Empty();
@@ -212,7 +214,7 @@
                         Name = quiz.Topic.Name,
                         TopicId = quiz.Topic.Id
                     },
-                    UserId = quiz.UserId
+                    UserId = quiz.UserId.ToString()
                 });
         }
 
