@@ -7,7 +7,8 @@ type Props = {}
 
 type State = {
     username: string,
-    password: string
+    password: string,
+    isLoggingIn: boolean
 }
 
 export default class Login extends React.Component<Props, State> {
@@ -17,7 +18,21 @@ export default class Login extends React.Component<Props, State> {
 
         this.state = {
             username: '',
-            password: ''
+            password: '',
+            isLoggingIn: false
+        }
+    }
+
+    handleLogin = (): void => {
+        console.log('logging in');
+        this.setState({
+            isLoggingIn: true
+        });
+    }
+
+    onKeyDown = (evt: React.KeyboardEvent<HTMLInputElement>): void => {
+        if(evt.key === 'Enter'){
+            this.handleLogin();
         }
     }
 
@@ -35,9 +50,11 @@ export default class Login extends React.Component<Props, State> {
                                     </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <FormControl
+                                    disabled={this.state.isLoggingIn}
                                     autoComplete="username"
                                     placeholder="username"
                                     value={this.state.username}
+                                    onKeyDown={this.onKeyDown}
                                     onChange={(evt: any) => this.setState({username: evt.target.value})}
                                 />
                             </InputGroup>
@@ -48,17 +65,22 @@ export default class Login extends React.Component<Props, State> {
                                     </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <FormControl
+                                    disabled={this.state.isLoggingIn}
+                                    type="password"
                                     autoComplete="current-password"
                                     placeholder="password"
                                     value={this.state.password}
+                                    onKeyDown={this.onKeyDown}
                                     onChange={(evt: any) => this.setState({password: evt.target.value})}
                                 />
                             </InputGroup>
                         </form>
                         <Button
+                            disabled={this.state.isLoggingIn}
                             variant="primary"
                             size="lg"
-                            block>
+                            block
+                            onClick={this.handleLogin}>
                             log in
                         </Button>
                     </div>

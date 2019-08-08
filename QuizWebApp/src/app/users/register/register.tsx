@@ -2,16 +2,18 @@ import * as React from 'react';
 import InputGroup from 'react-bootstrap/InputGroup';
 import FormControl from 'react-bootstrap/FormControl';
 import Button from 'react-bootstrap/Button';
+import Spinner from 'react-bootstrap/Spinner';
 import { RegisterUser } from 'models/user';
 
 type Props = {
     isRegisterLoading: boolean,
     hasRegisterError: boolean,
-    registerUser: Function
+    registerUser: Function,
 }
 
 type State = {
-    user: RegisterUser
+    user: RegisterUser,
+    isRegistering: boolean
 }
 
 export default class Register extends React.Component<Props, State> {
@@ -24,7 +26,8 @@ export default class Register extends React.Component<Props, State> {
                 email: '',
                 username: '',
                 password: ''
-            }
+            },
+            isRegistering: false
         }
     }
 
@@ -37,10 +40,42 @@ export default class Register extends React.Component<Props, State> {
         });
     }
 
+    isUserValid = () => {
+        const { user } = this.state;
+        
+        return !user.email
+            || !user.username
+            || !user.password;
+    }
+
     handleRegister = () => {
-        this.props.registerUser({
-            ...this.state.user
-        });
+        if(!this.isUserValid()){
+            this.setState({
+                isRegistering: true
+            })
+        }
+    }
+
+    componentDidUpdate(prevProps: Props, prevState: State){
+        if(prevProps.isRegisterLoading
+            && !this.props.isRegisterLoading
+            && this.props.hasRegisterError){
+            this.setState({
+                isRegistering: false
+            })
+        }
+
+        if(!prevState.isRegistering && this.state.isRegistering){
+            this.props.registerUser({
+                ...this.state.user
+            });
+        }
+    }
+
+    onKeyDown = (evt: React.KeyboardEvent<HTMLInputElement>): void => {
+        if(evt.key === 'Enter' && !this.state.isRegistering){
+            this.handleRegister();
+        }
     }
 
     render() {
@@ -57,6 +92,7 @@ export default class Register extends React.Component<Props, State> {
                                     </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <FormControl
+                                    onKeyDown={this.onKeyDown}
                                     autoComplete="email"
                                     placeholder="email"
                                     value={this.state.user.email}
@@ -70,6 +106,7 @@ export default class Register extends React.Component<Props, State> {
                                     </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <FormControl
+                                    onKeyDown={this.onKeyDown}
                                     autoComplete="username"
                                     placeholder="username"
                                     value={this.state.user.username}
@@ -83,6 +120,7 @@ export default class Register extends React.Component<Props, State> {
                                     </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <FormControl
+                                    onKeyDown={this.onKeyDown}
                                     autoComplete="new-password"
                                     type="password"
                                     placeholder="password"
@@ -92,11 +130,22 @@ export default class Register extends React.Component<Props, State> {
                             </InputGroup>
                         </form>
                         <Button
+                            disabled={this.state.isRegistering || !this.isUserValid()}
                             variant="primary"
                             size="lg"
                             block
                             onClick={this.handleRegister}>
-                            register
+                            {this.state.isRegistering &&
+                                <Spinner
+                                    as="span"
+                                    animation="border"
+                                    size="sm"
+                                    role="status"
+                                    aria-hidden="true"
+                                    />}
+                            {this.state.isRegistering
+                                ? ' loading...'
+                                : ' register'}
                         </Button>
                     </div>
                 </div>
