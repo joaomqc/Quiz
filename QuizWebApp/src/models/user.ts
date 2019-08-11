@@ -8,3 +8,8 @@ export type LoginUser = {
     username: string,
     password: string
 };
+
+export type Token = {
+    accessToken: string,
+    expiresIn: number
+}

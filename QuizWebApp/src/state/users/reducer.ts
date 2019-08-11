@@ -4,6 +4,8 @@ import { UserAction } from './types';
 const initialState = {
     isRegisterLoading: false,
     hasRegisterError: false,
+    isLoginLoading: false,
+    hasLoginError: false
 };
 
 export default function reducer (state = initialState, action: UserAction) {
@@ -28,6 +30,27 @@ export default function reducer (state = initialState, action: UserAction) {
                 isRegisterLoading: false,
                 hasRegisterError: true
             };
+
+        case ActionTypes.LOGGING_IN:
+            return {
+                ...state,
+                isLoginLoading: true,
+                hasLoginError: false
+            }
+
+        case ActionTypes.LOG_IN_SUCCESS:
+            return {
+                ...state,
+                isLoginLoading: false,
+                hasLoginError: false
+            }
+
+        case ActionTypes.LOG_IN_ERROR:
+            return {
+                ...state,
+                isLoginLoading: false,
+                hasLoginError: true
+            }
 
         default:
             return state;

@@ -4,6 +4,7 @@ import FormControl from 'react-bootstrap/FormControl';
 import Button from 'react-bootstrap/Button';
 import Spinner from 'react-bootstrap/Spinner';
 import { RegisterUser } from 'models/user';
+import { isEmailValid, isUsernameValid, isPasswordValid } from 'shared/validators';
 
 type Props = {
     isRegisterLoading: boolean,
@@ -13,7 +14,9 @@ type Props = {
 
 type State = {
     user: RegisterUser,
-    isRegistering: boolean
+    hasEmailError: boolean,
+    hasUsernameError: boolean,
+    hasPasswordError: boolean
 }
 
 export default class Register extends React.Component<Props, State> {
@@ -27,7 +30,9 @@ export default class Register extends React.Component<Props, State> {
                 username: '',
                 password: ''
             },
-            isRegistering: false
+            hasEmailError: false,
+            hasUsernameError: false,
+            hasPasswordError: false
         }
     }
 
@@ -42,40 +47,60 @@ export default class Register extends React.Component<Props, State> {
 
     isUserValid = () => {
         const { user } = this.state;
-        
-        return !user.email
-            || !user.username
-            || !user.password;
+
+        return isEmailValid(user.email)
+            && isUsernameValid(user.username)
+            && isPasswordValid(user.password);
     }
 
     handleRegister = () => {
-        if(!this.isUserValid()){
-            this.setState({
-                isRegistering: true
-            })
-        }
-    }
-
-    componentDidUpdate(prevProps: Props, prevState: State){
-        if(prevProps.isRegisterLoading
-            && !this.props.isRegisterLoading
-            && this.props.hasRegisterError){
-            this.setState({
-                isRegistering: false
-            })
-        }
-
-        if(!prevState.isRegistering && this.state.isRegistering){
-            this.props.registerUser({
-                ...this.state.user
-            });
+        if(!this.props.isRegisterLoading){
+            if(this.isUserValid()){
+                this.props.registerUser(
+                    this.state.user
+                );
+            }else {
+                this.checkEmailIsValid();
+                this.checkUsernameIsValid();
+                this.checkPasswordIsValid();
+            }
         }
     }
 
     onKeyDown = (evt: React.KeyboardEvent<HTMLInputElement>): void => {
-        if(evt.key === 'Enter' && !this.state.isRegistering){
+        if(evt.key === 'Enter'){
             this.handleRegister();
         }
+    }
+
+    checkEmailIsValid = () => {
+        const emailIsValid = isEmailValid(this.state.user.email);
+
+        this.setState({
+            hasEmailError: !emailIsValid
+        });
+
+        return emailIsValid;
+    }
+
+    checkUsernameIsValid = () => {
+        const usernameIsValid = isUsernameValid(this.state.user.username);
+
+        this.setState({
+            hasUsernameError: !usernameIsValid
+        });
+
+        return usernameIsValid
+    }
+
+    checkPasswordIsValid = () => {
+        const passwordIsValid = isPasswordValid(this.state.user.password);
+
+        this.setState({
+            hasPasswordError: !passwordIsValid
+        });
+
+        return passwordIsValid;
     }
 
     render() {
@@ -96,9 +121,16 @@ export default class Register extends React.Component<Props, State> {
                                     autoComplete="email"
                                     placeholder="email"
                                     value={this.state.user.email}
-                                    onChange={(evt: any) => this.updateUserField('email', evt.target.value)}
+                                    onChange={(evt: any) =>
+                                        this.updateUserField('email', evt.target.value)}
+                                    onBlur={this.checkEmailIsValid}
+                                    onFocus={() => this.setState({
+                                        hasEmailError: false
+                                    })}
                                 />
                             </InputGroup>
+                            {this.state.hasEmailError &&
+                                <span className="alert-message mb-3">Email is not valid</span>}
                             <InputGroup className="mb-3">
                                 <InputGroup.Prepend>
                                     <InputGroup.Text>
@@ -110,9 +142,16 @@ export default class Register extends React.Component<Props, State> {
                                     autoComplete="username"
                                     placeholder="username"
                                     value={this.state.user.username}
-                                    onChange={(evt: any) => this.updateUserField('username', evt.target.value)}
+                                    onChange={(evt: any) =>
+                                        this.updateUserField('username', evt.target.value)}
+                                    onBlur={this.checkUsernameIsValid}
+                                    onFocus={() => this.setState({
+                                        hasUsernameError: false
+                                    })}
                                 />
                             </InputGroup>
+                            {this.state.hasUsernameError &&
+                                <span className="alert-message mb-3">Username must be between 3 and 20 characters</span>}
                             <InputGroup className="mb-3">
                                 <InputGroup.Prepend>
                                     <InputGroup.Text>
@@ -125,17 +164,24 @@ export default class Register extends React.Component<Props, State> {
                                     type="password"
                                     placeholder="password"
                                     value={this.state.user.password}
-                                    onChange={(evt: any) => this.updateUserField('password', evt.target.value)}
+                                    onChange={(evt: any) =>
+                                        this.updateUserField('password', evt.target.value)}
+                                    onBlur={this.checkPasswordIsValid}
+                                    onFocus={() => this.setState({
+                                        hasPasswordError: false
+                                    })}
                                 />
                             </InputGroup>
+                            {this.state.hasPasswordError &&
+                                <span className="alert-message mb-3">Password must have at least 8 characters</span>}
                         </form>
                         <Button
-                            disabled={this.state.isRegistering || !this.isUserValid()}
+                            disabled={this.props.isRegisterLoading}
                             variant="primary"
                             size="lg"
                             block
                             onClick={this.handleRegister}>
-                            {this.state.isRegistering &&
+                            {this.props.isRegisterLoading &&
                                 <Spinner
                                     as="span"
                                     animation="border"
@@ -143,9 +189,9 @@ export default class Register extends React.Component<Props, State> {
                                     role="status"
                                     aria-hidden="true"
                                     />}
-                            {this.state.isRegistering
+                            {this.props.isRegisterLoading
                                 ? ' loading...'
-                                : ' register'}
+                                : 'register'}
                         </Button>
                     </div>
                 </div>
