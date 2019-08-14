@@ -38,15 +38,17 @@
 
 
             return new GetQuizByIdResults(
-                quiz.Id,
-                quiz.Name,
-                quiz.CreationTimestamp,
-                quiz.UserId,
-                quiz.Questions,
-                new TopicDetails(
-                    topic.Id,
-                    topic.Name),
-                quiz.IsPublic);
+                id: quiz.Id,
+                name: quiz.Name,
+                creationTimestamp: quiz.CreationTimestamp,
+                userId: quiz.UserId,
+                questions: quiz.Questions,
+                topic: new TopicDetails(
+                    id: topic.Id,
+                    name: topic.Name,
+                    imageUrl: topic.ImageUrl),
+                isPublic: quiz.IsPublic,
+                imageUrl: quiz.ImageUrl);
         }
     }
 }

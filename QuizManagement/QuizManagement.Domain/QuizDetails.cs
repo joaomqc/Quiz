@@ -10,7 +10,8 @@
             DateTime creationTimestamp,
             Guid userId,
             TopicDetails topic,
-            bool isPublic)
+            bool isPublic,
+            string imageUrl)
         {
             Id = id;
             Name = name;
@@ -18,6 +19,7 @@
             UserId = userId;
             Topic = topic;
             IsPublic = isPublic;
+            ImageUrl = imageUrl;
         }
 
         public int Id { get; }
@@ -26,5 +28,6 @@
         public Guid UserId { get; }
         public TopicDetails Topic { get; }
         public bool IsPublic { get; }
+        public string ImageUrl { get; }
     }
 }

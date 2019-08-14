@@ -60,7 +60,8 @@
                                 UserId = c.UserId
                             },
                         Topic = q.Topic,
-                        IsPublic = q.IsPublic
+                        IsPublic = q.IsPublic,
+                        ImageUrl = q.ImageUrl
                     })
                     .FirstOrDefaultAsync()
                     .ConfigureAwait(false);
@@ -91,14 +92,15 @@
                     .ConfigureAwait(false);
 
             return new Quiz(
-                quiz.Id,
-                quiz.Name,
-                quiz.CreationTimestamp,
-                quiz.UserId,
-                questions,
-                quiz.Topic.Id,
-                quiz.IsPublic,
-                comments);
+                id: quiz.Id,
+                name: quiz.Name,
+                creationTimestamp: quiz.CreationTimestamp,
+                userId: quiz.UserId,
+                questions: questions,
+                topicId: quiz.Topic.Id,
+                isPublic: quiz.IsPublic,
+                comments: comments,
+                imageUrl: quiz.ImageUrl);
         }
 
         public async Task<QuizzesPaged> GetByTopicPagedAsync(
@@ -107,9 +109,9 @@
             int numberOfItems)
         {
             return await GetPagedAsync(
-                startIndex,
-                numberOfItems,
-                quiz => quiz.Topic.Id == topicId && quiz.IsPublic)
+                startIndex: startIndex,
+                numberOfItems: numberOfItems,
+                filter: quiz => quiz.Topic.Id == topicId && quiz.IsPublic)
                 .ConfigureAwait(false);
         }
 
@@ -118,9 +120,9 @@
             int numberOfItems)
         {
             return await GetPagedAsync(
-                startIndex,
-                numberOfItems,
-                quiz => quiz.IsPublic)
+                startIndex: startIndex,
+                numberOfItems: numberOfItems,
+                filter: quiz => quiz.IsPublic)
                 .ConfigureAwait(false);
         }
 
@@ -130,9 +132,9 @@
             int numberOfItems)
         {
             return await GetPagedAsync(
-                startIndex,
-                numberOfItems,
-                quiz => quiz.UserId == userId)
+                startIndex: startIndex,
+                numberOfItems: numberOfItems,
+                filter: quiz => quiz.UserId == userId)
                 .ConfigureAwait(false);
         }
 
@@ -142,9 +144,9 @@
             int numberOfItems)
         {
             return await GetPagedAsync(
-                startIndex,
-                numberOfItems,
-                quiz => quiz.UserId == userId && quiz.IsPublic)
+                startIndex: startIndex,
+                numberOfItems:numberOfItems,
+                filter: quiz => quiz.UserId == userId && quiz.IsPublic)
                 .ConfigureAwait(false);
         }
 
@@ -167,21 +169,23 @@
                     .ConfigureAwait(false);
 
             return new QuizzesPaged(
-                quizzes.Select(
+                list: quizzes.Select(
                     quiz => new QuizDetails(
-                        quiz.Id,
-                        quiz.Name,
-                        quiz.CreationTimestamp,
-                        quiz.UserId,
-                        new TopicDetails(
-                            quiz.Topic.Id,
-                            quiz.Topic.Name), 
-                        quiz.IsPublic))
+                        id: quiz.Id,
+                        name: quiz.Name,
+                        creationTimestamp: quiz.CreationTimestamp,
+                        userId: quiz.UserId,
+                        topic: new TopicDetails(
+                            id: quiz.Topic.Id,
+                            name: quiz.Topic.Name,
+                            imageUrl: quiz.Topic.ImageUrl), 
+                        isPublic: quiz.IsPublic,
+                        imageUrl: quiz.ImageUrl))
                     .ToList(),
-                total,
-                quizzes.Count,
-                startIndex,
-                startIndex + quizzes.Count);
+                totalCount: total,
+                itemCount: quizzes.Count,
+                startIndex: startIndex,
+                endIndex: startIndex + quizzes.Count);
         }
         
         public async Task InsertAsync(Quiz quiz)
@@ -193,7 +197,8 @@
                     CreationTimestamp = quiz.CreationTimestamp,
                     UserId = quiz.UserId,
                     IsPublic = quiz.IsPublic,
-                    TopicId = quiz.TopicId
+                    TopicId = quiz.TopicId,
+                    ImageUrl = quiz.ImageUrl
                 };
             
             var questions =

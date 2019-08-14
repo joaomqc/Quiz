@@ -22,6 +22,8 @@
 
         [Required]
         public bool IsPublic { get; set; }
+
+        public string ImageUrl { get; set; }
         
         [Required]
         public int TopicId { get; set; }

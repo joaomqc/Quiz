@@ -46,6 +46,7 @@ message CreateQuizParameter {
 	repeated QuestionParameter Questions = 3;
 	int32 TopicId = 4;
 	bool IsPublic = 5;
+	string ImageUrl = 6;
 }
 
 // Parameter DTOs
@@ -72,6 +73,7 @@ message GetQuizByIdResult {
 	repeated QuestionResult Questions = 5;
 	TopicResult Topic = 6;
 	bool IsPublic = 7;
+	string ImageUrl = 8;
 }
 
 message GetQuizzesPagedResult {
@@ -101,9 +103,11 @@ message QuizResult {
 	string UserId = 4;
 	TopicResult Topic = 5;
 	bool IsPublic = 6;
+	string ImageUrl = 7;
 }
 
 message TopicResult {
 	int32 TopicId = 1;
 	string Name = 2;
+	string ImageUrl = 3;
 }

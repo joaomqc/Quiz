@@ -16,6 +16,6 @@
         public string Description { get; set; }
         
         [Required]
-        public string Url { get; set; }
+        public string ImageUrl { get; set; }
     }
 }

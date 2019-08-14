@@ -34,59 +34,60 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
             "cy5Db21tb24uR2V0UGFnZWRQYXJhbWV0ZXISDwoHVG9waWNJZBgCIAEoBSIl",
             "ChNEZWxldGVRdWl6UGFyYW1ldGVyEg4KBlF1aXpJZBgBIAEoBSJCChxEZWxl",
             "dGVRdWl6emVzQnlVc2VyUGFyYW1ldGVyEg4KBlVzZXJJZBgBIAEoCRISCgpL",
-            "ZWVwUHVibGljGAIgASgIIqUBChNDcmVhdGVRdWl6UGFyYW1ldGVyEgwKBE5h",
+            "ZWVwUHVibGljGAIgASgIIrcBChNDcmVhdGVRdWl6UGFyYW1ldGVyEgwKBE5h",
             "bWUYASABKAkSDgoGVXNlcklkGAIgASgJEk0KCVF1ZXN0aW9ucxgDIAMoCzI6",
             "LlNoYXJlZC5Db250cmFjdHMuUXVpek1hbmFnZW1lbnQuUXVpenplcy5RdWVz",
             "dGlvblBhcmFtZXRlchIPCgdUb3BpY0lkGAQgASgFEhAKCElzUHVibGljGAUg",
-            "ASgIIoYBChFRdWVzdGlvblBhcmFtZXRlchIMCgRUZXh0GAEgASgJEhgKEElz",
-            "TXVsdGlwbGVDaG9pY2UYAiABKAgSSQoHQW5zd2VycxgDIAMoCzI4LlNoYXJl",
-            "ZC5Db250cmFjdHMuUXVpek1hbmFnZW1lbnQuUXVpenplcy5BbnN3ZXJQYXJh",
-            "bWV0ZXIiMgoPQW5zd2VyUGFyYW1ldGVyEgwKBFRleHQYASABKAkSEQoJSXND",
-            "b3JyZWN0GAIgASgIIv8BChFHZXRRdWl6QnlJZFJlc3VsdBIOCgZRdWl6SWQY",
-            "ASABKAUSDAoETmFtZRgCIAEoCRIZChFDcmVhdGlvblRpbWVzdGFtcBgDIAEo",
-            "AxIOCgZVc2VySWQYBCABKAkSSgoJUXVlc3Rpb25zGAUgAygLMjcuU2hhcmVk",
-            "LkNvbnRyYWN0cy5RdWl6TWFuYWdlbWVudC5RdWl6emVzLlF1ZXN0aW9uUmVz",
-            "dWx0EkMKBVRvcGljGAYgASgLMjQuU2hhcmVkLkNvbnRyYWN0cy5RdWl6TWFu",
-            "YWdlbWVudC5RdWl6emVzLlRvcGljUmVzdWx0EhAKCElzUHVibGljGAcgASgI",
-            "IpgBChVHZXRRdWl6emVzUGFnZWRSZXN1bHQSOQoIUGFnZUluZm8YASABKAsy",
-            "Jy5TaGFyZWQuQ29udHJhY3RzLkNvbW1vbi5HZXRQYWdlZFJlc3VsdBJECgdR",
-            "dWl6emVzGAIgAygLMjMuU2hhcmVkLkNvbnRyYWN0cy5RdWl6TWFuYWdlbWVu",
-            "dC5RdWl6emVzLlF1aXpSZXN1bHQiQQoMQW5zd2VyUmVzdWx0EhAKCEFuc3dl",
-            "cklkGAEgASgFEgwKBFRleHQYAiABKAkSEQoJSXNDb3JyZWN0GAMgASgIIpQB",
-            "Cg5RdWVzdGlvblJlc3VsdBISCgpRdWVzdGlvbklkGAEgASgFEgwKBFRleHQY",
-            "AiABKAkSGAoQSXNNdWx0aXBsZUNob2ljZRgDIAEoCBJGCgdBbnN3ZXJzGAQg",
-            "AygLMjUuU2hhcmVkLkNvbnRyYWN0cy5RdWl6TWFuYWdlbWVudC5RdWl6emVz",
-            "LkFuc3dlclJlc3VsdCKsAQoKUXVpelJlc3VsdBIOCgZRdWl6SWQYASABKAUS",
-            "DAoETmFtZRgCIAEoCRIZChFDcmVhdGlvblRpbWVzdGFtcBgDIAEoAxIOCgZV",
-            "c2VySWQYBCABKAkSQwoFVG9waWMYBSABKAsyNC5TaGFyZWQuQ29udHJhY3Rz",
-            "LlF1aXpNYW5hZ2VtZW50LlF1aXp6ZXMuVG9waWNSZXN1bHQSEAoISXNQdWJs",
-            "aWMYBiABKAgiLAoLVG9waWNSZXN1bHQSDwoHVG9waWNJZBgBIAEoBRIMCgRO",
-            "YW1lGAIgASgJMt0ICg5RdWl6emVzU2VydmljZRJ9Cg9HZXRRdWl6emVzUGFn",
-            "ZWQSKi5TaGFyZWQuQ29udHJhY3RzLkNvbW1vbi5HZXRQYWdlZFBhcmFtZXRl",
-            "cho+LlNoYXJlZC5Db250cmFjdHMuUXVpek1hbmFnZW1lbnQuUXVpenplcy5H",
-            "ZXRRdWl6emVzUGFnZWRSZXN1bHQShAEKB0dldFF1aXoSPS5TaGFyZWQuQ29u",
-            "dHJhY3RzLlF1aXpNYW5hZ2VtZW50LlF1aXp6ZXMuR2V0UXVpekJ5SWRQYXJh",
-            "bWV0ZXIaOi5TaGFyZWQuQ29udHJhY3RzLlF1aXpNYW5hZ2VtZW50LlF1aXp6",
-            "ZXMuR2V0UXVpekJ5SWRSZXN1bHQSoAEKFUdldFF1aXp6ZXNCeVVzZXJQYWdl",
-            "ZBJHLlNoYXJlZC5Db250cmFjdHMuUXVpek1hbmFnZW1lbnQuUXVpenplcy5H",
-            "ZXRRdWl6emVzQnlVc2VyUGFnZWRQYXJhbWV0ZXIaPi5TaGFyZWQuQ29udHJh",
-            "Y3RzLlF1aXpNYW5hZ2VtZW50LlF1aXp6ZXMuR2V0UXVpenplc1BhZ2VkUmVz",
-            "dWx0EqYBChtHZXRQdWJsaWNRdWl6emVzQnlVc2VyUGFnZWQSRy5TaGFyZWQu",
-            "Q29udHJhY3RzLlF1aXpNYW5hZ2VtZW50LlF1aXp6ZXMuR2V0UXVpenplc0J5",
-            "VXNlclBhZ2VkUGFyYW1ldGVyGj4uU2hhcmVkLkNvbnRyYWN0cy5RdWl6TWFu",
-            "YWdlbWVudC5RdWl6emVzLkdldFF1aXp6ZXNQYWdlZFJlc3VsdBKiAQoWR2V0",
-            "UXVpenplc0J5VG9waWNQYWdlZBJILlNoYXJlZC5Db250cmFjdHMuUXVpek1h",
-            "bmFnZW1lbnQuUXVpenplcy5HZXRRdWl6emVzQnlUb3BpY1BhZ2VkUGFyYW1l",
-            "dGVyGj4uU2hhcmVkLkNvbnRyYWN0cy5RdWl6TWFuYWdlbWVudC5RdWl6emVz",
-            "LkdldFF1aXp6ZXNQYWdlZFJlc3VsdBJqCgpDcmVhdGVRdWl6EjwuU2hhcmVk",
-            "LkNvbnRyYWN0cy5RdWl6TWFuYWdlbWVudC5RdWl6emVzLkNyZWF0ZVF1aXpQ",
-            "YXJhbWV0ZXIaHi5TaGFyZWQuQ29udHJhY3RzLkNvbW1vbi5FbXB0eRJqCgpE",
-            "ZWxldGVRdWl6EjwuU2hhcmVkLkNvbnRyYWN0cy5RdWl6TWFuYWdlbWVudC5R",
-            "dWl6emVzLkRlbGV0ZVF1aXpQYXJhbWV0ZXIaHi5TaGFyZWQuQ29udHJhY3Rz",
-            "LkNvbW1vbi5FbXB0eRJ8ChNEZWxldGVRdWl6emVzQnlVc2VyEkUuU2hhcmVk",
-            "LkNvbnRyYWN0cy5RdWl6TWFuYWdlbWVudC5RdWl6emVzLkRlbGV0ZVF1aXp6",
-            "ZXNCeVVzZXJQYXJhbWV0ZXIaHi5TaGFyZWQuQ29udHJhY3RzLkNvbW1vbi5F",
-            "bXB0eWIGcHJvdG8z"));
+            "ASgIEhAKCEltYWdlVXJsGAYgASgJIoYBChFRdWVzdGlvblBhcmFtZXRlchIM",
+            "CgRUZXh0GAEgASgJEhgKEElzTXVsdGlwbGVDaG9pY2UYAiABKAgSSQoHQW5z",
+            "d2VycxgDIAMoCzI4LlNoYXJlZC5Db250cmFjdHMuUXVpek1hbmFnZW1lbnQu",
+            "UXVpenplcy5BbnN3ZXJQYXJhbWV0ZXIiMgoPQW5zd2VyUGFyYW1ldGVyEgwK",
+            "BFRleHQYASABKAkSEQoJSXNDb3JyZWN0GAIgASgIIpECChFHZXRRdWl6QnlJ",
+            "ZFJlc3VsdBIOCgZRdWl6SWQYASABKAUSDAoETmFtZRgCIAEoCRIZChFDcmVh",
+            "dGlvblRpbWVzdGFtcBgDIAEoAxIOCgZVc2VySWQYBCABKAkSSgoJUXVlc3Rp",
+            "b25zGAUgAygLMjcuU2hhcmVkLkNvbnRyYWN0cy5RdWl6TWFuYWdlbWVudC5R",
+            "dWl6emVzLlF1ZXN0aW9uUmVzdWx0EkMKBVRvcGljGAYgASgLMjQuU2hhcmVk",
+            "LkNvbnRyYWN0cy5RdWl6TWFuYWdlbWVudC5RdWl6emVzLlRvcGljUmVzdWx0",
+            "EhAKCElzUHVibGljGAcgASgIEhAKCEltYWdlVXJsGAggASgJIpgBChVHZXRR",
+            "dWl6emVzUGFnZWRSZXN1bHQSOQoIUGFnZUluZm8YASABKAsyJy5TaGFyZWQu",
+            "Q29udHJhY3RzLkNvbW1vbi5HZXRQYWdlZFJlc3VsdBJECgdRdWl6emVzGAIg",
+            "AygLMjMuU2hhcmVkLkNvbnRyYWN0cy5RdWl6TWFuYWdlbWVudC5RdWl6emVz",
+            "LlF1aXpSZXN1bHQiQQoMQW5zd2VyUmVzdWx0EhAKCEFuc3dlcklkGAEgASgF",
+            "EgwKBFRleHQYAiABKAkSEQoJSXNDb3JyZWN0GAMgASgIIpQBCg5RdWVzdGlv",
+            "blJlc3VsdBISCgpRdWVzdGlvbklkGAEgASgFEgwKBFRleHQYAiABKAkSGAoQ",
+            "SXNNdWx0aXBsZUNob2ljZRgDIAEoCBJGCgdBbnN3ZXJzGAQgAygLMjUuU2hh",
+            "cmVkLkNvbnRyYWN0cy5RdWl6TWFuYWdlbWVudC5RdWl6emVzLkFuc3dlclJl",
+            "c3VsdCK+AQoKUXVpelJlc3VsdBIOCgZRdWl6SWQYASABKAUSDAoETmFtZRgC",
+            "IAEoCRIZChFDcmVhdGlvblRpbWVzdGFtcBgDIAEoAxIOCgZVc2VySWQYBCAB",
+            "KAkSQwoFVG9waWMYBSABKAsyNC5TaGFyZWQuQ29udHJhY3RzLlF1aXpNYW5h",
+            "Z2VtZW50LlF1aXp6ZXMuVG9waWNSZXN1bHQSEAoISXNQdWJsaWMYBiABKAgS",
+            "EAoISW1hZ2VVcmwYByABKAkiPgoLVG9waWNSZXN1bHQSDwoHVG9waWNJZBgB",
+            "IAEoBRIMCgROYW1lGAIgASgJEhAKCEltYWdlVXJsGAMgASgJMt0ICg5RdWl6",
+            "emVzU2VydmljZRJ9Cg9HZXRRdWl6emVzUGFnZWQSKi5TaGFyZWQuQ29udHJh",
+            "Y3RzLkNvbW1vbi5HZXRQYWdlZFBhcmFtZXRlcho+LlNoYXJlZC5Db250cmFj",
+            "dHMuUXVpek1hbmFnZW1lbnQuUXVpenplcy5HZXRRdWl6emVzUGFnZWRSZXN1",
+            "bHQShAEKB0dldFF1aXoSPS5TaGFyZWQuQ29udHJhY3RzLlF1aXpNYW5hZ2Vt",
+            "ZW50LlF1aXp6ZXMuR2V0UXVpekJ5SWRQYXJhbWV0ZXIaOi5TaGFyZWQuQ29u",
+            "dHJhY3RzLlF1aXpNYW5hZ2VtZW50LlF1aXp6ZXMuR2V0UXVpekJ5SWRSZXN1",
+            "bHQSoAEKFUdldFF1aXp6ZXNCeVVzZXJQYWdlZBJHLlNoYXJlZC5Db250cmFj",
+            "dHMuUXVpek1hbmFnZW1lbnQuUXVpenplcy5HZXRRdWl6emVzQnlVc2VyUGFn",
+            "ZWRQYXJhbWV0ZXIaPi5TaGFyZWQuQ29udHJhY3RzLlF1aXpNYW5hZ2VtZW50",
+            "LlF1aXp6ZXMuR2V0UXVpenplc1BhZ2VkUmVzdWx0EqYBChtHZXRQdWJsaWNR",
+            "dWl6emVzQnlVc2VyUGFnZWQSRy5TaGFyZWQuQ29udHJhY3RzLlF1aXpNYW5h",
+            "Z2VtZW50LlF1aXp6ZXMuR2V0UXVpenplc0J5VXNlclBhZ2VkUGFyYW1ldGVy",
+            "Gj4uU2hhcmVkLkNvbnRyYWN0cy5RdWl6TWFuYWdlbWVudC5RdWl6emVzLkdl",
+            "dFF1aXp6ZXNQYWdlZFJlc3VsdBKiAQoWR2V0UXVpenplc0J5VG9waWNQYWdl",
+            "ZBJILlNoYXJlZC5Db250cmFjdHMuUXVpek1hbmFnZW1lbnQuUXVpenplcy5H",
+            "ZXRRdWl6emVzQnlUb3BpY1BhZ2VkUGFyYW1ldGVyGj4uU2hhcmVkLkNvbnRy",
+            "YWN0cy5RdWl6TWFuYWdlbWVudC5RdWl6emVzLkdldFF1aXp6ZXNQYWdlZFJl",
+            "c3VsdBJqCgpDcmVhdGVRdWl6EjwuU2hhcmVkLkNvbnRyYWN0cy5RdWl6TWFu",
+            "YWdlbWVudC5RdWl6emVzLkNyZWF0ZVF1aXpQYXJhbWV0ZXIaHi5TaGFyZWQu",
+            "Q29udHJhY3RzLkNvbW1vbi5FbXB0eRJqCgpEZWxldGVRdWl6EjwuU2hhcmVk",
+            "LkNvbnRyYWN0cy5RdWl6TWFuYWdlbWVudC5RdWl6emVzLkRlbGV0ZVF1aXpQ",
+            "YXJhbWV0ZXIaHi5TaGFyZWQuQ29udHJhY3RzLkNvbW1vbi5FbXB0eRJ8ChNE",
+            "ZWxldGVRdWl6emVzQnlVc2VyEkUuU2hhcmVkLkNvbnRyYWN0cy5RdWl6TWFu",
+            "YWdlbWVudC5RdWl6emVzLkRlbGV0ZVF1aXp6ZXNCeVVzZXJQYXJhbWV0ZXIa",
+            "Hi5TaGFyZWQuQ29udHJhY3RzLkNvbW1vbi5FbXB0eWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Shared.Contracts.Common.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -95,15 +96,15 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
             new pbr::GeneratedClrTypeInfo(typeof(global::Shared.Contracts.QuizManagement.Quizzes.GetQuizzesByTopicPagedParameter), global::Shared.Contracts.QuizManagement.Quizzes.GetQuizzesByTopicPagedParameter.Parser, new[]{ "PageInfo", "TopicId" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Shared.Contracts.QuizManagement.Quizzes.DeleteQuizParameter), global::Shared.Contracts.QuizManagement.Quizzes.DeleteQuizParameter.Parser, new[]{ "QuizId" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Shared.Contracts.QuizManagement.Quizzes.DeleteQuizzesByUserParameter), global::Shared.Contracts.QuizManagement.Quizzes.DeleteQuizzesByUserParameter.Parser, new[]{ "UserId", "KeepPublic" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Shared.Contracts.QuizManagement.Quizzes.CreateQuizParameter), global::Shared.Contracts.QuizManagement.Quizzes.CreateQuizParameter.Parser, new[]{ "Name", "UserId", "Questions", "TopicId", "IsPublic" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Shared.Contracts.QuizManagement.Quizzes.CreateQuizParameter), global::Shared.Contracts.QuizManagement.Quizzes.CreateQuizParameter.Parser, new[]{ "Name", "UserId", "Questions", "TopicId", "IsPublic", "ImageUrl" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Shared.Contracts.QuizManagement.Quizzes.QuestionParameter), global::Shared.Contracts.QuizManagement.Quizzes.QuestionParameter.Parser, new[]{ "Text", "IsMultipleChoice", "Answers" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Shared.Contracts.QuizManagement.Quizzes.AnswerParameter), global::Shared.Contracts.QuizManagement.Quizzes.AnswerParameter.Parser, new[]{ "Text", "IsCorrect" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Shared.Contracts.QuizManagement.Quizzes.GetQuizByIdResult), global::Shared.Contracts.QuizManagement.Quizzes.GetQuizByIdResult.Parser, new[]{ "QuizId", "Name", "CreationTimestamp", "UserId", "Questions", "Topic", "IsPublic" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Shared.Contracts.QuizManagement.Quizzes.GetQuizByIdResult), global::Shared.Contracts.QuizManagement.Quizzes.GetQuizByIdResult.Parser, new[]{ "QuizId", "Name", "CreationTimestamp", "UserId", "Questions", "Topic", "IsPublic", "ImageUrl" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Shared.Contracts.QuizManagement.Quizzes.GetQuizzesPagedResult), global::Shared.Contracts.QuizManagement.Quizzes.GetQuizzesPagedResult.Parser, new[]{ "PageInfo", "Quizzes" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Shared.Contracts.QuizManagement.Quizzes.AnswerResult), global::Shared.Contracts.QuizManagement.Quizzes.AnswerResult.Parser, new[]{ "AnswerId", "Text", "IsCorrect" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Shared.Contracts.QuizManagement.Quizzes.QuestionResult), global::Shared.Contracts.QuizManagement.Quizzes.QuestionResult.Parser, new[]{ "QuestionId", "Text", "IsMultipleChoice", "Answers" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Shared.Contracts.QuizManagement.Quizzes.QuizResult), global::Shared.Contracts.QuizManagement.Quizzes.QuizResult.Parser, new[]{ "QuizId", "Name", "CreationTimestamp", "UserId", "Topic", "IsPublic" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Shared.Contracts.QuizManagement.Quizzes.TopicResult), global::Shared.Contracts.QuizManagement.Quizzes.TopicResult.Parser, new[]{ "TopicId", "Name" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Shared.Contracts.QuizManagement.Quizzes.QuizResult), global::Shared.Contracts.QuizManagement.Quizzes.QuizResult.Parser, new[]{ "QuizId", "Name", "CreationTimestamp", "UserId", "Topic", "IsPublic", "ImageUrl" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Shared.Contracts.QuizManagement.Quizzes.TopicResult), global::Shared.Contracts.QuizManagement.Quizzes.TopicResult.Parser, new[]{ "TopicId", "Name", "ImageUrl" }, null, null, null)
           }));
     }
     #endregion
@@ -881,6 +882,7 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
       questions_ = other.questions_.Clone();
       topicId_ = other.topicId_;
       isPublic_ = other.isPublic_;
+      imageUrl_ = other.imageUrl_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -943,6 +945,17 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
       }
     }
 
+    /// <summary>Field number for the "ImageUrl" field.</summary>
+    public const int ImageUrlFieldNumber = 6;
+    private string imageUrl_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ImageUrl {
+      get { return imageUrl_; }
+      set {
+        imageUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as CreateQuizParameter);
@@ -961,6 +974,7 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
       if(!questions_.Equals(other.questions_)) return false;
       if (TopicId != other.TopicId) return false;
       if (IsPublic != other.IsPublic) return false;
+      if (ImageUrl != other.ImageUrl) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -972,6 +986,7 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
       hash ^= questions_.GetHashCode();
       if (TopicId != 0) hash ^= TopicId.GetHashCode();
       if (IsPublic != false) hash ^= IsPublic.GetHashCode();
+      if (ImageUrl.Length != 0) hash ^= ImageUrl.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1002,6 +1017,10 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
         output.WriteRawTag(40);
         output.WriteBool(IsPublic);
       }
+      if (ImageUrl.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(ImageUrl);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1022,6 +1041,9 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
       }
       if (IsPublic != false) {
         size += 1 + 1;
+      }
+      if (ImageUrl.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ImageUrl);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1046,6 +1068,9 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
       }
       if (other.IsPublic != false) {
         IsPublic = other.IsPublic;
+      }
+      if (other.ImageUrl.Length != 0) {
+        ImageUrl = other.ImageUrl;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1076,6 +1101,10 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
           }
           case 40: {
             IsPublic = input.ReadBool();
+            break;
+          }
+          case 50: {
+            ImageUrl = input.ReadString();
             break;
           }
         }
@@ -1450,6 +1479,7 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
       questions_ = other.questions_.Clone();
       topic_ = other.topic_ != null ? other.topic_.Clone() : null;
       isPublic_ = other.isPublic_;
+      imageUrl_ = other.imageUrl_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1534,6 +1564,17 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
       }
     }
 
+    /// <summary>Field number for the "ImageUrl" field.</summary>
+    public const int ImageUrlFieldNumber = 8;
+    private string imageUrl_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ImageUrl {
+      get { return imageUrl_; }
+      set {
+        imageUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as GetQuizByIdResult);
@@ -1554,6 +1595,7 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
       if(!questions_.Equals(other.questions_)) return false;
       if (!object.Equals(Topic, other.Topic)) return false;
       if (IsPublic != other.IsPublic) return false;
+      if (ImageUrl != other.ImageUrl) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1567,6 +1609,7 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
       hash ^= questions_.GetHashCode();
       if (topic_ != null) hash ^= Topic.GetHashCode();
       if (IsPublic != false) hash ^= IsPublic.GetHashCode();
+      if (ImageUrl.Length != 0) hash ^= ImageUrl.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1605,6 +1648,10 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
         output.WriteRawTag(56);
         output.WriteBool(IsPublic);
       }
+      if (ImageUrl.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(ImageUrl);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1631,6 +1678,9 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
       }
       if (IsPublic != false) {
         size += 1 + 1;
+      }
+      if (ImageUrl.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ImageUrl);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1664,6 +1714,9 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
       }
       if (other.IsPublic != false) {
         IsPublic = other.IsPublic;
+      }
+      if (other.ImageUrl.Length != 0) {
+        ImageUrl = other.ImageUrl;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1705,6 +1758,10 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
           }
           case 56: {
             IsPublic = input.ReadBool();
+            break;
+          }
+          case 66: {
+            ImageUrl = input.ReadString();
             break;
           }
         }
@@ -2292,6 +2349,7 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
       userId_ = other.userId_;
       topic_ = other.topic_ != null ? other.topic_.Clone() : null;
       isPublic_ = other.isPublic_;
+      imageUrl_ = other.imageUrl_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2366,6 +2424,17 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
       }
     }
 
+    /// <summary>Field number for the "ImageUrl" field.</summary>
+    public const int ImageUrlFieldNumber = 7;
+    private string imageUrl_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ImageUrl {
+      get { return imageUrl_; }
+      set {
+        imageUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as QuizResult);
@@ -2385,6 +2454,7 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
       if (UserId != other.UserId) return false;
       if (!object.Equals(Topic, other.Topic)) return false;
       if (IsPublic != other.IsPublic) return false;
+      if (ImageUrl != other.ImageUrl) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2397,6 +2467,7 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
       if (UserId.Length != 0) hash ^= UserId.GetHashCode();
       if (topic_ != null) hash ^= Topic.GetHashCode();
       if (IsPublic != false) hash ^= IsPublic.GetHashCode();
+      if (ImageUrl.Length != 0) hash ^= ImageUrl.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2434,6 +2505,10 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
         output.WriteRawTag(48);
         output.WriteBool(IsPublic);
       }
+      if (ImageUrl.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(ImageUrl);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2459,6 +2534,9 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
       }
       if (IsPublic != false) {
         size += 1 + 1;
+      }
+      if (ImageUrl.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ImageUrl);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2491,6 +2569,9 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
       }
       if (other.IsPublic != false) {
         IsPublic = other.IsPublic;
+      }
+      if (other.ImageUrl.Length != 0) {
+        ImageUrl = other.ImageUrl;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2530,6 +2611,10 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
             IsPublic = input.ReadBool();
             break;
           }
+          case 58: {
+            ImageUrl = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -2563,6 +2648,7 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
     public TopicResult(TopicResult other) : this() {
       topicId_ = other.topicId_;
       name_ = other.name_;
+      imageUrl_ = other.imageUrl_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2593,6 +2679,17 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
       }
     }
 
+    /// <summary>Field number for the "ImageUrl" field.</summary>
+    public const int ImageUrlFieldNumber = 3;
+    private string imageUrl_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ImageUrl {
+      get { return imageUrl_; }
+      set {
+        imageUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as TopicResult);
@@ -2608,6 +2705,7 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
       }
       if (TopicId != other.TopicId) return false;
       if (Name != other.Name) return false;
+      if (ImageUrl != other.ImageUrl) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2616,6 +2714,7 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
       int hash = 1;
       if (TopicId != 0) hash ^= TopicId.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (ImageUrl.Length != 0) hash ^= ImageUrl.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2637,6 +2736,10 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
         output.WriteRawTag(18);
         output.WriteString(Name);
       }
+      if (ImageUrl.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(ImageUrl);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2650,6 +2753,9 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
       }
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (ImageUrl.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ImageUrl);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2668,6 +2774,9 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
       if (other.Name.Length != 0) {
         Name = other.Name;
       }
+      if (other.ImageUrl.Length != 0) {
+        ImageUrl = other.ImageUrl;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -2685,6 +2794,10 @@ namespace Shared.Contracts.QuizManagement.Quizzes {
           }
           case 18: {
             Name = input.ReadString();
+            break;
+          }
+          case 26: {
+            ImageUrl = input.ReadString();
             break;
           }
         }

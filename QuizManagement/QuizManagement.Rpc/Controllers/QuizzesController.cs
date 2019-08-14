@@ -66,9 +66,11 @@
                 Topic = new TopicResult
                 {
                     TopicId = quiz.Topic.Id,
-                    Name = quiz.Topic.Name
+                    Name = quiz.Topic.Name,
+                    ImageUrl = quiz.ImageUrl
                 },
-                UserId = quiz.UserId.ToString()
+                UserId = quiz.UserId.ToString(),
+                ImageUrl = quiz.ImageUrl
             };
         }
 
@@ -80,9 +82,9 @@
                 await _executor
                     .ExecuteAsync<GetAllQuizzesByUserPagedParameters, GetAllQuizzesByUserPagedResults>(
                         new GetAllQuizzesByUserPagedParameters(
-                            Guid.Parse(request.UserId),
-                            request.PageInfo.StartIndex,
-                            request.PageInfo.ItemCount))
+                            userId: Guid.Parse(request.UserId),
+                            startIndex: request.PageInfo.StartIndex,
+                            numberOfItems: request.PageInfo.ItemCount))
                     .ConfigureAwait(false);
 
             return new GetQuizzesPagedResult
@@ -106,9 +108,9 @@
                 await _executor
                     .ExecuteAsync<GetPublicQuizzesByUserPagedParameters, GetPublicQuizzesByUserPagedResults>(
                         new GetPublicQuizzesByUserPagedParameters(
-                            Guid.Parse(request.UserId),
-                            request.PageInfo.StartIndex,
-                            request.PageInfo.ItemCount))
+                            userId: Guid.Parse(request.UserId),
+                            startIndex: request.PageInfo.StartIndex,
+                            numberOfItems: request.PageInfo.ItemCount))
                     .ConfigureAwait(false);
 
             return new GetQuizzesPagedResult
@@ -132,9 +134,9 @@
                 await _executor
                     .ExecuteAsync<GetQuizzesByTopicPagedParameters, GetQuizzesByTopicPagedResults>(
                         new GetQuizzesByTopicPagedParameters(
-                            request.TopicId,
-                            request.PageInfo.StartIndex,
-                            request.PageInfo.ItemCount))
+                            topicId: request.TopicId,
+                            startIndex: request.PageInfo.StartIndex,
+                            numberOfItems: request.PageInfo.ItemCount))
                     .ConfigureAwait(false);
 
             return new GetQuizzesPagedResult
@@ -168,7 +170,8 @@
                                         text: answer.Text,
                                         isCorrect: answer.IsCorrect)))),
                         topicId: request.TopicId,
-                        isPublic: request.IsPublic))
+                        isPublic: request.IsPublic,
+                        imageUrl: request.ImageUrl))
                 .ConfigureAwait(false);
 
             return new Empty();
@@ -193,8 +196,8 @@
             await _executor
                 .ExecuteAsync<DeleteQuizzesByUserParameters, DeleteQuizzesByUserResults>(
                     new DeleteQuizzesByUserParameters(
-                        Guid.Parse(request.UserId),
-                        request.KeepPublic))
+                        userId: Guid.Parse(request.UserId),
+                        keepPublic: request.KeepPublic))
                 .ConfigureAwait(false);
 
             return new Empty();
@@ -212,9 +215,11 @@
                     Topic = new TopicResult
                     {
                         Name = quiz.Topic.Name,
-                        TopicId = quiz.Topic.Id
+                        TopicId = quiz.Topic.Id,
+                        ImageUrl = quiz.ImageUrl
                     },
-                    UserId = quiz.UserId.ToString()
+                    UserId = quiz.UserId.ToString(),
+                    ImageUrl = quiz.ImageUrl
                 });
         }
 

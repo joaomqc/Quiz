@@ -27,7 +27,7 @@
                 id: topic.Id,
                 name: topic.Name,
                 description: topic.Description,
-                url: topic.Url);
+                imageUrl: topic.ImageUrl);
         }
     }
 }

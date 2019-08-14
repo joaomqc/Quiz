@@ -26,26 +26,26 @@ namespace Shared.Contracts.QuizManagement.Topics {
           string.Concat(
             "ChtRdWl6TWFuYWdlbWVudC9Ub3BpY3MucHJvdG8SJlNoYXJlZC5Db250cmFj",
             "dHMuUXVpek1hbmFnZW1lbnQuVG9waWNzGhNDb21tb24vQ29tbW9uLnByb3Rv",
-            "IigKFUdldFRvcGljQnlJZFBhcmFtZXRlchIPCgdUb3BpY0lkGAEgASgFIlUK",
+            "IigKFUdldFRvcGljQnlJZFBhcmFtZXRlchIPCgdUb3BpY0lkGAEgASgFIloK",
             "EkdldFRvcGljQnlJZFJlc3VsdBIPCgdUb3BpY0lkGAEgASgFEgwKBE5hbWUY",
-            "AiABKAkSEwoLRGVzY3JpcHRpb24YAyABKAkSCwoDVXJsGAQgASgJIlkKEkdl",
-            "dEFsbFRvcGljc1Jlc3VsdBJDCgZUb3BpY3MYASADKAsyMy5TaGFyZWQuQ29u",
-            "dHJhY3RzLlF1aXpNYW5hZ2VtZW50LlRvcGljcy5Ub3BpY1Jlc3VsdCJOCgtU",
-            "b3BpY1Jlc3VsdBIPCgdUb3BpY0lkGAEgASgFEgwKBE5hbWUYAiABKAkSEwoL",
-            "RGVzY3JpcHRpb24YAyABKAkSCwoDVXJsGAQgASgJMocCCg1Ub3BpY3NTZXJ2",
-            "aWNlEmoKDEdldEFsbFRvcGljcxIeLlNoYXJlZC5Db250cmFjdHMuQ29tbW9u",
-            "LkVtcHR5GjouU2hhcmVkLkNvbnRyYWN0cy5RdWl6TWFuYWdlbWVudC5Ub3Bp",
-            "Y3MuR2V0QWxsVG9waWNzUmVzdWx0EokBCgxHZXRUb3BpY0J5SWQSPS5TaGFy",
-            "ZWQuQ29udHJhY3RzLlF1aXpNYW5hZ2VtZW50LlRvcGljcy5HZXRUb3BpY0J5",
-            "SWRQYXJhbWV0ZXIaOi5TaGFyZWQuQ29udHJhY3RzLlF1aXpNYW5hZ2VtZW50",
-            "LlRvcGljcy5HZXRUb3BpY0J5SWRSZXN1bHRiBnByb3RvMw=="));
+            "AiABKAkSEwoLRGVzY3JpcHRpb24YAyABKAkSEAoISW1hZ2VVcmwYBCABKAki",
+            "WQoSR2V0QWxsVG9waWNzUmVzdWx0EkMKBlRvcGljcxgBIAMoCzIzLlNoYXJl",
+            "ZC5Db250cmFjdHMuUXVpek1hbmFnZW1lbnQuVG9waWNzLlRvcGljUmVzdWx0",
+            "IlMKC1RvcGljUmVzdWx0Eg8KB1RvcGljSWQYASABKAUSDAoETmFtZRgCIAEo",
+            "CRITCgtEZXNjcmlwdGlvbhgDIAEoCRIQCghJbWFnZVVybBgEIAEoCTKHAgoN",
+            "VG9waWNzU2VydmljZRJqCgxHZXRBbGxUb3BpY3MSHi5TaGFyZWQuQ29udHJh",
+            "Y3RzLkNvbW1vbi5FbXB0eRo6LlNoYXJlZC5Db250cmFjdHMuUXVpek1hbmFn",
+            "ZW1lbnQuVG9waWNzLkdldEFsbFRvcGljc1Jlc3VsdBKJAQoMR2V0VG9waWNC",
+            "eUlkEj0uU2hhcmVkLkNvbnRyYWN0cy5RdWl6TWFuYWdlbWVudC5Ub3BpY3Mu",
+            "R2V0VG9waWNCeUlkUGFyYW1ldGVyGjouU2hhcmVkLkNvbnRyYWN0cy5RdWl6",
+            "TWFuYWdlbWVudC5Ub3BpY3MuR2V0VG9waWNCeUlkUmVzdWx0YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Shared.Contracts.Common.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Shared.Contracts.QuizManagement.Topics.GetTopicByIdParameter), global::Shared.Contracts.QuizManagement.Topics.GetTopicByIdParameter.Parser, new[]{ "TopicId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Shared.Contracts.QuizManagement.Topics.GetTopicByIdResult), global::Shared.Contracts.QuizManagement.Topics.GetTopicByIdResult.Parser, new[]{ "TopicId", "Name", "Description", "Url" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Shared.Contracts.QuizManagement.Topics.GetTopicByIdResult), global::Shared.Contracts.QuizManagement.Topics.GetTopicByIdResult.Parser, new[]{ "TopicId", "Name", "Description", "ImageUrl" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Shared.Contracts.QuizManagement.Topics.GetAllTopicsResult), global::Shared.Contracts.QuizManagement.Topics.GetAllTopicsResult.Parser, new[]{ "Topics" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Shared.Contracts.QuizManagement.Topics.TopicResult), global::Shared.Contracts.QuizManagement.Topics.TopicResult.Parser, new[]{ "TopicId", "Name", "Description", "Url" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Shared.Contracts.QuizManagement.Topics.TopicResult), global::Shared.Contracts.QuizManagement.Topics.TopicResult.Parser, new[]{ "TopicId", "Name", "Description", "ImageUrl" }, null, null, null)
           }));
     }
     #endregion
@@ -209,7 +209,7 @@ namespace Shared.Contracts.QuizManagement.Topics {
       topicId_ = other.topicId_;
       name_ = other.name_;
       description_ = other.description_;
-      url_ = other.url_;
+      imageUrl_ = other.imageUrl_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -251,14 +251,14 @@ namespace Shared.Contracts.QuizManagement.Topics {
       }
     }
 
-    /// <summary>Field number for the "Url" field.</summary>
-    public const int UrlFieldNumber = 4;
-    private string url_ = "";
+    /// <summary>Field number for the "ImageUrl" field.</summary>
+    public const int ImageUrlFieldNumber = 4;
+    private string imageUrl_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Url {
-      get { return url_; }
+    public string ImageUrl {
+      get { return imageUrl_; }
       set {
-        url_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        imageUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -278,7 +278,7 @@ namespace Shared.Contracts.QuizManagement.Topics {
       if (TopicId != other.TopicId) return false;
       if (Name != other.Name) return false;
       if (Description != other.Description) return false;
-      if (Url != other.Url) return false;
+      if (ImageUrl != other.ImageUrl) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -288,7 +288,7 @@ namespace Shared.Contracts.QuizManagement.Topics {
       if (TopicId != 0) hash ^= TopicId.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (Description.Length != 0) hash ^= Description.GetHashCode();
-      if (Url.Length != 0) hash ^= Url.GetHashCode();
+      if (ImageUrl.Length != 0) hash ^= ImageUrl.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -314,9 +314,9 @@ namespace Shared.Contracts.QuizManagement.Topics {
         output.WriteRawTag(26);
         output.WriteString(Description);
       }
-      if (Url.Length != 0) {
+      if (ImageUrl.Length != 0) {
         output.WriteRawTag(34);
-        output.WriteString(Url);
+        output.WriteString(ImageUrl);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -335,8 +335,8 @@ namespace Shared.Contracts.QuizManagement.Topics {
       if (Description.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
       }
-      if (Url.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Url);
+      if (ImageUrl.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ImageUrl);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -358,8 +358,8 @@ namespace Shared.Contracts.QuizManagement.Topics {
       if (other.Description.Length != 0) {
         Description = other.Description;
       }
-      if (other.Url.Length != 0) {
-        Url = other.Url;
+      if (other.ImageUrl.Length != 0) {
+        ImageUrl = other.ImageUrl;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -385,7 +385,7 @@ namespace Shared.Contracts.QuizManagement.Topics {
             break;
           }
           case 34: {
-            Url = input.ReadString();
+            ImageUrl = input.ReadString();
             break;
           }
         }
@@ -543,7 +543,7 @@ namespace Shared.Contracts.QuizManagement.Topics {
       topicId_ = other.topicId_;
       name_ = other.name_;
       description_ = other.description_;
-      url_ = other.url_;
+      imageUrl_ = other.imageUrl_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -585,14 +585,14 @@ namespace Shared.Contracts.QuizManagement.Topics {
       }
     }
 
-    /// <summary>Field number for the "Url" field.</summary>
-    public const int UrlFieldNumber = 4;
-    private string url_ = "";
+    /// <summary>Field number for the "ImageUrl" field.</summary>
+    public const int ImageUrlFieldNumber = 4;
+    private string imageUrl_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Url {
-      get { return url_; }
+    public string ImageUrl {
+      get { return imageUrl_; }
       set {
-        url_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        imageUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -612,7 +612,7 @@ namespace Shared.Contracts.QuizManagement.Topics {
       if (TopicId != other.TopicId) return false;
       if (Name != other.Name) return false;
       if (Description != other.Description) return false;
-      if (Url != other.Url) return false;
+      if (ImageUrl != other.ImageUrl) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -622,7 +622,7 @@ namespace Shared.Contracts.QuizManagement.Topics {
       if (TopicId != 0) hash ^= TopicId.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (Description.Length != 0) hash ^= Description.GetHashCode();
-      if (Url.Length != 0) hash ^= Url.GetHashCode();
+      if (ImageUrl.Length != 0) hash ^= ImageUrl.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -648,9 +648,9 @@ namespace Shared.Contracts.QuizManagement.Topics {
         output.WriteRawTag(26);
         output.WriteString(Description);
       }
-      if (Url.Length != 0) {
+      if (ImageUrl.Length != 0) {
         output.WriteRawTag(34);
-        output.WriteString(Url);
+        output.WriteString(ImageUrl);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -669,8 +669,8 @@ namespace Shared.Contracts.QuizManagement.Topics {
       if (Description.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
       }
-      if (Url.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Url);
+      if (ImageUrl.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ImageUrl);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -692,8 +692,8 @@ namespace Shared.Contracts.QuizManagement.Topics {
       if (other.Description.Length != 0) {
         Description = other.Description;
       }
-      if (other.Url.Length != 0) {
-        Url = other.Url;
+      if (other.ImageUrl.Length != 0) {
+        ImageUrl = other.ImageUrl;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -719,7 +719,7 @@ namespace Shared.Contracts.QuizManagement.Topics {
             break;
           }
           case 34: {
-            Url = input.ReadString();
+            ImageUrl = input.ReadString();
             break;
           }
         }

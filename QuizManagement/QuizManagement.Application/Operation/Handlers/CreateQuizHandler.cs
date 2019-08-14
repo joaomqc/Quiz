@@ -2,7 +2,6 @@
 {
     using System;
     using System.Linq;
-    using System.Threading;
     using System.Threading.Tasks;
     using Domain;
     using Parameters;
@@ -26,20 +25,21 @@
             await _quizzesRepository
                 .InsertAsync(
                     Quiz.CreateNewQuiz(
-                        parameters.Name,
-                        parameters.UserId,
-                        parameters.Questions.Select(
+                        name: parameters.Name,
+                        userId: parameters.UserId,
+                        questions: parameters.Questions.Select(
                             question => Question.CreateNewQuestion(
-                                question.Text,
-                                question.IsMultipleChoice,
-                                question.Answers.Select(
+                                text: question.Text,
+                                isMultipleChoice: question.IsMultipleChoice,
+                                answers: question.Answers.Select(
                                     answer => Answer.CreateNewAnswer(
-                                        answer.Text,
-                                        answer.IsCorrect))
+                                        text: answer.Text,
+                                        isCorrect: answer.IsCorrect))
                                     .ToList()))
                             .ToList(),
-                        parameters.TopicId,
-                        parameters.IsPublic))
+                        topicId: parameters.TopicId,
+                        isPublic: parameters.IsPublic,
+                        imageUrl: parameters.ImageUrl))
                 .ConfigureAwait(false);
 
             return new CreateQuizResults();

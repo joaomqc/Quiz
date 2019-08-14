@@ -10,17 +10,19 @@
             Guid userId,
             IEnumerable<Question> questions,
             int topicId,
-            bool isPublic)
+            bool isPublic,
+            string imageUrl)
         {
             return new Quiz(
-                0,
-                name,
-                DateTime.UtcNow,
-                userId,
-                questions,
-                topicId,
-                isPublic,
-                new List<Comment>());
+                id: 0,
+                name: name,
+                creationTimestamp: DateTime.UtcNow,
+                userId: userId,
+                questions: questions,
+                topicId: topicId,
+                isPublic: isPublic,
+                imageUrl: imageUrl,
+                comments: new List<Comment>());
         }
 
         public Quiz(
@@ -31,6 +33,7 @@
             IEnumerable<Question> questions,
             int topicId,
             bool isPublic,
+            string imageUrl,
             IEnumerable<Comment> comments)
         {
             Id = id;
@@ -40,6 +43,7 @@
             Questions = questions;
             TopicId = topicId;
             IsPublic = isPublic;
+            ImageUrl = imageUrl;
             Comments = comments;
         }
 
@@ -50,6 +54,7 @@
         public IEnumerable<Question> Questions { get; }
         public int TopicId { get; }
         public bool IsPublic { get; }
+        public string ImageUrl { get; }
         public IEnumerable<Comment> Comments { get; }
     }
 }

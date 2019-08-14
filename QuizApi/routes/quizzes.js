@@ -23,9 +23,11 @@ router.get('/', function (req, res, next) {
                     userId: quiz.UserId,
                     topic: {
                         id: quiz.Topic.Id,
-                        name: quiz.Topic.Name
+                        name: quiz.Topic.Name,
+                        imageUrl: quiz.Topic.ImageUrl
                     },
-                    isPublic: quiz.IsPublic
+                    isPublic: quiz.IsPublic,
+                    imageUrl: quiz.ImageUrl
                 };
             })
         });

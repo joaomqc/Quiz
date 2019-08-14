@@ -23,33 +23,26 @@
             Empty request,
             ServerCallContext context)
         {
-            try
-            {
-                var topics =
-                    await _executor
-                        .ExecuteAsync<GetAllTopicsParameters, GetAllTopicsResults>(
-                            new GetAllTopicsParameters())
-                        .ConfigureAwait(false);
+            var topics =
+                await _executor
+                    .ExecuteAsync<GetAllTopicsParameters, GetAllTopicsResults>(
+                        new GetAllTopicsParameters())
+                    .ConfigureAwait(false);
 
-                return new GetAllTopicsResult
-                {
-                    Topics =
-                    {
-                        topics.Topics.Select(
-                            topic => new TopicResult
-                            {
-                                Description = topic.Description,
-                                Name = topic.Name,
-                                TopicId = topic.Id,
-                                Url = topic.Url
-                            })
-                    }
-                };
-            }
-            catch
+            return new GetAllTopicsResult
             {
-                throw;
-            }
+                Topics =
+                {
+                    topics.Topics.Select(
+                        topic => new TopicResult
+                        {
+                            Description = topic.Description,
+                            Name = topic.Name,
+                            TopicId = topic.Id,
+                            ImageUrl = topic.ImageUrl
+                        })
+                }
+            };
         }
 
         public override async Task<GetTopicByIdResult> GetTopicById(
@@ -67,7 +60,7 @@
                 Description = topic.Description,
                 Name = topic.Name,
                 TopicId = topic.Id,
-                Url = topic.Url
+                ImageUrl = topic.ImageUrl
             };
         }
     }

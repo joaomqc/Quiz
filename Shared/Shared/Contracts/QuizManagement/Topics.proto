@@ -21,7 +21,7 @@ message GetTopicByIdResult {
 	int32 TopicId = 1;
 	string Name = 2;
 	string Description = 3;
-	string Url = 4;
+	string ImageUrl = 4;
 }
 
 message GetAllTopicsResult {
@@ -34,5 +34,5 @@ message TopicResult {
 	int32 TopicId = 1;
 	string Name = 2;
 	string Description = 3;
-	string Url = 4;
+	string ImageUrl = 4;
 }

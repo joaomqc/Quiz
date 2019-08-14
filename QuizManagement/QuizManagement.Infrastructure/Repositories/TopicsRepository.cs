@@ -28,10 +28,10 @@
 
             return topics
                 .Select(topic => new Topic(
-                    topic.Id,
-                    topic.Name,
-                    topic.Description,
-                    topic.Url))
+                    id: topic.Id,
+                    name: topic.Name,
+                    description: topic.Description,
+                    imageUrl: topic.ImageUrl))
                 .ToList();
         }
 
@@ -43,10 +43,10 @@
                     .ConfigureAwait(false);
 
             return new Topic(
-                topic.Id,
-                topic.Name,
-                topic.Description,
-                topic.Url);
+                id: topic.Id,
+                name: topic.Name,
+                description: topic.Description,
+                imageUrl: topic.ImageUrl);
         }
     }
 }

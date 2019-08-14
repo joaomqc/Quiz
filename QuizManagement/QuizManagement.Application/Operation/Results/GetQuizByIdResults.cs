@@ -14,7 +14,8 @@
             Guid userId,
             IEnumerable<Question> questions,
             TopicDetails topic,
-            bool isPublic)
+            bool isPublic,
+            string imageUrl)
         {
             Id = id;
             Name = name;
@@ -23,6 +24,7 @@
             Questions = questions;
             Topic = topic;
             IsPublic = isPublic;
+            ImageUrl = imageUrl;
         }
 
         public int Id { get; }
@@ -32,5 +34,6 @@
         public IEnumerable<Question> Questions { get; }
         public TopicDetails Topic { get; }
         public bool IsPublic { get; }
+        public string ImageUrl { get; }
     }
 }
